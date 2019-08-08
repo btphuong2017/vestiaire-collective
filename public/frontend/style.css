@@ -1,3 +1,628 @@
+body {
+  height: 4000px;
+}
 
+header {
+  position: relative;
+  background-color: #FFF;
+  margin-top: 40px;
+}
+header.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-top: 0;
+}
+
+.fixed-topbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 40px;
+  line-height: 40px;
+  background: rgba(43, 43, 43, 0.06);
+}
+
+.header-firstline {
+  position: relative;
+  height: 70px;
+  width: 100%;
+  border-bottom: 1px solid #eaeaea;
+  text-align: center;
+  z-index: 2;
+}
+.header-firstline .container {
+  height: 100%;
+}
+.header-firstline .header-logo {
+  position: absolute;
+  width: 243px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.header-firstline .header-logo img {
+  width: 100%;
+  object-fit: cover;
+}
+.header-firstline .header-user-access {
+  position: absolute;
+  right: 20px;
+  top: 0;
+  height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  z-index: 1;
+}
+.header-firstline .header-user-access.left {
+  right: auto;
+  left: 20px;
+}
+.header-firstline .header-user-access .user-access-item {
+  position: relative;
+}
+.header-firstline .header-user-access .user-access-item .btn {
+  margin: 0 11px;
+  position: relative;
+}
+.header-firstline .header-user-access .user-access-item .btn span.access-item-inner {
+  display: none;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  bottom: -8px;
+  right: -8px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #cc815e;
+  color: #FFF;
+  z-index: 1;
+}
+.header-firstline .header-user-access .user-access-item .btn span.access-item-text {
+  display: none;
+  font-size: 12px;
+  width: 100%;
+  text-align: center;
+}
+.header-firstline .header-user-access .user-access-item .btn span.access-item-inner.active {
+  display: flex;
+}
+.header-firstline .header-user-access .user-access-item .btn-icon {
+  padding: 0;
+}
+.header-firstline .header-user-access .user-access-item .btn-icon svg {
+  width: 21px;
+  object-fit: cover;
+}
+.header-firstline .header-user-access .user-access-item .btn-avatar {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+}
+.header-firstline .header-user-access .user-access-item .btn-avatar svg {
+  display: none;
+}
+.header-firstline .header-user-access .user-access-item .btn-avatar img {
+  display: block;
+  border-radius: 50%;
+  height: 40px;
+  object-fit: cover;
+}
+.header-firstline .header-user-access .user-access-item .access-dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 55px;
+  width: 290px;
+  padding: 20px;
+  background-color: #FFF;
+  box-shadow: 0 2px 8px 4px rgba(43, 43, 43, 0.06);
+  z-index: 3;
+}
+.header-firstline .header-user-access .user-access-item .access-dropdown.active {
+  display: block;
+}
+.header-firstline .header-user-access .user-access-item .access-dropdown .access-dropdown-arrow {
+  position: absolute;
+  top: -6px;
+  right: 24px;
+  width: 12px;
+  height: 12px;
+  background: #FFF;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  border-top-color: #eaeaea;
+  border-right-color: #eaeaea;
+  transform: rotate(-45deg);
+}
+.header-firstline .header-user-access .user-access-item.access-notification .access-dropdown.notifications {
+  width: auto;
+}
+.header-firstline .header-user-access .user-access-item.access-notification .access-dropdown.notifications .notification-list {
+  margin: 0;
+  padding: 0;
+  min-height: 80px;
+  max-height: 400px;
+  overflow-y: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.header-firstline .header-user-access .user-access-item.access-notification .access-dropdown.notifications .notification-list .notification {
+  width: 300px;
+  padding: 20px 0;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+  border-bottom: 1px solid #eaeaea;
+  display: flex;
+  align-items: flex-start;
+}
+.header-firstline .header-user-access .user-access-item.access-notification .access-dropdown.notifications .notification-list .notification .notification-picture {
+  height: 40px;
+  width: 40px;
+  margin-right: 15px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.header-firstline .header-user-access .user-access-item.access-notification .access-dropdown.notifications .notification-list .notification .notification-info {
+  font-size: 14px;
+  text-align: left;
+}
+.header-firstline .header-user-access .user-access-item.access-notification .access-dropdown.notifications .notification-list .notification .notification-info .notification-date {
+  font-size: 12px;
+  color: #ababab;
+}
+.header-firstline .header-user-access .user-access-item.access-favourite .access-dropdown.wishlist {
+  padding: 20px;
+  width: 300px;
+}
+.header-firstline .header-user-access .user-access-item.access-favourite .access-dropdown.wishlist .wishlist-empty {
+  padding: 30px 30px;
+  background: #fafafa;
+  color: #ababab;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  flex-flow: row wrap;
+  font-size: 18px;
+  line-height: 26px;
+}
+.header-firstline .header-user-access .user-access-item.access-favourite .access-dropdown.wishlist .wishlist-empty svg {
+  height: 33px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.header-firstline .header-user-access .user-access-item.access-cart .access-dropdown.shopping-basket {
+  padding: 20px;
+  width: 300px;
+}
+.header-firstline .header-user-access .user-access-item.access-cart .access-dropdown.shopping-basket .basket-empty {
+  padding: 30px 30px;
+  background: #fafafa;
+  color: #ababab;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  flex-flow: row wrap;
+  font-size: 18px;
+  line-height: 26px;
+}
+.header-firstline .header-user-access .user-access-item.access-cart .access-dropdown.shopping-basket .basket-empty svg {
+  height: 33px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.header-firstline .header-user-access .user-access-item.access-user {
+  position: relative;
+}
+.header-firstline .header-user-access .user-access-item.access-user .user-info {
+  text-align: left;
+}
+.header-firstline .header-user-access .user-access-item.access-user .user-info .border-bottom {
+  padding-bottom: 11px;
+}
+.header-firstline .header-user-access .user-access-item.access-user .user-info a {
+  color: #000;
+  text-decoration: none;
+}
+.header-firstline .header-user-access .user-access-item.access-user .user-info .user-info-profile .user-info-name {
+  line-height: 42px;
+  font-size: 32px;
+}
+.header-firstline .header-user-access .user-access-item.access-user .user-info .user-info-profile .user-info-link {
+  padding-top: 4px;
+  text-transform: uppercase;
+  color: #cc815e;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  line-height: 16px;
+  font-weight: 500;
+}
+.header-firstline .header-user-access .user-access-item.access-user .user-info .user-info-menu {
+  padding-top: 7px;
+}
+.header-firstline .header-user-access .user-access-item.access-user .user-info .user-info-menu .user-info-menu-item {
+  padding: 11px 0;
+  display: block;
+}
+.header-firstline .header-user-access .user-access-item.access-user .user-info .user-info-account .user-info-link {
+  padding-top: 4px;
+  text-transform: uppercase;
+  color: #cc815e;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  line-height: 16px;
+  font-weight: 500;
+}
+.header-firstline .header-user-access .user-access-item.access-user .user-info .user-info-help {
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+.header-firstline .header-user-access .user-access-item.access-user .user-info .user-info-help .user-info-help-link {
+  padding: 11px 0;
+  display: block;
+}
+.header-firstline .header-user-access .user-access-item.access-user .user-info .user-info-logout {
+  padding-top: 7px;
+}
+.header-firstline .header-user-access .user-access-item.access-user .user-info .user-info-logout .user-info-logout-link {
+  padding: 11px 0;
+  display: block;
+}
+.header-firstline .header-user-access .user-access-item.access-user .user-info.active {
+  display: block;
+}
+
+.header-secondline {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  height: 62px;
+  position: relative;
+}
+.header-secondline .container {
+  height: 100%;
+}
+.header-secondline .searchbar-desktop {
+  position: absolute;
+  top: -70px;
+  padding-top: 23px;
+  left: 20px;
+  width: 230px;
+  z-index: 2;
+  background-color: #FFF;
+  overflow: hidden;
+}
+.header-secondline .searchbar-desktop.active {
+  transition: width 1s ease;
+  width: 960px;
+  height: 400px;
+  padding-right: 58px;
+  left: -10px;
+  padding-left: 30px;
+  box-shadow: 0 2px 8px 4px rgba(43, 43, 43, 0.06);
+}
+.header-secondline .searchbar-desktop .searchbar-form-area .searchbar-input {
+  position: relative;
+}
+.header-secondline .searchbar-desktop .searchbar-form-area .searchbar-input input {
+  padding: 0;
+  border: none;
+  font-size: 15px;
+  padding-left: 40px;
+  padding-bottom: 5px;
+}
+.header-secondline .searchbar-desktop .searchbar-form-area .searchbar-input input:focus, .header-secondline .searchbar-desktop .searchbar-form-area .searchbar-input input:active, .header-secondline .searchbar-desktop .searchbar-form-area .searchbar-input input:visited {
+  outline: 0;
+}
+.header-secondline .searchbar-desktop .searchbar-form-area .searchbar-input svg {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+  position: absolute;
+  left: 1px;
+  top: 4px;
+}
+.header-secondline .searchbar-desktop .searchbar-form-area .searchbar-close-button {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  right: 20px;
+  top: 23px;
+  border: none;
+  background: none;
+  height: auto;
+  line-height: inherit;
+}
+.header-secondline .searchbar-desktop .searchbar-form-area .searchbar-close-button:active, .header-secondline .searchbar-desktop .searchbar-form-area .searchbar-close-button:focus, .header-secondline .searchbar-desktop .searchbar-form-area .searchbar-close-button:visited {
+  outline: 0;
+}
+.header-secondline .searchbar-desktop .searchbar-form-area .searchbar-close-button:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  height: 28px;
+  top: 0;
+  left: -20px;
+  width: 1px;
+  background-color: #eaeaea;
+}
+.header-secondline .searchbar-desktop .searchbar-form-area .searchbar-close-button .close-icon {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  transform: translateY(-50%);
+}
+.header-secondline .searchbar-desktop .searchbar-form-area .searchbar-close-button .close-icon:after, .header-secondline .searchbar-desktop .searchbar-form-area .searchbar-close-button .close-icon:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 16px;
+  width: 2px;
+  background-color: #ababab;
+  transform-origin: center center;
+}
+.header-secondline .searchbar-desktop .searchbar-form-area .searchbar-close-button .close-icon:after {
+  transform: rotate(-45deg);
+}
+.header-secondline .searchbar-desktop .searchbar-form-area .searchbar-close-button .close-icon:before {
+  transform: rotate(45deg);
+}
+.header-secondline .searchbar-desktop.active .searchbar-form-area .searchbar-input {
+  border-bottom: 1px solid #000;
+}
+.header-secondline .searchbar-desktop.active .searchbar-form-area .searchbar-input input {
+  padding-bottom: 24px;
+}
+.header-secondline .searchbar-desktop.active .searchbar-form-area .searchbar-close-button {
+  display: inline-block;
+}
+.header-secondline .searchbar-desktop .searchbar-suggestion {
+  width: 100%;
+  display: none;
+  padding-top: 24px;
+  flex-flow: nowrap;
+}
+.header-secondline .searchbar-desktop .searchbar-suggestion .suggestion-recent,
+.header-secondline .searchbar-desktop .searchbar-suggestion .suggestion-popular {
+  flex: 0 0 50%;
+  min-width: 300px;
+}
+.header-secondline .searchbar-desktop .searchbar-suggestion .suggestion-recent .suggestion-title,
+.header-secondline .searchbar-desktop .searchbar-suggestion .suggestion-popular .suggestion-title {
+  color: #ababab;
+  letter-spacing: 0.15em;
+  line-height: 26px;
+  font-size: 13px;
+  font-weight: 500;
+}
+.header-secondline .searchbar-desktop .searchbar-suggestion .suggestion-recent .suggestion-list,
+.header-secondline .searchbar-desktop .searchbar-suggestion .suggestion-popular .suggestion-list {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.header-secondline .searchbar-desktop .searchbar-suggestion .suggestion-recent .suggestion-list .suggestion-item,
+.header-secondline .searchbar-desktop .searchbar-suggestion .suggestion-popular .suggestion-list .suggestion-item {
+  margin: 0;
+  display: block;
+  line-height: 30px;
+  font-size: 18px;
+}
+.header-secondline .searchbar-desktop .searchbar-suggestion .suggestion-recent .suggestion-list .suggestion-item a,
+.header-secondline .searchbar-desktop .searchbar-suggestion .suggestion-popular .suggestion-list .suggestion-item a {
+  display: block;
+  color: #000;
+  text-decoration: none;
+}
+.header-secondline .searchbar-desktop .searchbar-suggestion .suggestion-recent .suggestion-list .suggestion-item a:hover,
+.header-secondline .searchbar-desktop .searchbar-suggestion .suggestion-popular .suggestion-list .suggestion-item a:hover {
+  background: #fafafa;
+}
+.header-secondline .searchbar-desktop .searchbar-suggestion .suggestion-recent .suggestion-list .suggestion-item a .suggestion-item-text,
+.header-secondline .searchbar-desktop .searchbar-suggestion .suggestion-popular .suggestion-list .suggestion-item a .suggestion-item-text {
+  font-size: 18px;
+}
+.header-secondline .searchbar-desktop .searchbar-suggestion .suggestion-recent .suggestion-list .suggestion-item a .suggestion-item-num,
+.header-secondline .searchbar-desktop .searchbar-suggestion .suggestion-popular .suggestion-list .suggestion-item a .suggestion-item-num {
+  font-size: 12px;
+}
+.header-secondline .searchbar-desktop.active .searchbar-suggestion {
+  display: flex;
+}
+.header-secondline .header-nav {
+  height: 100%;
+  width: 100%;
+}
+.header-secondline .header-nav .main-nav,
+.header-secondline .header-nav .sub-nav,
+.header-secondline .header-nav .child-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.header-secondline .header-nav .main-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  z-index: 1;
+}
+.header-secondline .header-nav .main-nav .nav-item {
+  margin-right: 26px;
+  padding: 22px 0 22px 0;
+  line-height: 18px;
+  display: inline-block;
+}
+.header-secondline .header-nav .main-nav .nav-item a {
+  font-size: 15px;
+  color: #000;
+  text-decoration: none;
+}
+.header-secondline .header-nav .main-nav .nav-item .sub-nav {
+  display: none;
+  position: absolute;
+  left: -20px;
+  top: 100%;
+  right: -20px;
+  padding: 20px 33px;
+  background: #FFF;
+  flex-flow: row nowrap;
+  border-bottom: 1px solid #eaeaea;
+}
+.header-secondline .header-nav .main-nav .nav-item .sub-nav .sub-nav-item {
+  width: 16.6667%;
+  padding-right: 60px;
+  display: inline-block;
+}
+.header-secondline .header-nav .main-nav .nav-item .sub-nav .sub-nav-item .sub-nav-title {
+  text-transform: uppercase;
+  color: #ababab;
+  letter-spacing: 1.5px;
+  line-height: 16px;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 13px;
+}
+.header-secondline .header-nav .main-nav .nav-item .sub-nav .sub-nav-item .child-nav {
+  display: block;
+}
+.header-secondline .header-nav .main-nav .nav-item .sub-nav .sub-nav-item .child-nav .child-nav-item {
+  display: block;
+  line-height: 30px;
+}
+.header-secondline .header-nav .main-nav .nav-item .sub-nav.active {
+  display: block;
+}
+.header-secondline .header-nav .main-nav .nav-item-underline {
+  position: absolute;
+  display: block;
+  transition: all 0.3s ease;
+  background: #de8962;
+  height: 2px;
+  bottom: 0px;
+  z-index: 4;
+}
+
+@media (max-width: 1023px) {
+  .header-firstline {
+    height: 100px;
+  }
+  .header-firstline .header-user-access .user-access-item .btn-icon svg {
+    height: 26px;
+    width: auto;
+    object-fit: cover;
+    margin-bottom: 2px;
+  }
+  .header-firstline .header-user-access .user-access-item .btn-icon span.access-item-text {
+    display: block;
+    text-transform: none;
+  }
+  .header-firstline .header-user-access .user-access-item .btn-icon span.access-item-inner {
+    bottom: 12px;
+    right: 12px;
+  }
+  .header-firstline .header-user-access .user-access-item .btn-brown {
+    display: none;
+  }
+  .header-firstline .header-user-access .user-access-item.access-user .btn-avatar {
+    width: auto;
+  }
+  .header-firstline .header-user-access .user-access-item.access-user .btn-avatar svg {
+    height: 26px;
+    width: auto;
+    object-fit: cover;
+    display: block;
+  }
+  .header-firstline .header-user-access .user-access-item.access-user .btn-avatar img {
+    display: none;
+  }
+  .header-firstline .header-user-access .user-access-item.access-user .btn-avatar .access-item-text {
+    text-transform: none;
+    text-align: center;
+    display: block;
+  }
+  .header-firstline .header-user-access .user-access-item .access-dropdown {
+    display: block;
+    position: fixed;
+    width: 300px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 380px;
+    z-index: 999;
+    transform: translate(100%, 0);
+    transition: 0.5s ease;
+  }
+  .header-firstline .header-user-access .user-access-item .access-dropdown .access-dropdown-arrow {
+    display: none;
+  }
+  .header-firstline .header-user-access .user-access-item .access-dropdown .access-dropdown-header {
+    display: none;
+  }
+  .header-firstline .header-user-access .user-access-item .access-dropdown.active {
+    transform: translate(0, 0);
+  }
+  .header-firstline .header-user-access .user-access-item .access-dropdown.access-notification .notification-list {
+    max-height: 100vh;
+  }
+
+  .header-secondline {
+    display: none;
+  }
+}
+@keyframes slideFromRight {
+  0% {
+    transform: translate(100%, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+.btn {
+  border-radius: 0px;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1.2px;
+  line-height: 15px;
+  padding: 8px 16px;
+  background: none;
+}
+.btn:active, .btn:focus, .btn:hover {
+  outline: 0;
+  box-shadow: none;
+}
+
+.btn-brown {
+  color: #FFF;
+  background-color: #cc815e;
+  border: 1px solid #cc815e;
+}
+.btn-brown:hover {
+  background-color: #b37152;
+  border-color: #b37152;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1460px;
+    width: 100%;
+    padding: 0 20px;
+    position: relative;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
