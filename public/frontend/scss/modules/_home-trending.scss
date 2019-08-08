@@ -1,0 +1,127 @@
+
+
+.title_trending{
+	font-size: 80px;
+    line-height: 80px;
+    letter-spacing: -.025em;
+    font-weight:350;
+}
+@media (max-width: 767px){
+.title_trending{
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 45px;
+    letter-spacing: -.01em;
+}
+}
+.inner_trending{
+	display: block;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+@media (min-width: 768px)
+{
+	.title_trending{
+       padding: 60px 0;
+     }
+}
+.product_trending{
+	display: flex;
+    overflow-y: hidden;
+    overflow-x: auto;
+    justify-content: flex-start;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-bottom: 32px;
+    padding-top: 20px;
+}
+@media (min-width: 768px)
+{
+	.product_trending{
+    justify-content: center;
+    position:relative;
+	}
+}
+.product_trending ul.products{
+	display:flex;
+	padding: 0px 10px;
+}
+.products li{
+	list-style: none;
+}
+
+@media (max-width:500px){
+.products li{
+	margin: 0px 10px;
+	}
+}
+@media (min-width: 768px){
+.merchandising{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: auto;
+    max-width: 214px;
+    text-align: center;
+    margin: 0 10px;
+    }
+}
+@media (max-width: 500px){
+.merchandising{
+    white-space: nowrap;
+    transition: opacity .3s ease-in-out;
+    box-sizing: content-box;
+    width: 140px;
+    height: 140px;
+    -o-object-fit: cover;
+    object-fit: cover;
+
+}
+}
+@media (min-width: 1024px){
+.products_li{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+	 }
+ }
+.merchandising_a{
+	display: block;
+    position: relative;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+@media (min-width: 768px){
+.image_product{
+	white-space: nowrap;
+    transition: opacity .3s ease-in-out;
+    box-sizing: content-box;
+    width: 100%;
+    max-width: 214px;
+    max-height: 214px;
+    height: 100%;
+}
+}
+.image_product img{
+	max-width:100%;
+}
+.products_name{
+
+	font-family: "HK Grotesk",sans-serif;
+    font-size: 12px;
+    line-height: 17px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 23px;
+    margin: 0;
+    letter-spacing: 1.5px;
+    color: #2b2b2b;
+    box-sizing: border-box;
+	
+}
