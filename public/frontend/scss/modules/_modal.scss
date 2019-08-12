@@ -1,8 +1,9 @@
 .modal {
+    
     .modal-dialog {
         max-width: 1280px;
         margin: 0 auto;
-
+        height: 100vh;
         .modal-content {
             position: relative;
             padding: 0;
@@ -79,7 +80,69 @@
     }
 }
 
-#signinModal {
+#authModal {
+    .modal-action-container {
+        display: none !important;
+        &.active {
+            display: block !important;
+        }
+    }
+    .forgot-password-container {
+        padding: 30% 18% 30%;
+        .forgot-password-title {
+            font-size: 38px;
+            line-height: 38px;
+            margin-bottom: 8px;
+            text-align: center;
+            padding-bottom: 40px;
+        }
+        .forgot-password-form   {
+            input {
+                display: block;
+                width: 100%;
+                background: #FFF;
+                border: none;
+                font-size: 16px;
+                line-height: 21px;
+                padding-bottom: 5px;
+                border-bottom: 1px solid #ababab;
+
+                &:-webkit-autofill,
+                &:-webkit-autofill:hover,
+                &:-webkit-autofill:focus,
+                &:-webkit-autofill:active {
+                    -webkit-box-shadow: 0 0 0 30px white inset !important;
+                }
+
+                &:focus,
+                &:visited {
+                    outline: 0;
+                }
+            }
+
+            .form-group {
+                margin: 8px 0;
+                padding-top: 18px;
+            }
+            button.btn-confirm-email {
+                border: 1px solid #eaeaea;
+                background: #eaeaea;
+                color: #ababab;
+                padding: 12px 20px;
+                letter-spacing: .1em;
+                font-size: 13px;
+                text-transform: uppercase;
+                line-height: 14px;
+                display: inline-block;
+                transition: 0.3s ease;
+                &:hover {
+                    background: #b37152;
+                    border-color: #b37152;
+                    color: #FFF;
+                }
+            }
+        }
+    }
     .signin-container {
         padding: 14% 18% 35px;
 
@@ -265,6 +328,10 @@
                 background: none;
                 font-size: 18px;
                 line-height: 28px;
+                cursor: pointer;
+                &:focus, &:visited {
+                    outline: 0;
+                }
             }
         }
 
@@ -291,11 +358,8 @@
             }
         }
     }
-}
-
-#signupModal {
     .signup-container {
-        padding: 14% 18% 35px;
+        padding: 8% 18% 35px;
 
         .signup-title {
             text-transform: uppercase;
@@ -314,7 +378,10 @@
 
         .signup-form {
             padding-top: 18px;
-
+            .form-group {
+                margin: 8px 0;
+                padding-top: 18px;
+            }
             input {
                 display: block;
                 width: 100%;
@@ -414,7 +481,7 @@
                     color: #707070;
                     line-height: 20px;
                     font-size: 15px;
-                    padding-left: 24px;
+                    padding-left: 30px;
 
                     &::after,
                     &::before {
@@ -457,6 +524,10 @@
                 font-size: 18px;
                 line-height: 28px;
                 cursor: pointer;
+                &:focus, &:visited {
+                    outline: 0;
+                    
+                }
             }
         }
 
@@ -503,6 +574,14 @@
     }
 }
 
+#signupModal {
+    .modal-dialog {
+        height: 100vh;
+        margin: 0 auto;
+    }
+    
+}
+
 @media (max-width: 1023px) {
     .modal {
         .modal-dialog {
@@ -510,6 +589,117 @@
             .modal-content {
                 .signin-container, .signup-container {
                     padding: 30px 20px !important;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 767px) {
+    #authModal {
+        .modal-dialog {
+            width: 100vw;
+            height: 100vh;
+            .modal-content {
+                height: 100%;
+                width: 100%;
+                button.close {
+                    right: 15px;
+                    top: 10px;
+                    z-index: 999;
+                }
+                .modal-visual-container {
+                    height: 100vh;
+                    width: 100vw;
+                    align-items: flex-end;
+                    display: none;
+                    &.active {
+                        display: flex;
+                    }
+                    .visual-content {
+                        width: 100%;
+                        padding: 20px;
+                        max-width: 100%;
+                        
+                        .visual-content-mobile {
+                            button {
+                                width: 100%;
+                                margin-top: 20px;
+                                border: none;
+                                border-radius: none;
+                                padding: 21px 40px;
+                                font-size: 14px;
+                                line-height: 16px;
+                                letter-spacing: 1.5px;
+                                text-transform: uppercase;
+                                background: none;
+                                font-weight: 500;
+                            }
+                            button.visual-signup-btn {
+                                background: #FFF;
+                                color: #2b2b2b;
+                            }
+                            button.visual-login-btn {
+                                background: #2b2b2b;
+                                color: #FFF;
+                            }
+                        }
+                    }
+                }
+                .modal-action-container {
+                    display: none;
+                }
+                .forgot-password-container {
+                    padding: 50px 20px;
+                }
+                .signin-container, .signup-container {
+                    padding: 50px 20px !important;
+                    position: relative;
+                    .signin-form {
+                        display: flex;
+                        flex-flow: column-reverse;
+                        & > * {
+                            flex: 0 0 100%;
+                        }
+                        .signin-recommended {
+                            display: none;
+                        }
+                        .signin-register {
+                            position: absolute;
+                            top: 10px;
+                            left: 20px;
+                            padding: 0;
+                            button {
+                                line-height: 16px;
+                                border-radius: 20px;
+                                border: 1px solid #ababab;
+                                color: #ababab;
+                                padding: 6px 10px;
+                                font-size: 14px;
+                            }
+                        }
+                        
+                    }
+                    .signup-form-area {
+                        display: flex;
+                        flex-flow: column-reverse;
+                        & > * {
+                            flex: 0 0 100%;
+                        }
+                    }
+                    .signup-login {
+                        position: absolute;
+                        top: 10px;
+                        left: 20px;
+                        padding: 0;
+                        button {
+                            line-height: 16px;
+                            border-radius: 20px;
+                            border: 1px solid #ababab;
+                            color: #ababab;
+                            padding: 6px 10px;
+                            font-size: 14px;
+                        }
+                    }
                 }
             }
         }

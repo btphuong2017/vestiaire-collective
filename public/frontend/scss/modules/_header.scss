@@ -1,9 +1,6 @@
 // ===============================
 // @First Line (Logo + User Accesss)
 // ===============================
-body {
-    height: 4000px;
-}
 
 body.safariNoScroll {
     overflow: hidden;
@@ -14,7 +11,7 @@ header {
     background-color: #FFF;
     margin-top: 40px;
     z-index: 99;
-
+    width: 100vw;
     &.fixed {
         position: fixed;
         top: 0;
@@ -114,6 +111,7 @@ body.safariNoScroll header .overflow-background {
 
                 span.access-item-text {
                     display: none;
+                    padding-top: 5px;
                     font-size: 12px;
                     width: 100%;
                     text-align: center;
@@ -412,7 +410,7 @@ body.safariNoScroll header .overflow-background {
     justify-content: space-between;
     height: 62px;
     position: relative;
-
+    border-bottom: 1px solid #eaeaea;
     .header-button-close {
         display: none;
     }
@@ -723,7 +721,7 @@ body.safariNoScroll header .overflow-background {
             .user-access-item.access-user {
                 .btn-avatar {
                     width: auto;
-
+                    height: 50px;
                     svg {
                         height: 26px;
                         width: auto;
@@ -874,7 +872,9 @@ body.safariNoScroll header .overflow-background {
         &.active {
             transform: translate(0, 0);
         }
-
+        .container {
+            padding: 0;
+        }
         .header-button-close {
             display: block;
             position: absolute;
@@ -925,7 +925,7 @@ body.safariNoScroll header .overflow-background {
         .header-searchbar .searchbar-mobile {
             display: block;
             margin-top: 62px;
-
+            padding: 0 20px;
             .searchbar-mobile-button {
                 display: block;
                 width: 100%;
@@ -955,17 +955,13 @@ body.safariNoScroll header .overflow-background {
 
 
         .header-nav {
-            margin-left: -15px;
-            margin-right: -15px;
-
             .main-nav {
                 .nav-item {
                     display: block;
                     width: 100%;
                     border-bottom: 1px solid #eaeaea;
-                    padding-left: 15px;
-                    padding-right: 15px;
-
+                    padding-left: 20px;
+                    // padding-right: 20px;
                     &>a {
                         padding-bottom: 19px;
                         font-size: 18px;
@@ -975,7 +971,7 @@ body.safariNoScroll header .overflow-background {
                         display: none;
                         height: 0;
                         padding: 0;
-                        padding-left: 15px;
+                        padding-left: 30px;
                         position: static;
                         border-bottom: none;
                         transition: 0.3s ease;
@@ -987,8 +983,8 @@ body.safariNoScroll header .overflow-background {
                             border-bottom: 1px solid #eaeaea;
 
                             .sub-nav-title {
-                                display: block;
-                                width: 100%;
+                                display: inline-block;
+                                width: auto;
                                 color: #000;
                                 font-weight: normal;
                                 text-transform: none;
@@ -1002,7 +998,7 @@ body.safariNoScroll header .overflow-background {
 
                             .child-nav {
                                 display: none;
-                                padding-left: 15px;
+                                padding-left: 30px;
                                 height: 0;
                                 transition: 0.3s ease;
 

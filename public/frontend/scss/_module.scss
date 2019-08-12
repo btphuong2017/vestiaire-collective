@@ -14,6 +14,8 @@
 @import './modules/button';
 @import './modules/container';
 @import './modules/modal';
+@import './modules/input-label';
+@import './modules/section';
 
 // ===========
 // @Home
@@ -39,7 +41,10 @@
 // @Detail
 // ==========
 
+
 @import './modules/product-detail';
 @import './modules/product-slideshow';
+@import './modules/product-infos';
+@import './modules/product-more-detail';
 @import './modules/product-offer';
 @import './modules/product-may-alse-like';
