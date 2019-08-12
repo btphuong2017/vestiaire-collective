@@ -7,8 +7,8 @@
   		<img src="frontend/images/banner1_home.jpg" class="img-responsive">
   		<div class="title_banner">
   			<div class="content_title">
-  					<p class="tit"><b>Our evening looks</b></p>
-  					<p class="upcase">Discover Our Selection</p>
+  					<h5 class="tit"><b>Our evening looks</b></h5>
+  					<h6 class="upcase">Discover Our Selection</h6>
   			</div>
   		</div>
   </div>
@@ -16,8 +16,8 @@
   		<img src="frontend/images/banner2_home.jpg" class="img-responsive">
   		<div class="title_banner">
   			<div class="content_title">
-  					<p class="tit"><b> Summer: we just can’t get enough </b></p>
-  					<p class="upcase">Shop the selection</p>
+  					<h5 class="tit"><b> Summer: we just can’t get enough </b></h5>
+  					<h6 class="upcase">Shop the selection</h6>
   			</div>
   		</div>
   </div>

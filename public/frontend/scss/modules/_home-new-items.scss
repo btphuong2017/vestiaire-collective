@@ -127,3 +127,21 @@
     display:none;
 }
 }
+.product_trending ul.products {
+    margin-bottom:0px !important;
+}
+
+.row_welove{
+    display:flex;
+    flex-wrap: wrap;
+}
+.contain_welove{
+   margin-left: -10px !important;
+   margin-right: -10px !important;
+}
+.single_product{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
