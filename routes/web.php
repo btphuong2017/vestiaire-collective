@@ -18,5 +18,5 @@ Route::get('/category', function () {
     return view('frontend.category.category');
 });
 Route::get('/detail', function () {
-    return view('frontend.detail.detail');
+    return view('frontend.detail.index');
 });

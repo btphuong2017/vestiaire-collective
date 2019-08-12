@@ -1,0 +1,41 @@
+.breadcrumb-container {
+    padding-top: 30px;
+    width: 100%;
+    order: 1;
+
+    .breadcrumb-list {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-flow: row nowrap;
+        min-height: 34px;
+        line-height: 16px;
+        font-size: 13px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        .breadcrumb-item {
+            display: flex;
+            align-items: center;
+            &::before {
+                content: '';
+                display: inline-block;
+                margin: 0 8px;
+                vertical-align: middle;
+                background-image: url('./images/angle-right.svg');
+                background-size: cover;
+                width: 7px;
+                height: 12px;
+            }
+
+            &:first-child::before {
+                display: none;
+            }
+
+            .breadcrumb-link {
+                color: #707070;
+            }
+        }
+    }
+}

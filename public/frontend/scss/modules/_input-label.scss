@@ -1,0 +1,21 @@
+
+.input-label-text {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    font-size: 18px;
+    line-height: 21px;
+    transform: translate(0, -50%);
+    color: #ababab;
+    transition: 0.3s ease;
+}
+
+.input-label-text.active {
+    top: 8px;
+    font-size: 14px;
+    color: #e51a32;
+}
+.input-label.active {
+    border-color: #e51a32 !important;
+
+}

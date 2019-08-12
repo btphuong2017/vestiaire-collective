@@ -1,0 +1,158 @@
+.section-more-detail {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    .more-detail-title {
+        font-size: 80px;
+        line-height: 80px;
+        letter-spacing: -.025em;
+        margin-bottom: 60px;
+    }
+    .seller-detail {
+        display: flex;
+        flex-flow: row wrap;
+        .seller-block, .seller-description, .product-reassurance {
+            flex: 0 0 auto;
+        }
+        
+        .seller-block {
+            background-color: #fafafa;
+            padding: 50px 24px;
+            text-align: center;
+            color: #2b2b2b;
+            text-decoration: none;
+            .seller-avatar {
+                height: 68px;
+                width: 68px;
+                margin: 0 auto;
+                margin-bottom: 8px;
+                border-radius: 50%;
+                object-fit: cover;
+                object-position: center;
+            }
+            .seller-name {
+                font-size: 24px;
+                line-height: 30px;
+                margin-bottom: 8px;
+            }
+            .seller-infos {
+                font-size: 15px;
+                line-height: 20px;
+                color: #ababab;
+                margin-bottom: 12px;
+                span {
+                    display: block;
+                    margin-top: 12px;
+                    margin-bottom: 20px;
+                    color: #de8962;
+                }
+            }
+            .seller-follow {
+                button {
+                    background: none;
+                    border: none;
+                    color: #de8962;
+                    padding: 6px 10px;
+                    border-radius: 3px;
+                    font-size: 12px;
+                    line-height: 12px;
+                    border: 1px solid #de8962;
+                    letter-spacing: .2em;
+                    transition: 0.3s ease;
+                    &:hover {
+                        color: #cc815e;
+                        border-color: #cc815e;
+                        background: #FFF;
+                    }
+                }
+            }
+        }
+        .seller-description-container {
+            flex-grow: 1;
+            margin: 0 4%;
+            .seller-description {
+                p {
+                    font-size: 18px;
+                    line-height: 28px;
+                    margin-bottom: 24px;
+                    white-space: pre-wrap;
+                }
+                button {
+                    text-transform: uppercase;
+                    font-size: 13px;
+                    letter-spacing: .15em;
+                    color: #707070;
+                    background: none;
+                    border: none;
+                    &:hover {
+                        color: #2b2b2b;
+                    }
+                    &:active, &:focus {
+                        outline: 0;
+                    }
+                }
+            }
+            .seller-general-information {
+                margin-top: 30px;
+                border-top: 1px solid #eaeaea;
+                padding-top: 30px;
+                .general-information-title {
+                    font-size: 13px;
+                    letter-spacing: .15em;
+                    color: #707070;
+                    text-transform: uppercase;
+                    margin-bottom: 10px;
+                }
+                ul {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                    margin-bottom: 30px;
+                    li {
+                        font-size: 18px;
+                        position: relative;
+                        padding-left: 15px;
+                    }
+                    li::before {
+                        content: '-';
+                        display: inline-block;
+                        position: absolute;
+                        left: 0;
+                        top: 50%;
+                        transform: translate(0, -50%);
+                    }
+                }
+                button {
+                    position: relative;
+                    display: inline-block;
+                    background: none;
+                    border: none;
+                    color: #de8962;
+                    font-size: 18px;
+                    line-height: 28px;
+                    padding-left: 30px;
+                    svg {
+                        position: absolute;
+                        left: 0;
+                        top:50%;
+                        transform: translate(0, -50%);
+                        height: 24px;
+                        width: 24px;
+                        path {
+                            fill: #FFF;
+                        }
+                    }
+                    p {
+                        margin: 0;
+                    }
+                    &:active, &:visited, &:focus {
+                        outline: 0;
+                    }
+                }
+            }
+        }
+        .product-reassurance {
+            width: 30%;
+            max-width: 340px;
+        }
+    }
+}
