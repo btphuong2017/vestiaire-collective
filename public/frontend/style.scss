@@ -1,5 +1,5 @@
 body {
-  overflow-x: hidden;
+  height: 4000px;
 }
 
 body.safariNoScroll {
@@ -11,7 +11,6 @@ header {
   background-color: #FFF;
   margin-top: 40px;
   z-index: 99;
-  width: 100vw;
 }
 header.fixed {
   position: fixed;
@@ -104,7 +103,6 @@ body.safariNoScroll header .overflow-background {
 }
 .header-firstline .header-user-access .user-access-item .btn span.access-item-text {
   display: none;
-  padding-top: 5px;
   font-size: 12px;
   width: 100%;
   text-align: center;
@@ -343,7 +341,6 @@ body.safariNoScroll header .overflow-background {
   justify-content: space-between;
   height: 62px;
   position: relative;
-  border-bottom: 1px solid #eaeaea;
 }
 .header-secondline .header-button-close {
   display: none;
@@ -604,7 +601,6 @@ body.safariNoScroll header .overflow-background {
   }
   .header-firstline .header-user-access .user-access-item.access-user .btn-avatar {
     width: auto;
-    height: 50px;
   }
   .header-firstline .header-user-access .user-access-item.access-user .btn-avatar svg {
     height: 26px;
@@ -727,9 +723,6 @@ body.safariNoScroll header .overflow-background {
   .header-secondline.active {
     transform: translate(0, 0);
   }
-  .header-secondline .container {
-    padding: 0;
-  }
   .header-secondline .header-button-close {
     display: block;
     position: absolute;
@@ -773,7 +766,6 @@ body.safariNoScroll header .overflow-background {
   .header-secondline .header-searchbar .searchbar-mobile {
     display: block;
     margin-top: 62px;
-    padding: 0 20px;
   }
   .header-secondline .header-searchbar .searchbar-mobile .searchbar-mobile-button {
     display: block;
@@ -797,11 +789,16 @@ body.safariNoScroll header .overflow-background {
     color: #ababab;
     vertical-align: inherit;
   }
+  .header-secondline .header-nav {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
   .header-secondline .header-nav .main-nav .nav-item {
     display: block;
     width: 100%;
     border-bottom: 1px solid #eaeaea;
-    padding-left: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
   .header-secondline .header-nav .main-nav .nav-item > a {
     padding-bottom: 19px;
@@ -811,7 +808,7 @@ body.safariNoScroll header .overflow-background {
     display: none;
     height: 0;
     padding: 0;
-    padding-left: 30px;
+    padding-left: 15px;
     position: static;
     border-bottom: none;
     transition: 0.3s ease;
@@ -823,8 +820,8 @@ body.safariNoScroll header .overflow-background {
     border-bottom: 1px solid #eaeaea;
   }
   .header-secondline .header-nav .main-nav .nav-item .sub-nav .sub-nav-item .sub-nav-title {
-    display: inline-block;
-    width: auto;
+    display: block;
+    width: 100%;
     color: #000;
     font-weight: normal;
     text-transform: none;
@@ -836,7 +833,7 @@ body.safariNoScroll header .overflow-background {
   }
   .header-secondline .header-nav .main-nav .nav-item .sub-nav .sub-nav-item .child-nav {
     display: none;
-    padding-left: 30px;
+    padding-left: 15px;
     height: 0;
     transition: 0.3s ease;
   }
@@ -1032,44 +1029,6 @@ body.safariNoScroll header .overflow-background {
     transform: translate(0, 50vh);
   }
 }
-.breadcrumb-container {
-  padding-top: 30px;
-  width: 100%;
-  order: 1;
-}
-.breadcrumb-container .breadcrumb-list {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  flex-flow: row nowrap;
-  min-height: 34px;
-  line-height: 16px;
-  font-size: 13px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.breadcrumb-container .breadcrumb-list .breadcrumb-item {
-  display: flex;
-  align-items: center;
-}
-.breadcrumb-container .breadcrumb-list .breadcrumb-item::before {
-  content: "";
-  display: inline-block;
-  margin: 0 8px;
-  vertical-align: middle;
-  background-image: url("./images/angle-right.svg");
-  background-size: cover;
-  width: 7px;
-  height: 12px;
-}
-.breadcrumb-container .breadcrumb-list .breadcrumb-item:first-child::before {
-  display: none;
-}
-.breadcrumb-container .breadcrumb-list .breadcrumb-item .breadcrumb-link {
-  color: #707070;
-}
-
 footer.footer .footer-body {
   background-color: #1a1a1a;
   padding: 70px 20px 30px 20px;
@@ -1613,23 +1572,6 @@ footer.footer .footer-bottom .footer-bottom-content .footer-bottom-content-right
   -webkit-transform: translateY(-10px) !important;
 }
 
-@font-face {
-  font-family: "quarto";
-  src: url("../../fonts/Quarto.woff2");
-}
-@font-face {
-  font-family: "bold-quarto";
-  src: url("../../fonts/Bold-Quarto.woff2");
-}
-@font-face {
-  font-family: "italic-quarto";
-  src: url("../../fonts/Italic-Quarto.woff2");
-}
-body {
-  font-family: "HK Grotesk", sans-serif;
-  font-weight: 400;
-}
-
 .btn {
   border-radius: 0px;
   text-transform: uppercase;
@@ -1665,7 +1607,6 @@ body {
 .modal .modal-dialog {
   max-width: 1280px;
   margin: 0 auto;
-  height: 100vh;
 }
 .modal .modal-dialog .modal-content {
   position: relative;
@@ -1735,70 +1676,17 @@ body {
   font-size: 16px;
 }
 
-#authModal .modal-action-container {
-  display: none !important;
-}
-#authModal .modal-action-container.active {
-  display: block !important;
-}
-#authModal .forgot-password-container {
-  padding: 30% 18% 30%;
-}
-#authModal .forgot-password-container .forgot-password-title {
-  font-size: 38px;
-  line-height: 38px;
-  margin-bottom: 8px;
-  text-align: center;
-  padding-bottom: 40px;
-}
-#authModal .forgot-password-container .forgot-password-form input {
-  display: block;
-  width: 100%;
-  background: #FFF;
-  border: none;
-  font-size: 16px;
-  line-height: 21px;
-  padding-bottom: 5px;
-  border-bottom: 1px solid #ababab;
-}
-#authModal .forgot-password-container .forgot-password-form input:-webkit-autofill, #authModal .forgot-password-container .forgot-password-form input:-webkit-autofill:hover, #authModal .forgot-password-container .forgot-password-form input:-webkit-autofill:focus, #authModal .forgot-password-container .forgot-password-form input:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0 30px white inset !important;
-}
-#authModal .forgot-password-container .forgot-password-form input:focus, #authModal .forgot-password-container .forgot-password-form input:visited {
-  outline: 0;
-}
-#authModal .forgot-password-container .forgot-password-form .form-group {
-  margin: 8px 0;
-  padding-top: 18px;
-}
-#authModal .forgot-password-container .forgot-password-form button.btn-confirm-email {
-  border: 1px solid #eaeaea;
-  background: #eaeaea;
-  color: #ababab;
-  padding: 12px 20px;
-  letter-spacing: 0.1em;
-  font-size: 13px;
-  text-transform: uppercase;
-  line-height: 14px;
-  display: inline-block;
-  transition: 0.3s ease;
-}
-#authModal .forgot-password-container .forgot-password-form button.btn-confirm-email:hover {
-  background: #b37152;
-  border-color: #b37152;
-  color: #FFF;
-}
-#authModal .signin-container {
+#signinModal .signin-container {
   padding: 14% 18% 35px;
 }
-#authModal .signin-container .signin-title {
+#signinModal .signin-container .signin-title {
   font-size: 38px;
   line-height: 38px;
   margin-bottom: 8px;
   text-align: center;
   padding-bottom: 40px;
 }
-#authModal .signin-container .signin-form input {
+#signinModal .signin-container .signin-form input {
   display: block;
   width: 100%;
   background: #FFF;
@@ -1808,17 +1696,17 @@ body {
   padding-bottom: 5px;
   border-bottom: 1px solid #ababab;
 }
-#authModal .signin-container .signin-form input:-webkit-autofill, #authModal .signin-container .signin-form input:-webkit-autofill:hover, #authModal .signin-container .signin-form input:-webkit-autofill:focus, #authModal .signin-container .signin-form input:-webkit-autofill:active {
+#signinModal .signin-container .signin-form input:-webkit-autofill, #signinModal .signin-container .signin-form input:-webkit-autofill:hover, #signinModal .signin-container .signin-form input:-webkit-autofill:focus, #signinModal .signin-container .signin-form input:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
-#authModal .signin-container .signin-form input:focus, #authModal .signin-container .signin-form input:visited {
+#signinModal .signin-container .signin-form input:focus, #signinModal .signin-container .signin-form input:visited {
   outline: 0;
 }
-#authModal .signin-container .signin-form .form-group {
+#signinModal .signin-container .signin-form .form-group {
   margin: 8px 0;
   padding-top: 18px;
 }
-#authModal .signin-container .signin-form .signin-options {
+#signinModal .signin-container .signin-form .signin-options {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1828,14 +1716,14 @@ body {
   margin-bottom: 36px;
   color: #707070;
 }
-#authModal .signin-container .signin-form .signin-options .signin-checkbox,
-#authModal .signin-container .signin-form .signin-options .signin-button-forgot {
+#signinModal .signin-container .signin-form .signin-options .signin-checkbox,
+#signinModal .signin-container .signin-form .signin-options .signin-button-forgot {
   flex: 0 0 50%;
 }
-#authModal .signin-container .signin-form .signin-options .signin-checkbox {
+#signinModal .signin-container .signin-form .signin-options .signin-checkbox {
   cursor: pointer;
 }
-#authModal .signin-container .signin-form .signin-options .signin-checkbox label {
+#signinModal .signin-container .signin-form .signin-options .signin-checkbox label {
   position: relative;
   color: #707070;
   line-height: 20px;
@@ -1843,7 +1731,7 @@ body {
   padding-left: 24px;
   cursor: pointer;
 }
-#authModal .signin-container .signin-form .signin-options .signin-checkbox label::after, #authModal .signin-container .signin-form .signin-options .signin-checkbox label::before {
+#signinModal .signin-container .signin-form .signin-options .signin-checkbox label::after, #signinModal .signin-container .signin-form .signin-options .signin-checkbox label::before {
   content: "";
   display: inline-block;
   position: absolute;
@@ -1853,30 +1741,30 @@ body {
   top: 50%;
   transform: translate(0, -50%);
 }
-#authModal .signin-container .signin-form .signin-options .signin-checkbox label::before {
+#signinModal .signin-container .signin-form .signin-options .signin-checkbox label::before {
   background: #FFF;
   border: 1px solid #000;
 }
-#authModal .signin-container .signin-form .signin-options .signin-checkbox label::after {
+#signinModal .signin-container .signin-form .signin-options .signin-checkbox label::after {
   display: none;
   background: #cc815e;
   border: 1px solid #cc815e;
 }
-#authModal .signin-container .signin-form .signin-options .signin-checkbox input:checked ~ label:after {
+#signinModal .signin-container .signin-form .signin-options .signin-checkbox input:checked ~ label:after {
   display: inline-block;
 }
-#authModal .signin-container .signin-form .signin-options .signin-button-forgot {
+#signinModal .signin-container .signin-form .signin-options .signin-button-forgot {
   height: 28px;
   text-align: right;
 }
-#authModal .signin-container .signin-form .signin-options .signin-button-forgot .signin-forgot-password {
+#signinModal .signin-container .signin-form .signin-options .signin-button-forgot .signin-forgot-password {
   background: none;
   border: none;
   color: #707070;
   font-size: 15px;
   cursor: pointer;
 }
-#authModal .signin-container .signin-form button.signin-submit {
+#signinModal .signin-container .signin-form button.signin-submit {
   border: 1px solid #eaeaea;
   background: #eaeaea;
   color: #ababab;
@@ -1889,19 +1777,19 @@ body {
   width: 100%;
   transition: 0.3s ease;
 }
-#authModal .signin-container .signin-form button.signin-submit:hover {
+#signinModal .signin-container .signin-form button.signin-submit:hover {
   background: #b37152;
   border-color: #b37152;
   color: #FFF;
 }
-#authModal .signin-container .signin-or {
+#signinModal .signin-container .signin-or {
   display: block;
   text-align: center;
   line-height: 16px;
   font-size: 14px;
   padding: 21px 0;
 }
-#authModal .signin-container .signin-facebook .signin-button-facebook {
+#signinModal .signin-container .signin-facebook .signin-button-facebook {
   font-size: 14px;
   color: #FFF;
   background: #3865a0;
@@ -1911,44 +1799,40 @@ body {
   width: 100%;
   transition: 0.3s ease;
 }
-#authModal .signin-container .signin-facebook .signin-button-facebook:hover {
+#signinModal .signin-container .signin-facebook .signin-button-facebook:hover {
   background: #2b4d7a;
   border-color: #2b4d7a;
 }
-#authModal .signin-container .signin-facebook .signin-button-facebook .signin-button-icon {
+#signinModal .signin-container .signin-facebook .signin-button-facebook .signin-button-icon {
   padding: 18px 19px 19px;
   flex: 0 0 auto;
 }
-#authModal .signin-container .signin-facebook .signin-button-facebook .signin-button-icon svg {
+#signinModal .signin-container .signin-facebook .signin-button-facebook .signin-button-icon svg {
   height: 16px;
 }
-#authModal .signin-container .signin-facebook .signin-button-facebook .signin-button-icon svg path {
+#signinModal .signin-container .signin-facebook .signin-button-facebook .signin-button-icon svg path {
   height: 16px;
   fill: #FFF;
 }
-#authModal .signin-container .signin-facebook .signin-button-facebook .signin-button-text {
+#signinModal .signin-container .signin-facebook .signin-button-facebook .signin-button-text {
   flex: 0 0 auto;
   flex-grow: 1;
   text-align: center;
   padding: 18px 0 19px;
   border-left: 1px solid #FFF;
 }
-#authModal .signin-container .signin-register {
+#signinModal .signin-container .signin-register {
   padding-top: 40px;
 }
-#authModal .signin-container .signin-register .signin-button-register {
+#signinModal .signin-container .signin-register .signin-button-register {
   margin: 0 auto;
   display: block;
   border: none;
   background: none;
   font-size: 18px;
   line-height: 28px;
-  cursor: pointer;
 }
-#authModal .signin-container .signin-register .signin-button-register:focus, #authModal .signin-container .signin-register .signin-button-register:visited {
-  outline: 0;
-}
-#authModal .signin-container .signin-recommended {
+#signinModal .signin-container .signin-recommended {
   font-size: 12px;
   line-height: 15px;
   margin-top: 24px;
@@ -1958,40 +1842,37 @@ body {
   justify-content: center;
   align-items: center;
 }
-#authModal .signin-container .signin-recommended span {
+#signinModal .signin-container .signin-recommended span {
   text-align: center;
 }
-#authModal .signin-container .signin-recommended span svg {
+#signinModal .signin-container .signin-recommended span svg {
   height: 15px;
   width: 41px;
   margin: 0 5px;
   display: inline-block;
   color: #ababab;
 }
-#authModal .signup-container {
-  padding: 8% 18% 35px;
+
+#signupModal .signup-container {
+  padding: 14% 18% 35px;
 }
-#authModal .signup-container .signup-title {
+#signupModal .signup-container .signup-title {
   text-transform: uppercase;
   font-size: 38px;
   line-height: 38px;
   margin-bottom: 8px;
   text-align: center;
 }
-#authModal .signup-container .signup-discount {
+#signupModal .signup-container .signup-discount {
   margin-bottom: 35px;
   font-size: 18px;
   line-height: 28px;
   text-align: center;
 }
-#authModal .signup-container .signup-form {
+#signupModal .signup-container .signup-form {
   padding-top: 18px;
 }
-#authModal .signup-container .signup-form .form-group {
-  margin: 8px 0;
-  padding-top: 18px;
-}
-#authModal .signup-container .signup-form input {
+#signupModal .signup-container .signup-form input {
   display: block;
   width: 100%;
   background: #FFF;
@@ -2001,15 +1882,15 @@ body {
   padding-bottom: 5px;
   border-bottom: 1px solid #ababab;
 }
-#authModal .signup-container .signup-form input:focus, #authModal .signup-container .signup-form input:visited {
+#signupModal .signup-container .signup-form input:focus, #signupModal .signup-container .signup-form input:visited {
   outline: 0;
 }
-#authModal .signup-container .signup-form span {
+#signupModal .signup-container .signup-form span {
   padding: 8px 0 36px;
   display: block;
   color: #707070;
 }
-#authModal .signup-container .signup-form button {
+#signupModal .signup-container .signup-form button {
   border: 1px solid #eaeaea;
   background: #eaeaea;
   color: #ababab;
@@ -2022,19 +1903,19 @@ body {
   width: 100%;
   transition: 0.3s ease;
 }
-#authModal .signup-container .signup-form button:hover {
+#signupModal .signup-container .signup-form button:hover {
   background: #b37152;
   border-color: #b37152;
   color: #FFF;
 }
-#authModal .signup-container .signup-or {
+#signupModal .signup-container .signup-or {
   display: block;
   text-align: center;
   line-height: 16px;
   font-size: 14px;
   padding: 21px 0;
 }
-#authModal .signup-container .signup-facebook .signup-button-facebook {
+#signupModal .signup-container .signup-facebook .signup-button-facebook {
   font-size: 14px;
   color: #FFF;
   background: #3865a0;
@@ -2044,42 +1925,42 @@ body {
   width: 100%;
   transition: 0.3s ease;
 }
-#authModal .signup-container .signup-facebook .signup-button-facebook:hover {
+#signupModal .signup-container .signup-facebook .signup-button-facebook:hover {
   background: #2b4d7a;
   border-color: #2b4d7a;
 }
-#authModal .signup-container .signup-facebook .signup-button-facebook .signup-button-icon {
+#signupModal .signup-container .signup-facebook .signup-button-facebook .signup-button-icon {
   padding: 18px 19px 19px;
   flex: 0 0 auto;
 }
-#authModal .signup-container .signup-facebook .signup-button-facebook .signup-button-icon svg {
+#signupModal .signup-container .signup-facebook .signup-button-facebook .signup-button-icon svg {
   height: 16px;
 }
-#authModal .signup-container .signup-facebook .signup-button-facebook .signup-button-icon svg path {
+#signupModal .signup-container .signup-facebook .signup-button-facebook .signup-button-icon svg path {
   height: 16px;
   fill: #FFF;
 }
-#authModal .signup-container .signup-facebook .signup-button-facebook .signup-button-text {
+#signupModal .signup-container .signup-facebook .signup-button-facebook .signup-button-text {
   flex: 0 0 auto;
   flex-grow: 1;
   text-align: center;
   padding: 18px 0 19px;
   border-left: 1px solid #FFF;
 }
-#authModal .signup-container .signup-register-offer {
+#signupModal .signup-container .signup-register-offer {
   margin-top: 18px;
 }
-#authModal .signup-container .signup-register-offer .signup-checkbox {
+#signupModal .signup-container .signup-register-offer .signup-checkbox {
   cursor: pointer;
 }
-#authModal .signup-container .signup-register-offer .signup-checkbox label {
+#signupModal .signup-container .signup-register-offer .signup-checkbox label {
   position: relative;
   color: #707070;
   line-height: 20px;
   font-size: 15px;
-  padding-left: 30px;
+  padding-left: 24px;
 }
-#authModal .signup-container .signup-register-offer .signup-checkbox label::after, #authModal .signup-container .signup-register-offer .signup-checkbox label::before {
+#signupModal .signup-container .signup-register-offer .signup-checkbox label::after, #signupModal .signup-container .signup-register-offer .signup-checkbox label::before {
   content: "";
   display: inline-block;
   position: absolute;
@@ -2089,22 +1970,22 @@ body {
   top: 50%;
   transform: translate(0, -50%);
 }
-#authModal .signup-container .signup-register-offer .signup-checkbox label::before {
+#signupModal .signup-container .signup-register-offer .signup-checkbox label::before {
   background: #FFF;
   border: 1px solid #000;
 }
-#authModal .signup-container .signup-register-offer .signup-checkbox label::after {
+#signupModal .signup-container .signup-register-offer .signup-checkbox label::after {
   display: none;
   background: #cc815e;
   border: 1px solid #cc815e;
 }
-#authModal .signup-container .signup-register-offer .signup-checkbox input:checked ~ label:after {
+#signupModal .signup-container .signup-register-offer .signup-checkbox input:checked ~ label:after {
   display: inline-block;
 }
-#authModal .signup-container .signup-login {
+#signupModal .signup-container .signup-login {
   padding-top: 40px;
 }
-#authModal .signup-container .signup-login .signup-button-login {
+#signupModal .signup-container .signup-login .signup-button-login {
   margin: 0 auto;
   display: block;
   border: none;
@@ -2113,10 +1994,7 @@ body {
   line-height: 28px;
   cursor: pointer;
 }
-#authModal .signup-container .signup-login .signup-button-login:focus, #authModal .signup-container .signup-login .signup-button-login:visited {
-  outline: 0;
-}
-#authModal .signup-container .signup-recommended {
+#signupModal .signup-container .signup-recommended {
   font-size: 12px;
   line-height: 15px;
   margin-top: 24px;
@@ -2126,17 +2004,17 @@ body {
   justify-content: center;
   align-items: center;
 }
-#authModal .signup-container .signup-recommended span {
+#signupModal .signup-container .signup-recommended span {
   text-align: center;
 }
-#authModal .signup-container .signup-recommended span svg {
+#signupModal .signup-container .signup-recommended span svg {
   height: 15px;
   width: 41px;
   margin: 0 5px;
   display: inline-block;
   color: #ababab;
 }
-#authModal .signup-container .signup-learnmore {
+#signupModal .signup-container .signup-learnmore {
   font-size: 12px;
   line-height: 15px;
   margin-top: 24px;
@@ -2146,16 +2024,11 @@ body {
   justify-content: center;
   align-items: center;
 }
-#authModal .signup-container .signup-learnmore a {
+#signupModal .signup-container .signup-learnmore a {
   color: #ababab;
   text-decoration-style: solid;
   text-decoration-color: #ababab;
   text-decoration-line: underline;
-}
-
-#signupModal .modal-dialog {
-  height: 100vh;
-  margin: 0 auto;
 }
 
 @media (max-width: 1023px) {
@@ -2167,156 +2040,10 @@ body {
   }
 }
 @media (max-width: 767px) {
-  #authModal .modal-dialog {
-    width: 100vw;
-    height: 100vh;
-  }
-  #authModal .modal-dialog .modal-content {
-    height: 100%;
-    width: 100%;
-  }
-  #authModal .modal-dialog .modal-content button.close {
-    right: 15px;
-    top: 10px;
-    z-index: 999;
-  }
-  #authModal .modal-dialog .modal-content .modal-visual-container {
-    height: 100vh;
-    width: 100vw;
-    align-items: flex-end;
+  #signinModal .modal-dialog .modal-content .modal-action-container {
     display: none;
   }
-  #authModal .modal-dialog .modal-content .modal-visual-container.active {
-    display: flex;
-  }
-  #authModal .modal-dialog .modal-content .modal-visual-container .visual-content {
-    width: 100%;
-    padding: 20px;
-    max-width: 100%;
-  }
-  #authModal .modal-dialog .modal-content .modal-visual-container .visual-content .visual-content-mobile button {
-    width: 100%;
-    margin-top: 20px;
-    border: none;
-    border-radius: none;
-    padding: 21px 40px;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    background: none;
-    font-weight: 500;
-  }
-  #authModal .modal-dialog .modal-content .modal-visual-container .visual-content .visual-content-mobile button.visual-signup-btn {
-    background: #FFF;
-    color: #2b2b2b;
-  }
-  #authModal .modal-dialog .modal-content .modal-visual-container .visual-content .visual-content-mobile button.visual-login-btn {
-    background: #2b2b2b;
-    color: #FFF;
-  }
-  #authModal .modal-dialog .modal-content .modal-action-container {
-    display: none;
-  }
-  #authModal .modal-dialog .modal-content .forgot-password-container {
-    padding: 50px 20px;
-  }
-  #authModal .modal-dialog .modal-content .signin-container, #authModal .modal-dialog .modal-content .signup-container {
-    padding: 50px 20px !important;
-    position: relative;
-  }
-  #authModal .modal-dialog .modal-content .signin-container .signin-form, #authModal .modal-dialog .modal-content .signup-container .signin-form {
-    display: flex;
-    flex-flow: column-reverse;
-  }
-  #authModal .modal-dialog .modal-content .signin-container .signin-form > *, #authModal .modal-dialog .modal-content .signup-container .signin-form > * {
-    flex: 0 0 100%;
-  }
-  #authModal .modal-dialog .modal-content .signin-container .signin-form .signin-recommended, #authModal .modal-dialog .modal-content .signup-container .signin-form .signin-recommended {
-    display: none;
-  }
-  #authModal .modal-dialog .modal-content .signin-container .signin-form .signin-register, #authModal .modal-dialog .modal-content .signup-container .signin-form .signin-register {
-    position: absolute;
-    top: 10px;
-    left: 20px;
-    padding: 0;
-  }
-  #authModal .modal-dialog .modal-content .signin-container .signin-form .signin-register button, #authModal .modal-dialog .modal-content .signup-container .signin-form .signin-register button {
-    line-height: 16px;
-    border-radius: 20px;
-    border: 1px solid #ababab;
-    color: #ababab;
-    padding: 6px 10px;
-    font-size: 14px;
-  }
-  #authModal .modal-dialog .modal-content .signin-container .signup-form-area, #authModal .modal-dialog .modal-content .signup-container .signup-form-area {
-    display: flex;
-    flex-flow: column-reverse;
-  }
-  #authModal .modal-dialog .modal-content .signin-container .signup-form-area > *, #authModal .modal-dialog .modal-content .signup-container .signup-form-area > * {
-    flex: 0 0 100%;
-  }
-  #authModal .modal-dialog .modal-content .signin-container .signup-login, #authModal .modal-dialog .modal-content .signup-container .signup-login {
-    position: absolute;
-    top: 10px;
-    left: 20px;
-    padding: 0;
-  }
-  #authModal .modal-dialog .modal-content .signin-container .signup-login button, #authModal .modal-dialog .modal-content .signup-container .signup-login button {
-    line-height: 16px;
-    border-radius: 20px;
-    border: 1px solid #ababab;
-    color: #ababab;
-    padding: 6px 10px;
-    font-size: 14px;
-  }
 }
-.input-label-text {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  font-size: 18px;
-  line-height: 21px;
-  transform: translate(0, -50%);
-  color: #ababab;
-  transition: 0.3s ease;
-}
-
-.input-label-text.active {
-  top: 8px;
-  font-size: 14px;
-  color: #e51a32;
-}
-
-.input-label.active {
-  border-color: #e51a32 !important;
-}
-
-.section {
-  overflow-x: hidden;
-}
-
-.section-detail-product {
-  position: relative;
-  border-bottom: 1px solid #eaeaea;
-}
-.section-detail-product::before {
-  content: "";
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 0;
-  background: #fafafa;
-  width: 50vw;
-  height: 100%;
-  z-index: -1;
-}
-
-.section-more-detail {
-  position: relative;
-  padding-top: 30px;
-}
-
 .img-responsive {
   max-width: 100%;
   overflow: hidden;
@@ -2689,477 +2416,4 @@ body {
   background-color: #fafafa;
 }
 
-.product-detail {
-  display: flex;
-  flex-flow: row wrap;
-}
-.product-detail .product-detail-title {
-  flex: 0 0 100%;
-  padding: 20px 0;
-  color: #2b2b2b;
-  text-align: center;
-}
-.product-detail .product-detail-title .product-detail-brand {
-  text-transform: capitalize;
-  font-size: 100px;
-  text-align: center;
-  color: #2b2b2b;
-  font-weight: 300;
-  letter-spacing: -0.02em;
-  text-decoration: none;
-  font-family: "bold-quarto";
-}
-.product-detail .product-detail-title .product-detail-name {
-  display: block;
-  line-height: 120px;
-  text-transform: uppercase;
-  font-size: 18px;
-  line-height: 21px;
-  letter-spacing: 1.5px;
-  margin-top: 5px;
-}
-.product-detail .product-detail-title .product-detail-tags {
-  min-height: 23px;
-  margin: 13px 0 0;
-  text-align: center;
-  line-height: 0;
-}
-.product-detail .product-detail-images {
-  width: 50%;
-  flex: 0 0 50%;
-  padding-right: 6.9%;
-  min-height: 100%;
-}
-.product-detail .product-detail-infos {
-  flex: 0 0 50%;
-  width: 50%;
-  padding-left: 9.154%;
-}
-
-.product-detail-images {
-  text-align: right;
-  position: relative;
-}
-.product-detail-images .product-slideshow {
-  display: inline-block;
-  width: calc(100% - 75px);
-  position: static;
-}
-.product-detail-images .product-slideshow .carousel-item img {
-  width: 100%;
-  object-fit: cover;
-}
-.product-detail-images .product-slideshow .carousel-indicators {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  z-index: 1;
-  margin: 0;
-  padding: 0;
-  width: 50px;
-  transform: translate(0, -50%);
-  display: flex;
-  flex-flow: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-.product-detail-images .product-slideshow .carousel-indicators li {
-  margin: 5px 0;
-  width: 50px;
-  height: 50px;
-  flex: 0 0 50px;
-  border: 1px solid #ababab;
-  text-align: center;
-  opacity: 0.5;
-}
-.product-detail-images .product-slideshow .carousel-indicators li img {
-  display: block;
-  width: 100%;
-  object-fit: cover;
-}
-.product-detail-images .product-slideshow .carousel-indicators li.active {
-  opacity: 1;
-}
-.product-detail-images .product-detail-links {
-  text-align: center;
-}
-.product-detail-images .product-detail-links a {
-  color: #de8962;
-  font-size: 18px;
-  line-height: 20px;
-  margin: 0 10px;
-}
-.product-detail-images .product-detail-links a svg {
-  margin-right: 10px;
-  height: 16px;
-  object-fit: cover;
-}
-.product-detail-images .product-detail-links a svg path {
-  fill: #fff;
-}
-
-.product-detail-infos {
-  position: relative;
-  padding-bottom: 60px;
-}
-.product-detail-infos p {
-  margin: 0;
-  padding: 0;
-}
-.product-detail-infos .product-detail-price, .product-detail-infos .product-detail-moreInfo {
-  font-size: 18px;
-  line-height: 26px;
-  color: #2b2b2b;
-}
-.product-detail-infos .product-detail-buyerFees {
-  margin-bottom: 6px;
-  font-size: 15px;
-  line-height: 20px;
-  color: #707070;
-  font-weight: 400;
-}
-.product-detail-infos .product-detail-moreInfo button {
-  background: none;
-  border: none;
-  display: inline-block;
-  color: #707070;
-  font-size: 15px;
-  margin-left: 7px;
-  text-decoration: underline;
-  cursor: pointer;
-}
-.product-detail-infos .product-detail-verified, .product-detail-infos .product-detail-discount {
-  color: #de8962;
-}
-.product-detail-infos .product-detail-verified button {
-  margin-top: 20px;
-  background: none;
-  border: none;
-  display: inline-block;
-  font-size: 15px;
-  padding: 0;
-}
-.product-detail-infos .product-detail-verified button svg {
-  display: inline-block;
-  margin-right: 10px;
-  height: 38px;
-  width: 41px;
-  color: #cc815e;
-}
-.product-detail-infos .product-detail-verified button p {
-  display: inline-block;
-  color: #de8962;
-}
-.product-detail-infos .product-detail-verified button span {
-  color: #de8962;
-  text-decoration: underline;
-}
-.product-detail-infos .product-detail-verified button:focus, .product-detail-infos .product-detail-verified button:visited, .product-detail-infos .product-detail-verified button:actived {
-  outline: 0;
-}
-.product-detail-infos .product-detail-discount {
-  margin: 20px 0 6px;
-  line-height: 28px;
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-}
-.product-detail-infos .product-detail-discount svg {
-  display: inline-block;
-  width: 19px;
-  height: 20px;
-  margin-right: 8px;
-  color: #de8962;
-  margin-bottom: 4px;
-}
-.product-detail-infos .product-detail-discount p {
-  display: inline-block;
-  font-size: 18px;
-  color: #de8962;
-}
-.product-detail-infos .product-detail-actions {
-  margin: 30px 0 35px;
-  display: flex;
-}
-.product-detail-infos .product-detail-actions button {
-  display: inline-block;
-  flex: 0 0 auto;
-  flex-grow: 1;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 16px;
-  letter-spacing: 1.5px;
-  padding: 21px 40px;
-  margin-right: 14px;
-  text-transform: uppercase;
-  border-width: 1px;
-  border-style: solid;
-  transition: 0.3s;
-}
-.product-detail-infos .product-detail-actions .btn-add-basket {
-  background: #2b2b2b;
-  color: #FFF;
-  border-color: #2b2b2b;
-}
-.product-detail-infos .product-detail-actions .btn-add-basket:hover {
-  color: #FFF;
-  background: #de8962;
-  border-color: #de8962;
-}
-.product-detail-infos .product-detail-actions .btn-make-offer {
-  background: #FFF;
-  border-color: #2b2b2b;
-  color: #2b2b2b;
-}
-.product-detail-infos .product-detail-actions .btn-make-offer:hover {
-  color: #FFF;
-  background: #de8962;
-  border-color: #de8962;
-}
-.product-detail-infos .product-detail-wishlist button, .product-detail-infos .product-detail-follow button {
-  background: none;
-  border: none;
-  position: relative;
-  padding-left: 31px;
-  padding-bottom: 6px;
-  padding-top: 6px;
-  font-size: 16px;
-  line-height: 20px;
-  text-overflow: ellipsis;
-  max-width: 100%;
-}
-.product-detail-infos .product-detail-wishlist button svg, .product-detail-infos .product-detail-follow button svg {
-  color: #de8962;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translate(0, -50%);
-  height: 14px;
-  width: 15px;
-}
-.product-detail-infos .product-detail-wishlist button p, .product-detail-infos .product-detail-follow button p {
-  color: #de8962;
-}
-.product-detail-infos .product-detail-wishlist button:active, .product-detail-infos .product-detail-wishlist button:focus, .product-detail-infos .product-detail-follow button:active, .product-detail-infos .product-detail-follow button:focus {
-  outline: 0;
-}
-.product-detail-infos .product-detail-wishlist #btn-add-wishlist svg, .product-detail-infos .product-detail-follow #btn-add-wishlist svg {
-  top: 4px;
-  height: 19px;
-  width: 18px;
-  transform: none;
-}
-.product-detail-infos .product-detail-additionals {
-  margin-top: 20px;
-  padding: 12px 0;
-  border-top: 1px solid #eaeaea;
-  border-bottom: 1px solid #eaeaea;
-}
-.product-detail-infos .product-detail-additionals .product-detail-additional {
-  font-size: 15px;
-  line-height: 20px;
-  padding: 6px 0;
-  color: #2b2b2b;
-}
-.product-detail-infos .product-detail-additionals .product-detail-additional svg {
-  display: inline-block;
-  width: 15px;
-  margin-top: -1px;
-  margin-left: 4px;
-  margin-right: 9px;
-  vertical-align: middle;
-}
-.product-detail-infos .product-detail-additionals .product-detail-additional p {
-  display: inline-block;
-}
-.product-detail-infos .product-detail-additionals .product-detail-additional button {
-  display: inline-block;
-  background: none;
-  border: none;
-  text-decoration: underline;
-}
-.product-detail-infos .product-detail-additionals .product-detail-additional button:active, .product-detail-infos .product-detail-additionals .product-detail-additional button:focus, .product-detail-infos .product-detail-additionals .product-detail-additional button:visited {
-  outline: 0;
-}
-.product-detail-infos .product-detail-seller {
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 9;
-  text-align: right;
-  transform: translate(0, -50%);
-}
-.product-detail-infos .product-detail-seller .product-detail-sellerLink {
-  text-align: right;
-  color: #2b2b2b;
-  text-decoration: none;
-}
-.product-detail-infos .product-detail-seller .product-detail-sellerLink img, .product-detail-infos .product-detail-seller .product-detail-sellerLink p {
-  display: block;
-  margin: 0;
-}
-.product-detail-infos .product-detail-seller .product-detail-sellerLink img {
-  display: inline-block;
-  border-radius: 50%;
-  margin-bottom: 14px;
-  height: 68px;
-  width: 68px;
-  object-fit: cover;
-  object-position: center;
-}
-
-.section-more-detail {
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
-.section-more-detail .more-detail-title {
-  font-size: 80px;
-  line-height: 80px;
-  letter-spacing: -0.025em;
-  margin-bottom: 60px;
-}
-.section-more-detail .seller-detail {
-  display: flex;
-  flex-flow: row wrap;
-}
-.section-more-detail .seller-detail .seller-block, .section-more-detail .seller-detail .seller-description, .section-more-detail .seller-detail .product-reassurance {
-  flex: 0 0 auto;
-}
-.section-more-detail .seller-detail .seller-block {
-  background-color: #fafafa;
-  padding: 50px 24px;
-  text-align: center;
-  color: #2b2b2b;
-  text-decoration: none;
-}
-.section-more-detail .seller-detail .seller-block .seller-avatar {
-  height: 68px;
-  width: 68px;
-  margin: 0 auto;
-  margin-bottom: 8px;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: center;
-}
-.section-more-detail .seller-detail .seller-block .seller-name {
-  font-size: 24px;
-  line-height: 30px;
-  margin-bottom: 8px;
-}
-.section-more-detail .seller-detail .seller-block .seller-infos {
-  font-size: 15px;
-  line-height: 20px;
-  color: #ababab;
-  margin-bottom: 12px;
-}
-.section-more-detail .seller-detail .seller-block .seller-infos span {
-  display: block;
-  margin-top: 12px;
-  margin-bottom: 20px;
-  color: #de8962;
-}
-.section-more-detail .seller-detail .seller-block .seller-follow button {
-  background: none;
-  border: none;
-  color: #de8962;
-  padding: 6px 10px;
-  border-radius: 3px;
-  font-size: 12px;
-  line-height: 12px;
-  border: 1px solid #de8962;
-  letter-spacing: 0.2em;
-  transition: 0.3s ease;
-}
-.section-more-detail .seller-detail .seller-block .seller-follow button:hover {
-  color: #cc815e;
-  border-color: #cc815e;
-  background: #FFF;
-}
-.section-more-detail .seller-detail .seller-description-container {
-  flex-grow: 1;
-  margin: 0 4%;
-}
-.section-more-detail .seller-detail .seller-description-container .seller-description p {
-  font-size: 18px;
-  line-height: 28px;
-  margin-bottom: 24px;
-  white-space: pre-wrap;
-}
-.section-more-detail .seller-detail .seller-description-container .seller-description button {
-  text-transform: uppercase;
-  font-size: 13px;
-  letter-spacing: 0.15em;
-  color: #707070;
-  background: none;
-  border: none;
-}
-.section-more-detail .seller-detail .seller-description-container .seller-description button:hover {
-  color: #2b2b2b;
-}
-.section-more-detail .seller-detail .seller-description-container .seller-description button:active, .section-more-detail .seller-detail .seller-description-container .seller-description button:focus {
-  outline: 0;
-}
-.section-more-detail .seller-detail .seller-description-container .seller-general-information {
-  margin-top: 30px;
-  border-top: 1px solid #eaeaea;
-  padding-top: 30px;
-}
-.section-more-detail .seller-detail .seller-description-container .seller-general-information .general-information-title {
-  font-size: 13px;
-  letter-spacing: 0.15em;
-  color: #707070;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
-.section-more-detail .seller-detail .seller-description-container .seller-general-information ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  margin-bottom: 30px;
-}
-.section-more-detail .seller-detail .seller-description-container .seller-general-information ul li {
-  font-size: 18px;
-  position: relative;
-  padding-left: 15px;
-}
-.section-more-detail .seller-detail .seller-description-container .seller-general-information ul li::before {
-  content: "-";
-  display: inline-block;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translate(0, -50%);
-}
-.section-more-detail .seller-detail .seller-description-container .seller-general-information button {
-  position: relative;
-  display: inline-block;
-  background: none;
-  border: none;
-  color: #de8962;
-  font-size: 18px;
-  line-height: 28px;
-  padding-left: 30px;
-}
-.section-more-detail .seller-detail .seller-description-container .seller-general-information button svg {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translate(0, -50%);
-  height: 24px;
-  width: 24px;
-}
-.section-more-detail .seller-detail .seller-description-container .seller-general-information button svg path {
-  fill: #FFF;
-}
-.section-more-detail .seller-detail .seller-description-container .seller-general-information button p {
-  margin: 0;
-}
-.section-more-detail .seller-detail .seller-description-container .seller-general-information button:active, .section-more-detail .seller-detail .seller-description-container .seller-general-information button:visited, .section-more-detail .seller-detail .seller-description-container .seller-general-information button:focus {
-  outline: 0;
-}
-.section-more-detail .seller-detail .product-reassurance {
-  width: 30%;
-  max-width: 340px;
-}
-
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.scss.map */

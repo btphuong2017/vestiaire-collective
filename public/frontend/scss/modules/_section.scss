@@ -1,0 +1,22 @@
+.section {
+    overflow-x: hidden;
+}
+.section-detail-product {
+    position: relative;
+    border-bottom: 1px solid #eaeaea;
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background: #fafafa;
+        width: 50vw;
+        height: 100%;
+        z-index: -1;
+    }
+}
+.section-more-detail {
+    position: relative;
+    padding-top: 30px;
+}
