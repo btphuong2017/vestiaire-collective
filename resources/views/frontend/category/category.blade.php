@@ -1,5 +1,5 @@
 @extends('frontend.layout.layout')
 
 @section('content')
-<h1>Category</h1>
+@include('frontend.category.filter')
 @endSection
