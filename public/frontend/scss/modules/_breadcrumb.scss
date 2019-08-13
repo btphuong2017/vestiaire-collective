@@ -39,3 +39,8 @@
         }
     }
 }
+@media (max-width: 767px) {
+    .breadcrumb-container {
+        display: none;
+    }
+}

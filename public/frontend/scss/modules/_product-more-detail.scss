@@ -1,25 +1,38 @@
 .section-more-detail {
     padding-top: 60px;
     padding-bottom: 60px;
+
     .more-detail-title {
         font-size: 80px;
         line-height: 80px;
         letter-spacing: -.025em;
         margin-bottom: 60px;
     }
+
     .seller-detail {
         display: flex;
         flex-flow: row wrap;
-        .seller-block, .seller-description, .product-reassurance {
+
+        .seller-block,
+        .seller-description,
+        .product-reassurance {
             flex: 0 0 auto;
         }
-        
+
         .seller-block {
-            background-color: #fafafa;
-            padding: 50px 24px;
-            text-align: center;
-            color: #2b2b2b;
-            text-decoration: none;
+            max-width: 220px;
+            flex: 0 0 auto;
+
+            a {
+                display: block;
+                background-color: #fafafa;
+                text-align: center;
+                color: #2b2b2b;
+                text-decoration: none;
+                padding: 50px 24px;
+                margin-bottom: 20px;
+            }
+
             .seller-avatar {
                 height: 68px;
                 width: 68px;
@@ -29,16 +42,19 @@
                 object-fit: cover;
                 object-position: center;
             }
+
             .seller-name {
                 font-size: 24px;
                 line-height: 30px;
                 margin-bottom: 8px;
             }
+
             .seller-infos {
                 font-size: 15px;
                 line-height: 20px;
                 color: #ababab;
                 margin-bottom: 12px;
+
                 span {
                     display: block;
                     margin-top: 12px;
@@ -46,6 +62,7 @@
                     color: #de8962;
                 }
             }
+
             .seller-follow {
                 button {
                     background: none;
@@ -58,6 +75,7 @@
                     border: 1px solid #de8962;
                     letter-spacing: .2em;
                     transition: 0.3s ease;
+
                     &:hover {
                         color: #cc815e;
                         border-color: #cc815e;
@@ -66,9 +84,11 @@
                 }
             }
         }
+
         .seller-description-container {
             flex-grow: 1;
             margin: 0 4%;
+
             .seller-description {
                 p {
                     font-size: 18px;
@@ -76,6 +96,7 @@
                     margin-bottom: 24px;
                     white-space: pre-wrap;
                 }
+
                 button {
                     text-transform: uppercase;
                     font-size: 13px;
@@ -83,18 +104,23 @@
                     color: #707070;
                     background: none;
                     border: none;
+
                     &:hover {
                         color: #2b2b2b;
                     }
-                    &:active, &:focus {
+
+                    &:active,
+                    &:focus {
                         outline: 0;
                     }
                 }
             }
+
             .seller-general-information {
                 margin-top: 30px;
                 border-top: 1px solid #eaeaea;
                 padding-top: 30px;
+
                 .general-information-title {
                     font-size: 13px;
                     letter-spacing: .15em;
@@ -102,16 +128,19 @@
                     text-transform: uppercase;
                     margin-bottom: 10px;
                 }
+
                 ul {
                     list-style: none;
                     padding: 0;
                     margin: 0;
                     margin-bottom: 30px;
+
                     li {
                         font-size: 18px;
                         position: relative;
                         padding-left: 15px;
                     }
+
                     li::before {
                         content: '-';
                         display: inline-block;
@@ -121,38 +150,276 @@
                         transform: translate(0, -50%);
                     }
                 }
-                button {
-                    position: relative;
-                    display: inline-block;
-                    background: none;
+
+
+            }
+
+            button.button-leave-comment {
+                position: relative;
+                display: inline-block;
+                background: none;
+                border: none;
+                color: #de8962;
+                font-size: 18px;
+                line-height: 28px;
+                padding-left: 30px;
+
+                svg {
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    transform: translate(0, -50%);
+                    height: 24px;
+                    width: 24px;
+
+                    path {
+                        fill: #FFF;
+                    }
+                }
+
+                p {
+                    margin: 0;
+                }
+
+                &:active,
+                &:visited,
+                &:focus {
+                    outline: 0;
+                }
+            }
+
+            .button-general-information {
+                display: none;
+            }
+        }
+
+        .product-reassurance {
+            width: 30%;
+            max-width: 340px;
+
+            .card.reassurance {
+                background: #fafafa;
+                border-radius: 0px;
+                border: none;
+                color: #707070;
+                margin-bottom: 15px;
+
+                .card-header {
+                    padding: 20px 28px;
+                    background: #fafafa;
                     border: none;
-                    color: #de8962;
-                    font-size: 18px;
-                    line-height: 28px;
-                    padding-left: 30px;
-                    svg {
-                        position: absolute;
-                        left: 0;
-                        top:50%;
-                        transform: translate(0, -50%);
-                        height: 24px;
-                        width: 24px;
-                        path {
-                            fill: #FFF;
+
+                    button {
+                        position: relative;
+                        display: block;
+                        width: 100%;
+                        padding: 0;
+                        text-align: left;
+                        cursor: pointer;
+                        background: none;
+                        border: none;
+                        font-size: 18px;
+                        line-height: 28px;
+
+                        &:focus,
+                        &:visited,
+                        &:active {
+                            outline: 0;
+                        }
+
+                        &::before,
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            display: inline-block;
+                            background: #707070;
+                            right: 0;
+                            top: 50%;
+                            transform: translate(0, -50%);
+                            transition: 0.3s;
+                        }
+
+                        &::before {
+                            width: 1px;
+                            height: 14px;
+                            right: 7px;
+                        }
+
+                        &::after {
+                            width: 14px;
+                            height: 1px;
                         }
                     }
-                    p {
-                        margin: 0;
+
+                    button[aria-expanded="true"] {
+                        &::before {
+                            height: 0px;
+                        }
                     }
-                    &:active, &:visited, &:focus {
-                        outline: 0;
+                }
+
+                .card-body {
+                    background: #fafafa;
+                    padding: 0;
+
+                    .reassurance-content {
+                        font-size: 15px;
+                        line-height: 20px;
+                        padding: 20px 28px;
+
+                        p {
+                            white-space: pre-line;
+                        }
+
+                        a {
+                            display: block;
+                            color: #707070;
+                            line-height: 20px;
+                            font-size: 15px;
+
+                            svg {
+                                height: 20px;
+                                width: 20px;
+                                margin-right: 15px;
+                            }
+                        }
+
+                        div svg {
+                            max-height: 30px;
+                            width: 36px;
+                            margin: 5px;
+
+                            &.svg_mastercard {
+                                width: 28px;
+                            }
+
+                            &.svg_american_express {
+                                width: 21px;
+                            }
+
+                            &.svg_paypal {
+                                width: 47px;
+                            }
+                        }
                     }
                 }
             }
         }
-        .product-reassurance {
-            width: 30%;
-            max-width: 340px;
+    }
+}
+
+@media (max-width: 767px) {
+    .section-more-detail {
+        .more-detail-title {
+            font-size: 40px;
+            line-height: 45px;
+            letter-spacing: -.01em;
+            font-weight: 300;
+            margin-bottom: 40px;
+        }
+
+        .seller-detail {
+            .seller-block {
+                max-width: 100%;
+                flex: 0 0 100%;
+
+                a {
+                    position: relative;
+                    display: flex;
+                    flex-flow: row wrap;
+                    padding: 20px;
+
+                    .seller-avatar {
+                        flex: 0 0 68px;
+                        margin: 0;
+                        margin-right: 10px;
+                    }
+
+                    .seller-name,
+                    .seller-infos,
+                    .seller-infos span {
+                        margin-bottom: 0;
+                        margin-top: 0;
+                    }
+
+                    .seller-info-area {
+                        flex: 0 0 auto;
+                        text-align: left;
+
+                        .btn-follow-seller {
+                            position: absolute;
+                            right: 20px;
+                            top: 20px;
+
+                            svg {
+                                display: inline;
+                                height: 13px;
+
+                            }
+                        }
+                    }
+                }
+            }
+
+            .seller-description-container {
+                .seller-general-information {
+                    display: none;
+
+                    &.active {
+                        display: block;
+                    }
+                }
+
+                .button-general-information {
+                    display: block;
+                    background: none;
+                    border: none;
+                    width: 100%;
+                    margin-top: 30px;
+                    margin-bottom: 30px;
+                    text-transform: uppercase;
+                    font-size: 13px;
+                    line-height: 14px;
+                    border: 1px solid #de8962;
+                    color: #de8962;
+                    padding: 12px 20px;
+                    letter-spacing: 1.5px;
+
+                    .is-close {
+                        display: block;
+                    }
+
+                    .is-open {
+                        display: none;
+                    }
+
+                    &.active {
+                        color: #FFF;
+                        background: #cc815e;
+                        border-color: #cc815e;
+
+                        .is-close {
+                            display: none;
+                        }
+
+                        .is-open {
+                            display: block;
+                        }
+                    }
+                }
+                button.button-leave-comment {
+                    text-align: left;
+                    svg {
+                        top : 15px;
+                    }
+                }
+            }
+
+            .product-reassurance {
+                max-width: 100%;
+                flex: 0 0 100%;
+                margin-top: 30px;
+            }
         }
     }
 }

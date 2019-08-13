@@ -529,6 +529,109 @@ const inputLabel = function () {
         var ip = new InputLabel(input);
     });
 };
+
+const generalInformation = function () {
+    var btnGeneral = document.getElementById('buttonGeneralInformation');
+    var generalContainer = document.getElementById('generalInformationContainer');
+    btnGeneral.addEventListener('click', function () {
+        if (!generalContainer.classList.contains('active')) {
+            generalContainer.classList.add('active');
+            btnGeneral.classList.add('active');
+        } else {
+            generalContainer.classList.remove('active');
+            btnGeneral.classList.remove('active');
+        }
+    });
+};
+
+const magnifierGlassModal = function () {
+    var productSliderImgs = document.querySelectorAll('#productSlideshow .carousel-inner img');
+    var magnifierGlassModal = document.getElementById('magnifierGlassModal');
+    var glass = null;
+    var isMouseOver = false;
+    var image = null;
+    var magnifierGlassImage = magnifierGlassModal.querySelector('.carousel .carousel-inner');
+
+
+
+    productSliderImgs.forEach(function (img) {
+        img.addEventListener('click', function () {
+            if (magnifierGlassModal.getAttribute('data-state') == 'close') {
+                $(magnifierGlassModal).modal('show');
+                magnifierGlassModal.setAttribute('data-state', 'open');
+            }
+        });
+    });
+
+    $(magnifierGlassModal).on('hidden.bs.modal', function () {
+        magnifierGlassModal.setAttribute('data-state', 'close');
+    });
+
+    magnifierGlassImage.addEventListener('mouseover', createGlass);
+    magnifierGlassImage.addEventListener('mousemove', moveGlass);
+    magnifierGlassImage.addEventListener('mouseout', removeGlass);
+
+    function createGlass(e) {
+        isMouseOver = true;
+        e = e || window.event;
+        if (!glass) {
+            image = this.querySelector('.carousel-item.active img');
+            var src = image.src;
+            glass = document.createElement('div');
+            glass.className = 'magnifier-glass';
+            glass.style.backgroundImage = 'url("' + src + '")';
+            var pos = getPosition(e);
+            glass.style.top = pos.y + 'px';
+            glass.style.left = pos.x + 'px';
+            glass.style.backgroundSize = image.offsetWidth * 3 + 'px ' + image.offsetHeight * 3 + 'px';
+            document.body.appendChild(glass);
+        }
+    }
+
+    function getPosition(e) {
+        e = e || window.event;
+        var rect = magnifierGlassImage.getBoundingClientRect();
+        return {
+            x: e.clientX,
+            y: e.clientY
+        };
+    }
+
+    function moveGlass(e) {
+        e = e || window.event;
+        if (isMouseOver) {
+            var rect = magnifierGlassImage.getBoundingClientRect();
+            var pos = getPosition(e);
+            glass.style.top = pos.y + 'px';
+            glass.style.left = pos.x + 'px';
+            var bgPos = getBackgroundPosition(e);
+            glass.style.backgroundPositionX = -bgPos.x + 'px';
+            glass.style.backgroundPositionY = -bgPos.y + 'px';
+        }
+    }
+
+    function getBackgroundPosition (e) {
+        e = e || window.event;
+        var rect = image.getBoundingClientRect();
+        var x = e.clientX - rect.left;
+        var y = e.clientY - rect.top;
+        if (x <= 0) x = 0;
+        if (y <= 0) y = 0;
+        return {
+            x: x * 3,
+            y: y * 3
+        };
+    }
+
+    function removeGlass() {
+        if (isMouseOver) {
+            image = null;
+            isMouseOver = false;
+            document.body.removeChild(glass);
+            glass = null;
+        }
+    }
+};
 document.addEventListener('DOMContentLoaded', function () {
     var header = headerFix();
     var inputlabel = inputLabel();
@@ -537,4 +640,6 @@ document.addEventListener('DOMContentLoaded', function () {
     var dropdown = dropDown();
     var searchbarmobile = searchbarMobile();
     var signinmodal = authModal();
+    var generalinformation = generalInformation();
+    var magnifierglassimage = magnifierGlassModal();
 });

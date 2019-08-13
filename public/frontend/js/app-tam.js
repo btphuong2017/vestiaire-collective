@@ -1,8 +1,8 @@
+
 var angleDown = document.querySelectorAll('.footer-body-service-title');
 var footerLink  = document.querySelectorAll('.footer-body-service-link');
 var angleDownPolicy = document.querySelectorAll('.footer-body-policy-block-mobile');
 var policy = document.querySelectorAll('.footer-privacy-policy-hidden');
-
 
 angleDown[0].addEventListener('click', collapseShowItemOur);
 angleDown[1].addEventListener('click', collapseShowItemBuy);

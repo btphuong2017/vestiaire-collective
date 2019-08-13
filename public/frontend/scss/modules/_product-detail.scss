@@ -45,4 +45,40 @@
         padding-left: 9.154%;
     }
 }
+@media (max-width: 767px) {
+    .product-detail {
+        .product-detail-images, .product-detail-infos, .product-detail-title {
+            flex: 0 0 100%;
+            width: 100%;
+        }
+        .product-detail-images {
+            order: 1;
+            padding-right: 0;
+        }
+        
+        .product-detail-infos {
+            order: 3;
+            padding-left: 0;
+        }
+
+        .product-detail-title {
+            order: 2;
+            padding-top: 20px;
+            .product-detail-brand {
+                font-size: 50px;
+                line-height: 50px;
+                text-align: center;
+            }
+            .product-detail-name {
+                font-size: 18px;
+                line-height: 21px;
+                text-align: left;
+                margin-top: 9px;
+                .product-detail-like {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}
 
