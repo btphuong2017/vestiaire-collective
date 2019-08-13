@@ -186,79 +186,67 @@ footer.footer .footer-bottom .footer-bottom-content .footer-bottom-content-right
 }
 
 /* ----------------------- Modal --------------------------- */
-.modal-footer {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1000;
+.modal {
   display: none;
-  padding: 0;
-  justify-content: center;
-  width: 100%;
-  height: 100vh;
   opacity: 0;
-  transform: translateY(10px);
-  -webkit-transform: translateY(10px);
-  transition: all 0.6s;
-  -webkit-transition: all 0.6s;
+  transition: all 0.7s;
+  -webkit-transition: all 0.7s;
+  z-index: 1000;
 }
-.modal-footer .modal-dialog-footer {
-  width: 100%;
-  height: 100vh;
+.modal .modal-dialog {
+  margin: 0;
+  max-width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.modal-footer .modal-dialog-footer .modal-content {
-  z-index: 1100;
+.modal .modal-dialog .modal-content {
+  position: relative;
   width: 600px;
-  height: 343px;
-  padding: 60px 40px 40px 40px;
+  height: 330px;
+  padding: 40px 25px 25px 25px;
+  z-index: 1000;
 }
-.modal-footer .modal-dialog-footer .modal-content .close {
+.modal .modal-dialog .modal-content .close {
   position: absolute;
   top: 0;
-  right: 0;
+  right: 0px;
+  z-index: 1000;
 }
-.modal-footer .modal-dialog-footer .modal-content .close button {
-  width: 56px;
-  height: 56px;
+.modal .modal-dialog .modal-content .close button {
   border: none;
   outline: none;
-  font-size: 30px;
-  padding: 0;
-  color: #ababab;
   background-color: #fff;
+  font-size: 30px;
+  width: 50px;
+  height: 50px;
   cursor: pointer;
 }
-.modal-footer .modal-dialog-footer .modal-content .modal-body {
-  padding: 0;
-}
-.modal-footer .modal-dialog-footer .modal-content .modal-body .modal-body-title {
+.modal .modal-dialog .modal-content .modal-body .modal-body-title {
   font-size: 38px;
   /* 	font-weight: 300; */
-  margin-bottom: 30px;
+  margin-bottom: 25px;
+  letter-spacing: -3px;
 }
-.modal-footer .modal-dialog-footer .modal-content .modal-body .modal-body-choose {
+.modal .modal-dialog .modal-content .modal-body .modal-body-choose {
   width: 100%;
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
 }
-.modal-footer .modal-dialog-footer .modal-content .modal-body .modal-body-choose label {
+.modal .modal-dialog .modal-content .modal-body .modal-body-choose label {
   display: block;
   font-size: 13px;
   font-weight: 500;
   color: #cacaca;
 }
-.modal-footer .modal-dialog-footer .modal-content .modal-body .modal-body-choose .customs-select {
+.modal .modal-dialog .modal-content .modal-body .modal-body-choose .customs-select {
   position: relative;
   width: auto;
   height: auto;
 }
-.modal-footer .modal-dialog-footer .modal-content .modal-body .modal-body-choose .customs-select::after {
+.modal .modal-dialog .modal-content .modal-body .modal-body-choose .customs-select::after {
   content: "";
   position: absolute;
   top: 14px;
@@ -271,21 +259,21 @@ footer.footer .footer-bottom .footer-bottom-content .footer-bottom-content-right
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
 }
-.modal-footer .modal-dialog-footer .modal-content .modal-body .modal-body-choose .customs-select select {
+.modal .modal-dialog .modal-content .modal-body .modal-body-choose .customs-select select {
   width: 158px;
   height: 43px;
   -webkit-appearance: none;
   padding: 0 15px;
   font-size: 14px;
 }
-.modal-footer .modal-dialog-footer .modal-content .modal-body .modal-body-choose .customs-select #language {
+.modal .modal-dialog .modal-content .modal-body .modal-body-choose .customs-select #language {
   width: 163px;
 }
-.modal-footer .modal-dialog-footer .modal-content .modal-body div.save-change {
-  padding-top: 40px;
+.modal .modal-dialog .modal-content .modal-body div.save-change {
+  padding-top: 30px;
   text-align: right;
 }
-.modal-footer .modal-dialog-footer .modal-content .modal-body div.save-change button {
+.modal .modal-dialog .modal-content .modal-body div.save-change button {
   background-color: #2b2b2b;
   width: 158px;
   color: #fff;
@@ -294,7 +282,7 @@ footer.footer .footer-bottom .footer-bottom-content .footer-bottom-content-right
   font-size: 13px;
   padding: 12px 20px;
 }
-.modal-footer .modal-dialog-footer .modal-content .modal-body div.save-change button:hover {
+.modal .modal-dialog .modal-content .modal-body div.save-change button:hover {
   background-color: #b37152;
   transition: all 0.3s;
   -webkit-transition: all 0.3s;
@@ -329,6 +317,16 @@ footer.footer .footer-bottom .footer-bottom-content .footer-bottom-content-right
   }
 }
 /* ------------ End max-width: 768px ----------- */
+/* ------------ max-width: 758px --------------- */
+@media (max-width: 758px) {
+  footer.footer .footer-body .footer-body-usd .footer-body-usd-info {
+    flex-wrap: wrap;
+  }
+  footer.footer .footer-body .footer-body-usd .footer-body-usd-info .footer-body-usd-social {
+    flex-wrap: wrap;
+  }
+}
+/* ------------ End max-width: 758px --------------- */
 /* ------------------------ End Tablet ------------------- */
 /* ------------------------ Mobile -------------------------- */
 /* ------------- max-width: 425px --------------- */
@@ -495,22 +493,42 @@ footer.footer .footer-bottom .footer-bottom-content .footer-bottom-content-right
     flex-wrap: wrap;
   }
 
-  .modal-footer .modal-dialog-footer .modal-content {
-    padding: 20px;
+  .modal .modal-dialog .modal-content {
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    border-radius: 0;
+    padding: 0;
+    background-clip: initial;
   }
-  .modal-footer .modal-dialog-footer .modal-content .modal-body .modal-body-title {
-    font-size: 35px;
+  .modal .modal-dialog .modal-content .modal-body {
+    padding: 30px 20px 20px 20px;
   }
-  .modal-footer .modal-dialog-footer .modal-content .modal-body .modal-body-choose {
+  .modal .modal-dialog .modal-content .modal-body .modal-body-title {
+    font-size: 36px;
+  }
+  .modal .modal-dialog .modal-content .modal-body .modal-body-choose {
     flex-wrap: wrap;
   }
-  .modal-footer .modal-dialog-footer .modal-content .modal-body .modal-body-choose > div {
+  .modal .modal-dialog .modal-content .modal-body .modal-body-choose > div {
     width: 100%;
+    margin-bottom: 25px;
   }
-  .modal-footer .modal-dialog-footer .modal-content .modal-body .modal-body-choose > div .customs-select select {
+  .modal .modal-dialog .modal-content .modal-body .modal-body-choose > div .customs-select select {
     width: 100% !important;
+  }
+  .modal .modal-dialog .modal-content .modal-body div.save-change {
+    padding-top: 40px;
+    width: 100%;
+    text-align: right;
+  }
+  .modal .modal-dialog .modal-content .modal-body div.save-change button {
+    background-color: #2b2b2b;
+    width: 100%;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+    padding: 21px 40px;
   }
 }
 /* ------------- End max-width: 425px --------------- */
@@ -527,18 +545,20 @@ footer.footer .footer-bottom .footer-bottom-content .footer-bottom-content-right
   -o-transform: rotate(-227deg) !important;
 }
 
+.showServiceLinkMobile {
+  display: block !important;
+}
+
 .transitionCollapse {
   transition: all 2s !important;
   -webkit-transition: all 2s !important;
 }
 
 .showModal {
-  transition: all 0.6s !important;
-  -webkit-transition: all 0.6s !important;
-  opacity: 1 !important;
-  display: block !important;
-  transform: translateY(-10px) !important;
-  -webkit-transform: translateY(-10px) !important;
+  transition: all 0.7s;
+  -webkit-transition: all 0.7s;
+  opacity: 1;
+  display: block;
 }
 
 /*# sourceMappingURL=style.css.map */

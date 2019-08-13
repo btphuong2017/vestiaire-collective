@@ -104,7 +104,7 @@
 					</div>
 				</div>
 
-				<div id="open-modal" class="footer-body-usd-choose">
+				<div id="open-footer-modal" class="footer-body-usd-choose">
 					<div>Viet Nam - English US - $ - USD</div> <div class="angle-up"></div>
 				</div>
 			
@@ -427,59 +427,59 @@
 		</div>
 </footer>
 
-<div id="modal-footer" class="modal modal-footer">	
-	<div class="modal-dialog-footer">
-		<div id="modal-content" class="modal-content">
-		<div class="close">
-			<button id="close" type="button">&times;</button>
-		</div>
-		<div class="modal-body">	
-			<div class="modal-body-title">Chooseyourpreferences</div>
-			<div class="modal-body-choose">
-				<div class="choose-country">
-					<label>COUNTRY</label>
-					<div class="customs-select">
-						<select id="country">
-							<option>Vietnam</option>
-						</select>
-					</div>
-				</div>
-				<div class="choose-language">
-					<label>LANGUAGE</label>
-					<div class="customs-select">
-						<select id="language">
-							<option value="0">English - UK</option>
-							<option value="1" selected>English US</option>
-							<option value="2">French</option>
-							<option value="3">German</option>
-							<option value="4">Italian</option>
-							<option value="5">Spanish</option>
-						</select>
-					</div>
-				</div>
-				<div class="choose-currency">
-					<label>CURRENCY</label>
-					<div class="customs-select">
-						<select id="currency">
-							<option value="0">€ EUR</option>
-							<option value="1" selected>$ USD</option>
-							<option value="2">£ GBP</option>
-							<option value="3">HK$ HKD</option>						
-							<option value="4">S$ SGD</option>
-							<option value="5">AUD</option>
-							<option value="6">CDN$ CAD</option>
-							<option value="7">zł PLN</option>
-							<option value="8">CHF</option>						
-							<option value="9">SEK</option>
-							<option value="10">DKK</option>
-						</select>
-					</div>
-				</div>
+<div id="footer-modal-choose" class="modal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="close">
+				<button id="close-footer-modal" type="button">&times;</button>
 			</div>	
-			<div class="save-change">
-				<button type="button">SAVE CHANGES</button>
-			</div>		
+			<div class="modal-body">				
+				<div class="modal-body-title">Choose your preferences</div>
+				<div class="modal-body-choose">
+					<div class="choose-country">
+						<label>COUNTRY</label>
+						<div class="customs-select">
+							<select id="country">
+								<option>Vietnam</option>
+							</select>
+						</div>
+					</div>
+					<div class="choose-language">
+						<label>LANGUAGE</label>
+						<div class="customs-select">
+							<select id="language">
+								<option value="0">English - UK</option>
+								<option value="1" selected>English US</option>
+								<option value="2">French</option>
+								<option value="3">German</option>
+								<option value="4">Italian</option>
+								<option value="5">Spanish</option>
+							</select>
+						</div>
+					</div>			
+					<div class="choose-currency">
+						<label>CURRENCY</label>
+						<div class="customs-select">
+							<select id="currency">
+								<option value="0">€ EUR</option>
+								<option value="1" selected>$ USD</option>
+								<option value="2">£ GBP</option>
+								<option value="3">HK$ HKD</option>						
+								<option value="4">S$ SGD</option>
+								<option value="5">AUD</option>
+								<option value="6">CDN$ CAD</option>
+								<option value="7">zł PLN</option>
+								<option value="8">CHF</option>						
+								<option value="9">SEK</option>
+								<option value="10">DKK</option>
+							</select>
+							</div>
+					</div>
+				</div>	
+				<div class="save-change">
+					<button type="button">SAVE CHANGES</button>
+				</div>		
+			</div>
 		</div>
-	</div>
 	</div>
 </div>
