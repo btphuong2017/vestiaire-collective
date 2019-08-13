@@ -61,5 +61,8 @@ document.addEventListener('DOMContentLoaded', function () {
 			$('.catalogSort_Sortby').addClass('open');
 		}
 	});
+
 	
 });
+
+  								

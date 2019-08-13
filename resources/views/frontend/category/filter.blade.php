@@ -1,7 +1,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="/frontend/font-awesome/css/font-awesome.min.css">
 <section class="contain_filter">
 	<div class="visible-xs sort_fillter_mobile">
@@ -24,7 +24,7 @@
 							<span class="icon_filter"><i class="fa fa-angle-up" aria-hidden="true"></i></span>
 						</div>
 					</div>
-					<ul id="sub-item-1" style="list-style: none" class="list_designer">
+					<ul id="sub-item-1" style="list-style: none" class="list_designer" >
 						<!-- class="children collapse" id="sub-item-2" aria-expanded="false" -->
 						<li class="single_designer">
 							<input type="checkbox" id="test1">
@@ -68,7 +68,9 @@
 									<span class="span_color" style="background-color: rgb(223, 196, 163);"></span>
 									<span class="name_color label_name_color"  style="font-weight: normal;">Beige 
 										<span class="id_color">(5868)</span>
+										<span class="charset_color"></span>
 									</span>
+									
 								</label>
 							</li>
 							<li class="single_color">
@@ -76,6 +78,7 @@
 									<span class="span_color" style="background-color: rgb(0, 0, 0);"></span>
 									<span class="name_color label_name_color" style="font-weight: normal;">Beige 
 										<span class="id_color">(5868)</span>
+										<span class="charset_color"></span>
 									</span>
 								</label>
 							</li>
@@ -84,6 +87,7 @@
 									<span class="span_color" style="background-color: rgb(104, 160, 242);"></span>
 									<span class="name_color label_name_color" style="font-weight: normal;">Beige 
 										<span class="id_color">(5868)</span>
+										<span class="charset_color"></span>
 									</span>
 								</label>
 							</li>
@@ -92,6 +96,7 @@
 									<span class="span_color" style="background-color: rgb(165, 119, 56);"></span>
 									<span class="name_color label_name_color" style="font-weight: normal;">Beige 
 										<span class="id_color">(5868)</span>
+										<span class="charset_color"></span>
 									</span>
 								</label>
 							</li>
@@ -101,6 +106,7 @@
 									<span class="span_color" style="background-color: rgb(160, 69, 81);"></span>
 									<span class="name_color label_name_color" style="font-weight: normal;">Beige 
 										<span class="id_color">(5868)</span>
+										<span class="charset_color"></span>
 									</span>
 								</label>
 							</li>
@@ -110,6 +116,7 @@
 									<span class="span_color" style="background-color: rgb(198, 151, 90);"></span>
 									<span class="name_color label_name_color" style="font-weight: normal;">Beige 
 										<span class="id_color">(5868)</span>
+										<span class="charset_color"></span>
 									</span>
 								</label>
 							</li>
@@ -118,6 +125,7 @@
 									<span class="span_color" style="background-color: rgb(78, 78, 78);"></span>
 									<span class="name_color label_name_color" style="font-weight: normal;">Beige 
 										<span class="id_color">(5868)</span>
+										<span class="charset_color"></span>
 									</span>
 								</label>
 							</li>
@@ -126,6 +134,7 @@
 									<span class="span_color" style="background-color: rgb(137, 179, 121);"></span>
 									<span class="name_color label_name_color" style="font-weight: normal;">Beige 
 										<span class="id_color">(5868)</span>
+										<span class="charset_color"></span>
 									</span>
 								</label>
 							</li>
@@ -134,6 +143,7 @@
 									<span class="span_color" style="background-color: rgb(151, 164, 99);"></span>
 									<span class="name_color label_name_color" style="font-weight: normal;">Beige 
 										<span class="id_color">(5868)</span>
+										<span class="charset_color"></span>
 									</span>
 								</label>
 							</li>
@@ -142,6 +152,7 @@
 									<span class="span_color" style="background-color: rgb(197, 197, 197);"></span>
 									<span class="name_color label_name_color" style="font-weight: normal;">Beige 
 										<span class="id_color">(5868)</span>
+										<span class="charset_color"></span>
 									</span>
 								</label>
 							</li>
@@ -150,6 +161,7 @@
 									<span class="span_color" style="background-color: rgb(50, 91, 140);"></span>
 									<span class="name_color label_name_color" style="font-weight: normal;">Beige 
 										<span class="id_color">(5868)</span>
+										<span class="charset_color"></span>
 									</span>
 								</label>
 							</li>
@@ -158,6 +170,7 @@
 									<span class="span_color" style="background-color: rgb(255, 180, 73);"></span>
 									<span class="name_color label_name_color" style="font-weight: normal;">Beige 
 										<span class="id_color">(5868)</span>
+										<span class="charset_color"></span>
 									</span>
 								</label>
 							</li>
@@ -166,6 +179,7 @@
 									<span class="span_color" style="background-color: rgb(134, 56, 56); border-color: rgb(234, 234, 234);"></span>
 									<span class="name_color label_name_color" style="font-weight: normal;">Beige 
 										<span class="id_color">(5868)</span>
+										<span class="charset_color"></span>
 									</span>
 								</label>
 							</li>
@@ -175,6 +189,7 @@
 									<span class="span_color" style="background-color: rgb(191, 85, 189);"></span>
 									<span class="name_color label_name_color" style="font-weight: normal;">Beige 
 										<span class="id_color">(5868)</span>
+										<span class="charset_color"></span>
 									</span>
 								</label>
 							</li>
@@ -269,22 +284,19 @@
 							<div class="content_option radio_sort"  id="sub-item-6">
 								<form class="sort_">
     								<div class="form-check style_form_check">
-    									<div>
-        									<input type="radio" class="form-check-input input_radi" id="radio1" name="optradio" value="option1" checked>
-        								</div>
-        									 <label class="label_option_sort">Relavance</label>
+    									<input id="radio-1" class="radio-custom" name="radio-group" type="radio" checked >
+            							<label for="radio-1" class="radio-custom-label">Radio Button 1</label>
+            							<div class="mat-radio-ripple"></div>
     								</div>
    									<div class="form-check style_form_check">
-    									<div>
-        									<input type="radio" class="form-check-input input_radi" id="radio1" name="optradio" value="option1" checked>
-        								</div>
-        									 <label class="label_option_sort">Price:Low to high</label>
+    									<input id="radio-2" class="radio-custom" name="radio-group" type="radio" checked >
+            							<label for="radio-2" class="radio-custom-label">Radio Button 1</label>
+            							<div class="mat-radio-ripple"></div>
     								</div>
     								<div class="form-check style_form_check">
-    									<div>
-        									<input type="radio" class="form-check-input input_radi" id="radio1"  name="optradio" value="option1" checked>
-        								</div>
-        									 <label class="label_option_sort">Price: High to low</label>
+    									<input id="radio-3" class="radio-custom" name="radio-group" type="radio" checked >
+            							<label for="radio-3" class="radio-custom-label">Radio Button 1</label>
+            							<div class="mat-radio-ripple"></div>
     								</div>
   								</form>
   							</div>
@@ -302,7 +314,9 @@
 							<li class="waves-effect" data-page="6">4</li>
 							<li class="">...</li>
 							<li class="waves-effect" data-page="10">17</li>
-							<li class="waves-effect" data-page="next"><i class="waves-effect material-icons">></i></li>
+							<li class="waves-effect" data-page="next">
+								<i class="waves-effect material-icons">></i>
+							</li>
 						</ul>
 					</div>
 				</div>
