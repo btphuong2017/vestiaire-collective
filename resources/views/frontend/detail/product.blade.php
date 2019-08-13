@@ -66,7 +66,7 @@
                         c0-2.9-2.3-5.3-5.2-5.3C12.5,0.5,10.9,1.8,10,3.2z" fill="currentColor" stroke="currentColor">
                     </path>
                 </svg>
-                Like 10
+                <span>Like 10</span>
             </a>
             <a href="#comment" class="product-detail-comment">
                 <svg class="svg_bubble" viewBox="0 0 25 22">
@@ -78,7 +78,7 @@
                         <circle cx="-118" cy="11" fill="currentColor" id="Oval-4_1_" r="1"></circle>
                     </g>
                 </svg>
-                Add a comment
+                <span>Add a comment</span>
             </a>
             <a href="#share" class="product-detail-share">
                 <svg class="svg_share_arrow" viewBox="0 0 20 18">
@@ -86,7 +86,7 @@
                         c2.3-3.9,5.9-6.6,10.8-6.6h0.5V14.7z M0.5,18C0.5,18,0.5,18,0.5,18C0.5,18,0.5,18,0.5,18z"
                         stroke="currentColor"></path>
                 </svg>
-                Share this item
+                <span>Share this item</span>
             </a>
         </div>
     </div>
@@ -150,8 +150,23 @@
                 </p>
                 <div class="product-detail-tooltip">
                     <span class="tooltip-icon">
+                        <svg xml:space="preserve" class="svg-infos" style="enable-background:new 0 0 15 15;"
+                            version="1.1" viewBox="0 0 15 15" x="0px" xmlns="http://www.w3.org/2000/svg" y="0px">
+                            <g>
+                                <rect fill="currentColor" height="6" width="1" x="7" y="6"></rect>
+                                <rect fill="currentColor" height="1.5" width="1" x="7" y="3"></rect>
+                                <path d="M7.5,0C3.4,0,0,3.4,0,7.5S3.4,15,7.5,15S15,11.6,15,7.5S11.6,0,7.5,0z M7.5,14C3.9,14,1,11.1,1,7.5
+                                S3.9,1,7.5,1S14,3.9,14,7.5S11.1,14,7.5,14z" fill="currentColor"></path>
+                            </g>
+                        </svg>
                     </span>
-                    <div class="tooltip-content"></div>
+                    <div class="tooltip-content">
+                        <p>* This offer is valid once per person with the code WELCOME19UK and can be used on all orders
+                            placed through the Vestiaire Collective App with a minimum purchase of HK$1176.86 . Offer is
+                            non-exchangeable, non-refundable and not valid with any other discount or offer. Simply
+                            enter
+                            the code at the checkout.</p>
+                    </div>
                 </div>
             </div>
             <div class="product-detail-actions">

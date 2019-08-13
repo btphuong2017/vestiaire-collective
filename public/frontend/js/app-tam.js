@@ -2,7 +2,6 @@ if(window.innerWidth <= 425){
 /* test kích thước màn hình */
 console.log(window.innerWidth + " < = 425" );
 /* ------------------------ */
-
 	var angleDown = document.querySelectorAll('.footer-body-service-title');
 	var footerLink  = document.querySelectorAll('.footer-body-service-link');
 	var angleDownPolicy = document.querySelectorAll('.footer-body-policy-block-mobile');

@@ -1,21 +1,24 @@
 .product-detail-images {
     text-align: right;
     position: relative;
+
     .product-slideshow {
         display: inline-block;
         width: calc(100% - 75px);
-        position: static;
+        position: relative;
+
         .carousel-item {
             img {
                 width: 100%;
                 object-fit: cover;
+                cursor: zoom-in;
             }
         }
 
         .carousel-indicators {
             position: absolute;
             top: 50%;
-            left: 0;
+            left: -70px;
             z-index: 1;
             margin: 0;
             padding: 0;
@@ -25,6 +28,7 @@
             flex-flow: column;
             align-items: flex-start;
             justify-content: flex-start;
+
             li {
                 margin: 5px 0;
                 width: 50px;
@@ -33,31 +37,86 @@
                 border: 1px solid #ababab;
                 text-align: center;
                 opacity: 0.5;
+
                 img {
                     display: block;
                     width: 100%;
                     object-fit: cover;
                 }
+
                 &.active {
                     opacity: 1;
                 }
             }
         }
     }
+
     .product-detail-links {
         text-align: center;
+
         a {
             color: #de8962;
             font-size: 18px;
             line-height: 20px;
             margin: 0 10px;
+
             svg {
                 margin-right: 10px;
                 height: 16px;
                 object-fit: cover;
+
                 path {
                     fill: #fff;
                 }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .product-detail-images {
+        position: relative;
+        .product-slideshow {
+            width: 100%;
+            display: block;
+            padding-bottom: 30px;
+            margin-top: 20px;
+            position: static;
+            .carousel-indicators {
+                bottom: -8px;
+                top: auto;
+                left: 0;
+                right: auto;
+                text-align: left;
+                display: inline;
+                width: auto;
+                li {
+                    margin: 0 5px;
+                    display: inline-block;
+                    width: 5px;
+                    height: 5px;
+                    border-radius: 50%;
+                    padding: 0;
+                    border-color: #2b2b2b;
+                    img {
+                        display: none;
+                    }
+                    &.active {
+                        background: #2b2b2b;
+                    }
+                }
+            }
+        }
+        .product-detail-links {
+            position: absolute;
+            right: 0;
+            bottom: 3px;
+            width: auto;
+            a span {
+                display: none;
+            }
+            a svg {
+                margin: 0;
             }
         }
     }

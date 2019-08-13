@@ -251,3 +251,53 @@
         </div>
     </div>
 </div>
+<div id="magnifierGlassModal" class="modal fade" data-state="close">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <div class="carousel slide magnifier-glass-slider" data-ride="carousel" id="magnifierGlassSlider"
+                data-interval="false">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="{{ frontend('images/demo-slide-1.jpg') }}" alt="Demo" />
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ frontend('images/demo-slide-2.jpg') }}" lat="Demo" />
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ frontend('images/demo-slide-2.jpg') }}" lat="Demo" />
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ frontend('images/demo-slide-2.jpg') }}" lat="Demo" />
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ frontend('images/demo-slide-2.jpg') }}" lat="Demo" />
+                    </div>
+                </div>
+                <ol class="carousel-indicators">
+                    <li data-target="#magnifierGlassSlider" data-slide-to="0" class="active">
+                        <img src="{{ frontend('images/demo-slide-1.jpg') }}" alt="Demo" />
+                    </li>
+                    <li data-target="#magnifierGlassSlider" data-slide-to="1">
+                        <img src="{{ frontend('images/demo-slide-2.jpg') }}" alt="Demo" />
+                    </li>
+                    <li data-target="#magnifierGlassSlider" data-slide-to="2">
+                        <img src="{{ frontend('images/demo-slide-2.jpg') }}" alt="Demo" />
+                    </li>
+                    <li data-target="#magnifierGlassSlider" data-slide-to="3">
+                        <img src="{{ frontend('images/demo-slide-2.jpg') }}" alt="Demo" />
+                    </li>
+                    <li data-target="#magnifierGlassSlider" data-slide-to="4">
+                        <img src="{{ frontend('images/demo-slide-2.jpg') }}" alt="Demo" />
+                    </li>
+                </ol>
+                <a class="carousel-control-prev" href="#magnifierGlassSlider" role="button" data-slide="prev">
+                    <span></span>
+                </a>
+                <a class="carousel-control-next" href="#magnifierGlassSlider" role="button" data-slide="next">
+                    <span></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

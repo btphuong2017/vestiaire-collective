@@ -1,0 +1,42 @@
+.same-tags {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .tag {
+        margin: 0 5px 10px 5px;
+        flex: 0 0 auto;
+        button, a {
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: #de8962;
+            border: 1px solid #de8962;
+            padding: 12px 20px 11px;
+            line-height: 14px;
+            font-size: 13px;
+            font-weight: 500;
+            vertical-align: middle;
+            text-transform: uppercase;
+            letter-spacing: .1em;
+            transition: .3s ease;
+            &:active, &:focus, &:visited {
+                outline: 0;
+            }
+           
+        }
+        button:hover, a:hover {
+            border-color: #b37152;
+            background: #b37152;
+            color: #FFF;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .same-tags {
+        margin-top: 15px;
+        flex-flow: row nowrap;
+        overflow-x: auto;
+        justify-content: flex-start;
+    }
+}
