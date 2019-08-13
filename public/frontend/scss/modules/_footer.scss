@@ -202,57 +202,47 @@ footer.footer{
 }
 
 /* ----------------------- Modal --------------------------- */
-.modal-footer{	
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	z-index: 1000;
+
+.modal{
 	display: none;
-	padding: 0;	
-	justify-content: center;
-	width: 100%;
-	height: 100vh;
 	opacity: 0;
-	transform: translateY(10px);
-	-webkit-transform: translateY(10px);
-	transition: all .6s;
-	-webkit-transition: all .6s;
-	
-	.modal-dialog-footer{
-		    width: 100%;
-		    height: 100vh;
-		    display: flex;
-		    justify-content: center;
-		    align-items: center;
-		.modal-content{				
-			z-index: 1100;				
+	transition: all .7s;
+	-webkit-transition: all .7s;
+	z-index: 1000;
+	.modal-dialog{
+		margin: 0;
+		max-width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		.modal-content{					
+			position: relative;		
 			width: 600px;
-			height: 343px;
-			padding: 60px 40px 40px 40px; 
-			.close{
+			height: 330px;
+			padding: 40px 25px 25px 25px;
+			z-index: 1000;
+			.close{	
 				position: absolute;
 				top: 0;
-				right: 0;					
+				right: 0px;				
+				z-index: 1000;
 				button{
-					width: 56px;
-					height: 56px;
 					border: none;
 					outline: none;
-					font-size: 30px;
-					padding: 0;
-					color: #ababab;
 					background-color: #fff;
-					cursor: pointer;				
+					font-size: 30px;
+					width: 50px;
+					height: 50px;
+					cursor: pointer;
 				}
-			}
-			.modal-body{
-				padding: 0;
+			}				
+			.modal-body{		
 				.modal-body-title{
 					font-size: 38px;
 				/* 	font-weight: 300; */
-					margin-bottom: 30px;			
+					margin-bottom: 25px;	
+					letter-spacing: -3px;		
 				}
 				.modal-body-choose{
 					width: 100%;
@@ -295,7 +285,7 @@ footer.footer{
 					}
 				}
 				div.save-change{
-					padding-top: 40px;
+					padding-top: 30px;
 					text-align: right;
 					button{
 						background-color: #2b2b2b;
@@ -314,7 +304,7 @@ footer.footer{
 				}
 			}
 		}
-	}		
+	}
 }
 /* ----------------------- End Modal --------------------------- */
 
@@ -373,6 +363,23 @@ footer.footer{
 	}
 }
 /* ------------ End max-width: 768px ----------- */
+
+/* ------------ max-width: 758px --------------- */
+@media (max-width: 758px){
+	footer.footer{
+		.footer-body{
+			.footer-body-usd{
+				.footer-body-usd-info{
+					flex-wrap: wrap;
+					.footer-body-usd-social{
+						flex-wrap: wrap;
+					}
+				}
+			}
+		}
+	}
+}
+/* ------------ End max-width: 758px --------------- */
 /* ------------------------ End Tablet ------------------- */
 
 
@@ -550,25 +557,44 @@ footer.footer{
 			}
 		}
 	}
-	.modal-footer{
-		.modal-dialog-footer{
+	.modal{
+		.modal-dialog{
 			.modal-content{
-				padding: 20px;
 				width: 100%;
-				height: 100vh;
+				height: 100%;
+				border-radius: 0;
+				padding: 0;
+				background-clip: initial;
+				
 				.modal-body{
-					.modal-body-title{
-						font-size: 35px;
+					padding: 30px 20px 20px 20px;
+					.modal-body-title{		
+						font-size: 36px;			
 					}
 					.modal-body-choose{
 						flex-wrap: wrap;
 						& > div{
 							width: 100%;
+							margin-bottom: 25px;
 							.customs-select{
 								select{
 									width: 100% !important;
 								}
 							}
+						}
+					}
+					div.save-change{
+						padding-top: 40px;
+						width: 100%;
+						text-align: right;
+						button{
+							background-color: #2b2b2b;
+							width: 100%;
+							color: #fff;
+							border: none;
+							cursor: pointer;
+							font-size: 13px;
+							padding: 21px 40px;
 						}
 					}
 				}
@@ -596,15 +622,18 @@ footer.footer{
 		-o-transform: rotate(-227deg) !important;
 	}
 }
+.showServiceLinkMobile{
+	display: block !important;
+}
 .transitionCollapse{
 	transition: all 2s !important;
 	-webkit-transition: all 2s !important;
 }
 .showModal{
-	transition: all .6s !important;
-	-webkit-transition: all .6s !important;
-	opacity: 1 !important;
-	display: block !important;
-	transform: translateY(-10px) !important;
-	-webkit-transform: translateY(-10px) !important;
+	transition: all .7s;
+	-webkit-transition: all .7s;
+	opacity: 1;
+	display: block;
+	
 }
+
