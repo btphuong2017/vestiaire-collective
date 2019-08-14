@@ -1871,8 +1871,7 @@ footer.footer .footer-body .footer-body-usd .footer-body-usd-info .footer-body-u
   font-family: "italic-quarto";
   src: url("../../frontend/fonts/Italic-Quarto.woff2");
 }
-body,
-* {
+body {
   font-family: "HK Grotesk", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: auto;
