@@ -187,6 +187,8 @@ body.safariNoScroll header .overflow-background {
 }
 .header-firstline .header-user-access .user-access-item.access-signup .btn, .header-firstline .header-user-access .user-access-item.access-signin .btn {
   text-transform: none;
+  font-family: sans-serif;
+  font-size: 16px;
 }
 .header-firstline .header-user-access .user-access-item.access-notification .access-dropdown.notifications {
   width: auto;
