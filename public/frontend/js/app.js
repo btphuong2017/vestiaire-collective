@@ -1,6 +1,6 @@
+
 document.addEventListener('DOMContentLoaded', function () {
     var lder = loader();
-
     var owl = $('.owl-carousel.carousel-banner');
 
     if (owl.length > 0) {
@@ -285,7 +285,6 @@ const mainNavigation = function () {
     var navLinks = document.querySelectorAll('#main-nav > li.nav-item a')
     var itemUnderline = navBar.querySelector('.nav-item-underline');
     var subNavs = navBar.querySelectorAll('.nav-item .sub-nav');
-
     var justInNavContent = null;
 
     // =============
@@ -371,8 +370,8 @@ const mainNavigation = function () {
 
     navItems.forEach(function (item) {
         item.addEventListener('click', function (e) {
+            
             if (window.innerWidth <= 1024) {
-
                 if (this.classList.contains('active')) {
                     if (!e.target.closest('.main-nav .nav-item .sub-nav')) {
                         this.classList.remove('active');
@@ -397,7 +396,7 @@ const mainNavigation = function () {
 
     subNavItems.forEach(function (subItem) {
         subItem.addEventListener('click', function (e) {
-            if (window.innerWidth <= 1024) {
+            if (this.parentNode.parentNode.classList.contains('active') && window.innerWidth <= 1024) {
                 if (this.classList.contains('active')) {
                     if (!e.target.closest('.child-nav .child-nav-item a')) {
                         this.classList.remove('active');
@@ -769,18 +768,6 @@ const magnifierGlassModal = function () {
         }
     }
 };
-document.addEventListener('DOMContentLoaded', function () {
-    var header = headerFix();
-    var inputlabel = inputLabel();
-    var searchbar = searchbarDesktop();
-    var mainnav = mainNavigation();
-    var dropdown = dropDown();
-    var searchbarmobile = searchbarMobile();
-    var signinmodal = authModal();
-    var generalinformation = generalInformation();
-    var carouselslide = carouselSlide();
-    var magnifierglassimage = magnifierGlassModal();
-});
 const footerEvents = function () {
     var angleDown = document.querySelectorAll('.footer-body-service-title');
     var footerLink = document.querySelectorAll('.footer-body-service-link');
