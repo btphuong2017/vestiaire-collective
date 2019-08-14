@@ -10,7 +10,9 @@
         .carousel-item {
             img {
                 width: 100%;
-                object-fit: cover;
+                -o-object-fit: cover;
+                   object-fit: cover;
+                cursor: -webkit-zoom-in;
                 cursor: zoom-in;
             }
         }
@@ -23,17 +25,29 @@
             margin: 0;
             padding: 0;
             width: 50px;
-            transform: translate(0, -50%);
+            -webkit-transform: translate(0, -50%);
+                    transform: translate(0, -50%);
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-flow: column;
-            align-items: flex-start;
-            justify-content: flex-start;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-flow: column;
+                    flex-flow: column;
+            -webkit-box-align: start;
+                -ms-flex-align: start;
+                    align-items: flex-start;
+            -webkit-box-pack: start;
+                -ms-flex-pack: start;
+                    justify-content: flex-start;
 
             li {
                 margin: 5px 0;
                 width: 50px;
                 height: 50px;
-                flex: 0 0 50px;
+                -webkit-box-flex: 0;
+                    -ms-flex: 0 0 50px;
+                        flex: 0 0 50px;
                 border: 1px solid #ababab;
                 text-align: center;
                 opacity: 0.5;
@@ -41,7 +55,8 @@
                 img {
                     display: block;
                     width: 100%;
-                    object-fit: cover;
+                    -o-object-fit: cover;
+                       object-fit: cover;
                 }
 
                 &.active {
@@ -63,7 +78,8 @@
             svg {
                 margin-right: 10px;
                 height: 16px;
-                object-fit: cover;
+                -o-object-fit: cover;
+                   object-fit: cover;
 
                 path {
                     fill: #fff;

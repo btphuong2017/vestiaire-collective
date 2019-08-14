@@ -79,7 +79,9 @@
     .product-detail-discount {
         margin: 20px 0 6px;
         line-height: 28px;
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         position: relative;
         padding-right: 30px;
 
@@ -115,11 +117,13 @@
                 position: absolute;
                 right: 35px;
                 top: 50%;
-                transform: translate(0, -50%);
+                -webkit-transform: translate(0, -50%);
+                        transform: translate(0, -50%);
                 padding: 20px;
                 width: 360px;
                 background: #FFF;
-                box-shadow: 0 2px 8px 4px rgba(43,43,43,.06);
+                -webkit-box-shadow: 0 2px 8px 4px rgba(43,43,43,.06);
+                        box-shadow: 0 2px 8px 4px rgba(43,43,43,.06);
                 &::after {
                     content: "";
                     position: absolute;
@@ -130,7 +134,8 @@
                     right: 0;
                     top: 50%;
                     z-index: -1;
-                    transform: rotate(45deg) translate(0, -50%);
+                    -webkit-transform: rotate(45deg) translate(0, -50%);
+                            transform: rotate(45deg) translate(0, -50%);
                 }
                 p {
                     color: #707070;
@@ -147,12 +152,18 @@
 
     .product-detail-actions {
         margin: 30px 0 35px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
 
         button {
             display: inline-block;
-            flex: 0 0 auto;
-            flex-grow: 1;
+            -webkit-box-flex: 0;
+                -ms-flex: 0 0 auto;
+                    flex: 0 0 auto;
+            -webkit-box-flex: 1;
+                -ms-flex-positive: 1;
+                    flex-grow: 1;
             font-size: 14px;
             font-weight: 500;
             line-height: 16px;
@@ -162,6 +173,7 @@
             text-transform: uppercase;
             border-width: 1px;
             border-style: solid;
+            -webkit-transition: .3s;
             transition: .3s;
         }
 
@@ -209,7 +221,8 @@
                 position: absolute;
                 left: 0;
                 top: 50%;
-                transform: translate(0, -50%);
+                -webkit-transform: translate(0, -50%);
+                        transform: translate(0, -50%);
                 height: 14px;
                 width: 15px;
             }
@@ -229,7 +242,8 @@
                 top: 4px;
                 height: 19px;
                 width: 18px;
-                transform: none;
+                -webkit-transform: none;
+                        transform: none;
             }
         }
     }
@@ -280,7 +294,8 @@
         top: 0;
         z-index: 9;
         text-align: right;
-        transform: translate(0, -50%);
+        -webkit-transform: translate(0, -50%);
+                transform: translate(0, -50%);
 
         .product-detail-sellerLink {
             text-align: right;
@@ -299,13 +314,31 @@
                 margin-bottom: 14px;
                 height: 68px;
                 width: 68px;
-                object-fit: cover;
-                object-position: center;
+                -o-object-fit: cover;
+                   object-fit: cover;
+                -o-object-position: center;
+                   object-position: center;
             }
         }
     }
 }
-
+@media (max-width: 1024px) {
+    .product-detail-infos {
+        .product-detail-actions {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-flow: row wrap;
+                    flex-flow: row wrap;
+            button {
+                -webkit-box-flex: 0;
+                    -ms-flex: 0 0 100%;
+                        flex: 0 0 100%;
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+    }
+}
 @media (max-width: 767px) {
     .product-detail-infos {
         position: relative;
@@ -324,10 +357,15 @@
         }
 
         .product-detail-actions {
-            flex-flow: row wrap;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-flow: row wrap;
+                    flex-flow: row wrap;
 
             button {
-                flex: 0 0 100%;
+                -webkit-box-flex: 0;
+                    -ms-flex: 0 0 100%;
+                        flex: 0 0 100%;
                 width: 100%;
                 margin: 10px 0;
             }
@@ -356,7 +394,10 @@
         }
 
         .product-detail-discount {
-            flex-flow: row nowrap;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-flow: row nowrap;
+                    flex-flow: row nowrap;
 
             svg,
             p {

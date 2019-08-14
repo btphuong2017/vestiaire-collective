@@ -1,0 +1,28 @@
+.section-recently {
+    background: #fafafa;
+    .owl-carousel {
+        position: relative;
+        .owl-nav {
+            button {
+                position: absolute;
+                top: 50%;
+                -webkit-transform: translate(0, -50%);
+                        transform: translate(0, -50%);
+                font-size: 30px;
+                &:hover {
+                    background: transparent;
+                    color: #D6D6D6;
+                }
+                &:focus, &:active, &:visited {
+                    outline: 0;
+                }
+            }
+            button.owl-prev {
+                left: -13px;
+            }
+            button.owl-next {
+                right: -13px;
+            }
+        }
+    }
+}

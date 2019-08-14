@@ -64,11 +64,13 @@ body.safariNoScroll header .overflow-background {
         width: 243px;
         left: 50%;
         top: 50%;
-        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
 
         img {
             width: 100%;
-            object-fit: cover;
+            -o-object-fit: cover;
+               object-fit: cover;
         }
     }
 
@@ -77,9 +79,16 @@ body.safariNoScroll header .overflow-background {
         right: 20px;
         top: 0;
         height: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-flow: row nowrap;
-        align-items: center;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: row nowrap;
+                flex-flow: row nowrap;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
 
         &.left {
             right: auto;
@@ -101,8 +110,12 @@ body.safariNoScroll header .overflow-background {
                     height: 20px;
                     bottom: -8px;
                     right: -8px;
-                    align-items: center;
-                    justify-content: center;
+                    -webkit-box-align: center;
+                        -ms-flex-align: center;
+                            align-items: center;
+                    -webkit-box-pack: center;
+                        -ms-flex-pack: center;
+                            justify-content: center;
                     border-radius: 50%;
                     background-color: $main-brown;
                     color: #FFF;
@@ -118,6 +131,8 @@ body.safariNoScroll header .overflow-background {
                 }
 
                 span.access-item-inner.active {
+                    display: -webkit-box;
+                    display: -ms-flexbox;
                     display: flex;
                 }
             }
@@ -127,7 +142,8 @@ body.safariNoScroll header .overflow-background {
 
                 svg {
                     width: 21px;
-                    object-fit: cover;
+                    -o-object-fit: cover;
+                       object-fit: cover;
                 }
             }
 
@@ -144,7 +160,8 @@ body.safariNoScroll header .overflow-background {
                     display: block;
                     border-radius: 50%;
                     height: 40px;
-                    object-fit: cover;
+                    -o-object-fit: cover;
+                       object-fit: cover;
                 }
             }
 
@@ -155,7 +172,8 @@ body.safariNoScroll header .overflow-background {
                 top: 55px;
                 width: 300px;
                 background-color: #FFF;
-                box-shadow: 0 2px 8px 4px rgba(43, 43, 43, .06);
+                -webkit-box-shadow: 0 2px 8px 4px rgba(43, 43, 43, .06);
+                        box-shadow: 0 2px 8px 4px rgba(43, 43, 43, .06);
                 z-index: 99;
 
                 &.active {
@@ -175,7 +193,8 @@ body.safariNoScroll header .overflow-background {
                     border-color: transparent;
                     border-top-color: #eaeaea;
                     border-right-color: #eaeaea;
-                    transform: rotate(-45deg);
+                    -webkit-transform: rotate(-45deg);
+                            transform: rotate(-45deg);
                 }
 
                 .access-dropdown-header {
@@ -212,14 +231,19 @@ body.safariNoScroll header .overflow-background {
                         line-height: 20px;
                         margin: 0;
                         border-bottom: 1px solid #eaeaea;
+                        display: -webkit-box;
+                        display: -ms-flexbox;
                         display: flex;
-                        align-items: flex-start;
+                        -webkit-box-align: start;
+                            -ms-flex-align: start;
+                                align-items: flex-start;
 
                         .notification-picture {
                             height: 40px;
                             width: 40px;
                             margin-right: 15px;
-                            object-fit: cover;
+                            -o-object-fit: cover;
+                               object-fit: cover;
                             border-radius: 50%;
                         }
 
@@ -249,16 +273,24 @@ body.safariNoScroll header .overflow-background {
                     padding: 30px 0;
                     background: #fafafa;
                     color: #ababab;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
                     display: flex;
-                    align-items: center;
+                    -webkit-box-align: center;
+                        -ms-flex-align: center;
+                            align-items: center;
                     justify-items: center;
-                    flex-flow: row wrap;
+                    -webkit-box-orient: horizontal;
+                    -webkit-box-direction: normal;
+                        -ms-flex-flow: row wrap;
+                            flex-flow: row wrap;
                     font-size: 18px;
                     line-height: 26px;
 
                     svg {
                         height: 33px;
-                        object-fit: cover;
+                        -o-object-fit: cover;
+                           object-fit: cover;
                         margin-bottom: 20px;
                         margin-left: auto;
                         margin-right: auto;
@@ -284,16 +316,24 @@ body.safariNoScroll header .overflow-background {
                     padding: 30px 0;
                     background: #fafafa;
                     color: #ababab;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
                     display: flex;
-                    align-items: center;
+                    -webkit-box-align: center;
+                        -ms-flex-align: center;
+                            align-items: center;
                     justify-items: center;
-                    flex-flow: row wrap;
+                    -webkit-box-orient: horizontal;
+                    -webkit-box-direction: normal;
+                        -ms-flex-flow: row wrap;
+                            flex-flow: row wrap;
                     font-size: 18px;
                     line-height: 26px;
 
                     svg {
                         height: 33px;
-                        object-fit: cover;
+                        -o-object-fit: cover;
+                           object-fit: cover;
                         margin-bottom: 20px;
                         margin-left: auto;
                         margin-right: auto;
@@ -333,7 +373,9 @@ body.safariNoScroll header .overflow-background {
                         border-radius: 50%;
                     }
 
-                    object-fit: cover;
+                    -o-object-fit: cover;
+
+                       object-fit: cover;
                 }
 
                 .user-info-profile {
@@ -405,9 +447,14 @@ body.safariNoScroll header .overflow-background {
 .header-secondline {
     width: 100%;
     background-color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-content: center;
-    justify-content: space-between;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     height: 62px;
     position: relative;
     border-bottom: 1px solid #eaeaea;
@@ -434,13 +481,15 @@ body.safariNoScroll header .overflow-background {
         overflow: hidden;
 
         &.active {
+            -webkit-transition: width 1s ease;
             transition: width 1s ease;
             width: 960px;
             height: 400px;
             padding-right: 58px;
             left: -10px;
             padding-left: 30px;
-            box-shadow: 0 2px 8px 4px rgba(43, 43, 43, .06);
+            -webkit-box-shadow: 0 2px 8px 4px rgba(43, 43, 43, .06);
+                    box-shadow: 0 2px 8px 4px rgba(43, 43, 43, .06);
         }
 
         .searchbar-form-area {
@@ -464,10 +513,11 @@ body.safariNoScroll header .overflow-background {
                 svg {
                     width: 20px;
                     height: 20px;
-                    object-fit: cover;
+                    -o-object-fit: cover;
+                       object-fit: cover;
                     position: absolute;
                     left: 1px;
-                    top: 4px;
+                    top: 2px;
                 }
             }
 
@@ -503,7 +553,8 @@ body.safariNoScroll header .overflow-background {
                     width: 12px;
                     height: 12px;
                     display: inline-block;
-                    transform: translateY(-50%);
+                    -webkit-transform: translateY(-50%);
+                            transform: translateY(-50%);
 
                     &:after,
                     &:before {
@@ -515,16 +566,19 @@ body.safariNoScroll header .overflow-background {
                         height: 16px;
                         width: 2px;
                         background-color: #ababab;
-                        transform-origin: center center;
+                        -webkit-transform-origin: center center;
+                                transform-origin: center center;
                     }
 
                     &:after {
-                        transform: rotate(-45deg);
+                        -webkit-transform: rotate(-45deg);
+                                transform: rotate(-45deg);
 
                     }
 
                     &:before {
-                        transform: rotate(45deg);
+                        -webkit-transform: rotate(45deg);
+                                transform: rotate(45deg);
                     }
                 }
             }
@@ -549,11 +603,14 @@ body.safariNoScroll header .overflow-background {
             width: 100%;
             display: none;
             padding-top: 24px;
-            flex-flow: nowrap;
+            -ms-flex-flow: nowrap;
+                flex-flow: nowrap;
 
             .suggestion-recent,
             .suggestion-popular {
-                flex: 0 0 50%;
+                -webkit-box-flex: 0;
+                    -ms-flex: 0 0 50%;
+                        flex: 0 0 50%;
                 min-width: 300px;
 
                 .suggestion-title {
@@ -598,6 +655,8 @@ body.safariNoScroll header .overflow-background {
         }
 
         &.active .searchbar-suggestion {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
         }
     }
@@ -641,7 +700,10 @@ body.safariNoScroll header .overflow-background {
                     right: -20px;
                     padding: 20px 33px;
                     background: #FFF;
-                    flex-flow: row nowrap;
+                    -webkit-box-orient: horizontal;
+                    -webkit-box-direction: normal;
+                        -ms-flex-flow: row nowrap;
+                            flex-flow: row nowrap;
                     border-bottom: 1px solid #eaeaea;
 
                     .sub-nav-item {
@@ -678,6 +740,7 @@ body.safariNoScroll header .overflow-background {
             .nav-item-underline {
                 position: absolute;
                 display: block;
+                -webkit-transition: all 0.3s ease;
                 transition: all 0.3s ease;
                 background: #de8962;
                 height: 2px;
@@ -699,7 +762,8 @@ body.safariNoScroll header .overflow-background {
                     svg {
                         height: 26px;
                         width: auto;
-                        object-fit: cover;
+                        -o-object-fit: cover;
+                           object-fit: cover;
                         margin-bottom: 2px;
                     }
 
@@ -725,7 +789,8 @@ body.safariNoScroll header .overflow-background {
                     svg {
                         height: 26px;
                         width: auto;
-                        object-fit: cover;
+                        -o-object-fit: cover;
+                           object-fit: cover;
                         display: block;
                     }
 
@@ -750,7 +815,9 @@ body.safariNoScroll header .overflow-background {
                     top: 0;
                     bottom: 0;
                     width: 380px;
-                    transform: translate(100%, 0);
+                    -webkit-transform: translate(100%, 0);
+                            transform: translate(100%, 0);
+                    -webkit-transition: 0.5s ease;
                     transition: 0.5s ease;
 
                     .access-dropdown-arrow {
@@ -778,7 +845,8 @@ body.safariNoScroll header .overflow-background {
                             width: 16px;
                             height: 16px;
                             top: 50%;
-                            transform: translate(0, -50%);
+                            -webkit-transform: translate(0, -50%);
+                                    transform: translate(0, -50%);
 
                             span {
                                 display: inline-block;
@@ -787,7 +855,8 @@ body.safariNoScroll header .overflow-background {
                                 position: absolute;
                                 top: 50%;
                                 left: 50%;
-                                transform: translate(-50%, -50%);
+                                -webkit-transform: translate(-50%, -50%);
+                                        transform: translate(-50%, -50%);
 
                                 &:after,
                                 &:before {
@@ -799,22 +868,26 @@ body.safariNoScroll header .overflow-background {
                                     width: 16px;
                                     height: 2px;
                                     background: #ababab;
-                                    transform-origin: center center;
+                                    -webkit-transform-origin: center center;
+                                            transform-origin: center center;
                                 }
 
                                 &:after {
-                                    transform: rotate(45deg)
+                                    -webkit-transform: rotate(45deg);
+                                            transform: rotate(45deg)
                                 }
 
                                 &:before {
-                                    transform: rotate(-45deg)
+                                    -webkit-transform: rotate(-45deg);
+                                            transform: rotate(-45deg)
                                 }
                             }
                         }
                     }
 
                     &.active {
-                        transform: translate(0, 0);
+                        -webkit-transform: translate(0, 0);
+                                transform: translate(0, 0);
                     }
                 }
 
@@ -826,19 +899,31 @@ body.safariNoScroll header .overflow-background {
 
                 .access-dropdown.user-info {
                     .access-dropdown-header {
+                        display: -webkit-box;
+                        display: -ms-flexbox;
                         display: flex;
-                        flex-flow: row nowrap;
-                        align-items: center;
+                        -webkit-box-orient: horizontal;
+                        -webkit-box-direction: normal;
+                            -ms-flex-flow: row nowrap;
+                                flex-flow: row nowrap;
+                        -webkit-box-align: center;
+                            -ms-flex-align: center;
+                                align-items: center;
                         border-bottom: none;
 
                         .user-info-avatar {
-                            flex: 0 0 60px;
+                            -webkit-box-flex: 0;
+                                -ms-flex: 0 0 60px;
+                                    flex: 0 0 60px;
                             display: inline-block;
                         }
 
                         .user-info-profile {
-                            flex: 1 1 auto;
-                            flex-grow: 1;
+                            -webkit-box-flex: 1;
+                                -ms-flex: 1 1 auto;
+                                    flex: 1 1 auto;
+                            -ms-flex-positive: 1;
+                                flex-grow: 1;
                             display: inline-block;
                         }
                     }
@@ -865,12 +950,15 @@ body.safariNoScroll header .overflow-background {
         width: 375px;
         z-index: 99;
         background: #FFF;
-        transform: translate(-100%, 0);
+        -webkit-transform: translate(-100%, 0);
+                transform: translate(-100%, 0);
+        -webkit-transition: 0.5s ease;
         transition: 0.5s ease;
         overflow-y: auto;
 
         &.active {
-            transform: translate(0, 0);
+            -webkit-transform: translate(0, 0);
+                    transform: translate(0, 0);
         }
         .container {
             padding: 0;
@@ -893,7 +981,8 @@ body.safariNoScroll header .overflow-background {
                 position: absolute;
                 top: 50%;
                 left: 50%;
-                transform: translate(-50%, -50%);
+                -webkit-transform: translate(-50%, -50%);
+                        transform: translate(-50%, -50%);
 
                 &:after,
                 &:before {
@@ -905,15 +994,18 @@ body.safariNoScroll header .overflow-background {
                     width: 16px;
                     height: 2px;
                     background: #ababab;
-                    transform-origin: center center;
+                    -webkit-transform-origin: center center;
+                            transform-origin: center center;
                 }
 
                 &:after {
-                    transform: rotate(45deg)
+                    -webkit-transform: rotate(45deg);
+                            transform: rotate(45deg)
                 }
 
                 &:before {
-                    transform: rotate(-45deg)
+                    -webkit-transform: rotate(-45deg);
+                            transform: rotate(-45deg)
                 }
             }
         }
@@ -938,7 +1030,8 @@ body.safariNoScroll header .overflow-background {
                     display: inline-block;
                     margin-right: 10px;
                     width: 21px;
-                    object-fit: contain;
+                    -o-object-fit: contain;
+                       object-fit: contain;
                 }
 
                 span {
@@ -974,6 +1067,7 @@ body.safariNoScroll header .overflow-background {
                         padding-left: 30px;
                         position: static;
                         border-bottom: none;
+                        -webkit-transition: 0.3s ease;
                         transition: 0.3s ease;
 
                         .sub-nav-item {
@@ -1000,6 +1094,7 @@ body.safariNoScroll header .overflow-background {
                                 display: none;
                                 padding-left: 30px;
                                 height: 0;
+                                -webkit-transition: 0.3s ease;
                                 transition: 0.3s ease;
 
                                 .child-nav-item {
@@ -1059,14 +1154,16 @@ body.safariNoScroll header .overflow-background {
         bottom: 0;
         background: #FFF;
         z-index: 999;
-        animation: mobileSearchbarShow 0.3s ease;
+        -webkit-animation: mobileSearchbarShow 0.3s ease;
+                animation: mobileSearchbarShow 0.3s ease;
 
         &.active {
             display: block;
         }
 
         &.active.hide {
-            animation: mobileSearchbarHide 0.3s ease;
+            -webkit-animation: mobileSearchbarHide 0.3s ease;
+                    animation: mobileSearchbarHide 0.3s ease;
         }
 
         .searchbar-form {
@@ -1099,7 +1196,8 @@ body.safariNoScroll header .overflow-background {
                     margin-top: 4px;
                     border-left: 1px solid #ababab;
                     border-bottom: 1px solid #ababab;
-                    transform: rotate(45deg);
+                    -webkit-transform: rotate(45deg);
+                            transform: rotate(45deg);
                 }
             }
         }
@@ -1127,8 +1225,12 @@ body.safariNoScroll header .overflow-background {
                         font-size: 18px;
                         height: 50px;
                         line-height: 38px;
+                        display: -webkit-box;
+                        display: -ms-flexbox;
                         display: flex;
-                        justify-content: space-between;
+                        -webkit-box-pack: justify;
+                            -ms-flex-pack: justify;
+                                justify-content: space-between;
                         padding: 6px 0;
                         position: relative;
                         border-bottom: 1px solid #eaeaea;
@@ -1152,28 +1254,43 @@ body.safariNoScroll header .overflow-background {
         height: auto;
 
         .container {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-flow: row wrap;
-            justify-content: center;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-flow: row wrap;
+                    flex-flow: row wrap;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
         }
 
         .header-logo {
             position: static;
             display: block;
-            transform: none;
+            -webkit-transform: none;
+                    transform: none;
             margin: 20px auto;
 
             img {
                 width: 213px;
-                object-fit: cover;
+                -o-object-fit: cover;
+                   object-fit: cover;
             }
         }
 
         .header-user-access {
             position: static;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex: 0 0 100%;
-            justify-content: space-between;
+            -webkit-box-flex: 0;
+                -ms-flex: 0 0 100%;
+                    flex: 0 0 100%;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
             margin-bottom: 15px;
 
             .user-access-item {
@@ -1201,44 +1318,80 @@ body.safariNoScroll header .overflow-background {
 
 @keyframes slideFromRight {
     0% {
-        transform: translate(100%, 0);
+        -webkit-transform: translate(100%, 0);
+                transform: translate(100%, 0);
     }
 
     100% {
-        transform: translate(0, 0);
+        -webkit-transform: translate(0, 0);
+                transform: translate(0, 0);
     }
 }
 
 @-webkit-keyframes slideFromRight {
     0% {
-        transform: translate(100%, 0);
+        -webkit-transform: translate(100%, 0);
+                transform: translate(100%, 0);
     }
 
     100% {
-        transform: translate(0, 0);
+        -webkit-transform: translate(0, 0);
+                transform: translate(0, 0);
+    }
+}
+
+@-webkit-keyframes mobileSearchbarShow {
+    0% {
+        opacity: 0.0;
+        -webkit-transform: translate(0, 50vh);
+                transform: translate(0, 50vh);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translate(0, 0);
+                transform: translate(0, 0);
     }
 }
 
 @keyframes mobileSearchbarShow {
     0% {
         opacity: 0.0;
-        transform: translate(0, 50vh);
+        -webkit-transform: translate(0, 50vh);
+                transform: translate(0, 50vh);
     }
 
     100% {
         opacity: 1;
-        transform: translate(0, 0);
+        -webkit-transform: translate(0, 0);
+                transform: translate(0, 0);
+    }
+}
+
+@-webkit-keyframes mobileSearchbarHide {
+    0% {
+        opacity: 1;
+        -webkit-transform: translate(0, 0);
+                transform: translate(0, 0);
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: translate(0, 50vh);
+                transform: translate(0, 50vh);
     }
 }
 
 @keyframes mobileSearchbarHide {
     0% {
         opacity: 1;
-        transform: translate(0, 0);
+        -webkit-transform: translate(0, 0);
+                transform: translate(0, 0);
     }
 
     100% {
         opacity: 0;
-        transform: translate(0, 50vh);
+        -webkit-transform: translate(0, 50vh);
+                transform: translate(0, 50vh);
     }
 }

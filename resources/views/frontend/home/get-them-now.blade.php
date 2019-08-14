@@ -1,4 +1,17 @@
-<section class="inner_lejounal">
+{{-- Get Them Now --}}
+<section class="section section-getthemnow">
+    <h3 class="section-title-sm">Get them now</h3>
+    <a href="#" class="section-title">
+        <h2>The return of the Espadrille</h2>
+    </a>
+    <div class="section-getthemnow-image">
+        <img src="{{ frontend('images/get-them-now.jpg') }}" alt="" />
+    </div>
+</section>
+{{-- Get them now --}}
+
+{{-- Le journal --}}
+{{-- <section class="inner_lejounal">
 		<h2 class="title_trending"> Le journal</h2>
 		<div class="contain_allnew">
 		<div class="class_news">
@@ -53,4 +66,4 @@
 		</div>
 		</div>
 
-</section>
+</section> --}}

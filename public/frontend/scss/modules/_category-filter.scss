@@ -9,6 +9,8 @@
     padding-left: 20px;
     padding-right: 20px;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 @media (min-width: 768px){
@@ -21,7 +23,8 @@
     z-index: 0;
     margin-right: 5.2112%;
     min-width: 20.1408%;
-    flex-basis: 20.1408%;
+    -ms-flex-preferred-size: 20.1408%;
+        flex-basis: 20.1408%;
 }
 }
 @media (min-width: 768px){
@@ -88,7 +91,8 @@
     z-index: 0;
     margin-right: 5.2112%;
     min-width: 20.1408%;
-    flex-basis: 20.1408%;
+    -ms-flex-preferred-size: 20.1408%;
+        flex-basis: 20.1408%;
 }
 }
 .price_min{
@@ -148,9 +152,14 @@ display: block;
 }
 .list_size{
 	padding:0px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	display: flex;
-    flex-flow: row wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
     margin-right: -13px;
 }
 .col-6, .col-md-6.col-lg-4, .single_product {
@@ -158,10 +167,19 @@ display: block;
     padding-right: 10px;
 }
 .header_sortby{
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     font-size: 15px;
     color: #2b2b2b;
     padding-bottom: 20px;
@@ -224,31 +242,51 @@ display: block;
 }
 }
 
-.a_filter.collapsed .icon_filter i.fa{
-	transform: rotate(-180deg);
+.a_filter.collapsed .icon_filter i{
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+    vertical-align: middle;
 }
 .a_filte.collapsed:after{
-	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	        transform: rotate(-45deg);
 }
 
 .a_filter:visited{
-    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
 }
-.parent a:hover, a:focus, a:hover{
+.parent a:hover,
+.parent a:focus, 
+.parent a:hover {
     color: #000 !important;
     text-decoration: none !important;
 }
 
 .catalogSort{
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .form_prices{
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     font-size: 14px;
     line-height: 17px;
     padding-right: 40px;
@@ -305,7 +343,8 @@ display: block;
 .vc-btn {
     display: inline-block;
     height: auto;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     /*background: #2b2b2b;
     border: 1px solid #2b2b2b;*/
     border-radius: 0;
@@ -319,6 +358,7 @@ display: block;
     font-family: "HK Grotesk",sans-serif;
     position: relative;
     text-align: center;
+    -webkit-transition: .3s;
     transition: .3s;
     font-weight: 500;
     text-transform: uppercase;
@@ -368,7 +408,8 @@ display: block;
     	position: absolute;
     	bottom: -6px;
     	left: 50%;
-  		transform: rotate(45deg);
+  		-webkit-transform: rotate(45deg);
+  		        transform: rotate(45deg);
     	background: #fff;
     	width: 10px;
     	height: 10px;
@@ -520,7 +561,8 @@ display: block;
     left: auto;
     right: 0;
     z-index: 200;
-    box-shadow: 0 2px 2px rgba(0,0,0,.1);
+    -webkit-box-shadow: 0 2px 2px rgba(0,0,0,.1);
+            box-shadow: 0 2px 2px rgba(0,0,0,.1);
     -webkit-animation: none;
     animation: none;
 }
@@ -567,8 +609,13 @@ display: block;
     padding: 30px;
 }
 .radio_sort {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 .content_option{
 	display: block;
@@ -578,7 +625,8 @@ display: block;
     /* left: auto; */
     /* right: 0; */
     z-index: 200;
-    box-shadow: 0 2px 2px rgba(0,0,0,.1);
+    -webkit-box-shadow: 0 2px 2px rgba(0,0,0,.1);
+            box-shadow: 0 2px 2px rgba(0,0,0,.1);
     -webkit-animation: none;
     /* animation: none; */
     position: absolute;
@@ -613,14 +661,17 @@ display: block;
 	height: 20px;
 }
 .button_filter.collapsed .icon_filter i.fa{
-	transform: rotate(-180deg);
+	-webkit-transform: rotate(-180deg);
+	        transform: rotate(-180deg);
 }
 .button_filter.collapsed:after{
-	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	        transform: rotate(-45deg);
 }
 
 .button_filter:visited{
-    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
 }
 .sort_option{
 	display: inline-block;
@@ -769,7 +820,8 @@ label:hover:before {
 .radio-custom:checked + :before {
     background: #cc815e;
     border: 1px solid #eaeaea;
-    box-shadow: inset 0px 0px 0px 4px #fff;
+    -webkit-box-shadow: inset 0px 0px 0px 4px #fff;
+            box-shadow: inset 0px 0px 0px 4px #fff;
 }
 .radio-custom:focus ~ .mat-radio-ripple {
 	display: block;
@@ -843,6 +895,7 @@ label:hover:before {
 	    height: 100vh;
 	    padding-bottom: 70px;
 	    z-index: 600;
+	    -webkit-transition: .3s ease-in-out;
 	    transition: .3s ease-in-out;
 	}
 	.filters_checkbox_label{
@@ -909,7 +962,8 @@ label:hover:before {
 	}
 
 	.inner_filter{
-		flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
 	}
 	.sort_fillter_mobile{
 		width: 100%;
@@ -920,8 +974,11 @@ label:hover:before {
 	}
 	.visible-xs.sort_fillter_mobile{
 		width: 100%;
+		display: -webkit-box !important;
+		display: -ms-flexbox !important;
 		display: flex !important;
-		flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
 	}
 	.sort_fillter_mobile{
 		border-bottom: 1px solid #eaeaea;
@@ -1014,9 +1071,15 @@ label:hover:before {
 	    -webkit-transform .3s ease-out;
 	}
 	.catalogSort_Sortby.open{
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
-	    flex-flow: nowrap column;
-	    box-shadow: 0 0 500px 500px rgba(0,0,0,.4);
+	    -webkit-box-orient: vertical;
+	    -webkit-box-direction: normal;
+	        -ms-flex-flow: nowrap column;
+	            flex-flow: nowrap column;
+	    -webkit-box-shadow: 0 0 500px 500px rgba(0,0,0,.4);
+	            box-shadow: 0 0 500px 500px rgba(0,0,0,.4);
 	    -webkit-animation: .4s cubic-bezier(.25,.8,.25,1) forwards openFullWindow;
 	    animation: .4s cubic-bezier(.25,.8,.25,1) forwards openFullWindow;
 	}
@@ -1046,7 +1109,8 @@ label:hover:before {
 	}
 
 	.button_sort_mobile .dropdown .dropdown-menu{
-	    box-shadow: none;
+	    -webkit-box-shadow: none;
+	            box-shadow: none;
 	    position: relative;
 	    width: 100%;
 	    display: block !important;
@@ -1057,6 +1121,8 @@ label:hover:before {
 	    padding: 5px 30px;
 	}
 	.label_color{
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
    		position: relative;
     /* padding-left: 32px; */
@@ -1095,17 +1161,16 @@ label:hover:before {
 
 	}
 	.content_option {
-    	box-shadow: none;
+    	-webkit-box-shadow: none;
+    	        box-shadow: none;
     	border: none;
     	background-color: none;
 	}
 	.mat-radio-ripple {
     position: absolute;
-    left: calc(50% - 25px);
-    top: calc(50% - 25px);
     height: 50px;
     width: 50px;
-    top:8px;
+    top:10px;
     z-index: 1;
     pointer-events: none;
     left: -15px;

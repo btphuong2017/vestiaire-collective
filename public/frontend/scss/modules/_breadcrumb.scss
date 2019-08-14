@@ -1,13 +1,23 @@
 .breadcrumb-container {
     padding-top: 30px;
     width: 100%;
-    order: 1;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
 
     .breadcrumb-list {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        flex-flow: row nowrap;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: row nowrap;
+                flex-flow: row nowrap;
         min-height: 34px;
         line-height: 16px;
         font-size: 13px;
@@ -16,8 +26,12 @@
         margin: 0;
 
         .breadcrumb-item {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            align-items: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
             &::before {
                 content: '';
                 display: inline-block;

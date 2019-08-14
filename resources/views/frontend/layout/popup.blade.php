@@ -1,3 +1,4 @@
+{{-- Authentication Modal (Signin - Signup - Facebook - Forgot Password) --}}
 <div id="authModal" class="modal fade">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -251,6 +252,8 @@
         </div>
     </div>
 </div>
+{{-- Authentication Modal (Signin - Signup - Facebook - Forgot Password) --}}
+{{-- Detail Product - Magnifier Glass --}}
 <div id="magnifierGlassModal" class="modal fade" data-state="close">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -301,3 +304,4 @@
         </div>
     </div>
 </div>
+{{-- Detail Product - Magnifier Glass --}}
