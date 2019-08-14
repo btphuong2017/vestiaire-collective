@@ -11,18 +11,27 @@
     }
 
     .seller-detail {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-flow: row wrap;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: row wrap;
+                flex-flow: row wrap;
 
         .seller-block,
         .seller-description,
         .product-reassurance {
-            flex: 0 0 auto;
+            -webkit-box-flex: 0;
+                -ms-flex: 0 0 auto;
+                    flex: 0 0 auto;
         }
 
         .seller-block {
             max-width: 220px;
-            flex: 0 0 auto;
+            -webkit-box-flex: 0;
+                -ms-flex: 0 0 auto;
+                    flex: 0 0 auto;
 
             a {
                 display: block;
@@ -40,8 +49,10 @@
                 margin: 0 auto;
                 margin-bottom: 8px;
                 border-radius: 50%;
-                object-fit: cover;
-                object-position: center;
+                -o-object-fit: cover;
+                   object-fit: cover;
+                -o-object-position: center;
+                   object-position: center;
             }
 
             .seller-name {
@@ -75,6 +86,7 @@
                     line-height: 12px;
                     border: 1px solid #de8962;
                     letter-spacing: .2em;
+                    -webkit-transition: 0.3s ease;
                     transition: 0.3s ease;
 
                     &:hover {
@@ -87,7 +99,9 @@
         }
 
         .seller-description-container {
-            flex-grow: 1;
+            -webkit-box-flex: 1;
+                -ms-flex-positive: 1;
+                    flex-grow: 1;
             margin: 0 4%;
 
             .seller-description {
@@ -148,7 +162,8 @@
                         position: absolute;
                         left: 0;
                         top: 50%;
-                        transform: translate(0, -50%);
+                        -webkit-transform: translate(0, -50%);
+                                transform: translate(0, -50%);
                     }
                 }
 
@@ -169,7 +184,8 @@
                     position: absolute;
                     left: 0;
                     top: 50%;
-                    transform: translate(0, -50%);
+                    -webkit-transform: translate(0, -50%);
+                            transform: translate(0, -50%);
                     height: 24px;
                     width: 24px;
 
@@ -236,7 +252,9 @@
                             background: #707070;
                             right: 0;
                             top: 50%;
-                            transform: translate(0, -50%);
+                            -webkit-transform: translate(0, -50%);
+                                    transform: translate(0, -50%);
+                            -webkit-transition: 0.3s;
                             transition: 0.3s;
                         }
 
@@ -322,16 +340,25 @@
         .seller-detail {
             .seller-block {
                 max-width: 100%;
-                flex: 0 0 100%;
+                -webkit-box-flex: 0;
+                    -ms-flex: 0 0 100%;
+                        flex: 0 0 100%;
 
                 a {
                     position: relative;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
                     display: flex;
-                    flex-flow: row wrap;
+                    -webkit-box-orient: horizontal;
+                    -webkit-box-direction: normal;
+                        -ms-flex-flow: row wrap;
+                            flex-flow: row wrap;
                     padding: 20px;
 
                     .seller-avatar {
-                        flex: 0 0 68px;
+                        -webkit-box-flex: 0;
+                            -ms-flex: 0 0 68px;
+                                flex: 0 0 68px;
                         margin: 0;
                         margin-right: 10px;
                     }
@@ -344,7 +371,9 @@
                     }
 
                     .seller-info-area {
-                        flex: 0 0 auto;
+                        -webkit-box-flex: 0;
+                            -ms-flex: 0 0 auto;
+                                flex: 0 0 auto;
                         text-align: left;
 
                         .btn-follow-seller {
@@ -418,7 +447,9 @@
 
             .product-reassurance {
                 max-width: 100%;
-                flex: 0 0 100%;
+                -webkit-box-flex: 0;
+                    -ms-flex: 0 0 100%;
+                        flex: 0 0 100%;
                 margin-top: 30px;
             }
         }

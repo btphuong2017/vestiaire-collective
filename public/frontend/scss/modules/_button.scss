@@ -10,7 +10,8 @@
     &:focus,
     &:hover {
         outline: 0;
-        box-shadow: none;
+        -webkit-box-shadow: none;
+                box-shadow: none;
     }
     
 }

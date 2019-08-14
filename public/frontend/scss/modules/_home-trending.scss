@@ -30,10 +30,14 @@
 }
 
 .product_trending {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     overflow-y: hidden;
     overflow-x: auto;
-    justify-content: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: none;
     margin-left: -20px;
@@ -50,12 +54,16 @@
 
 @media (min-width: 768px) {
     .product_trending {
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         position: relative;
     }
 }
 
 .product_trending ul.products {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding: 0px 10px;
 }
@@ -72,9 +80,16 @@
 
 @media (min-width: 768px) {
     .merchandising {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
         width: auto;
         max-width: 214px;
         text-align: center;
@@ -85,8 +100,10 @@
 @media (max-width: 767px) {
     .merchandising {
         white-space: nowrap;
+        -webkit-transition: opacity .3s ease-in-out;
         transition: opacity .3s ease-in-out;
-        box-sizing: content-box;
+        -webkit-box-sizing: content-box;
+                box-sizing: content-box;
         width: 220px;
         height: 220px;
         -o-object-fit: cover;
@@ -97,9 +114,16 @@
 
 @media (min-width: 1024px) {
     .products_li {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
 
     }
 }
@@ -108,14 +132,17 @@
     display: block;
     position: relative;
     text-decoration: none;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 @media (min-width: 768px) {
     .image_product {
         white-space: nowrap;
+        -webkit-transition: opacity .3s ease-in-out;
         transition: opacity .3s ease-in-out;
-        box-sizing: content-box;
+        -webkit-box-sizing: content-box;
+                box-sizing: content-box;
         width: 100%;
         max-width: 214px;
         max-height: 214px;
@@ -139,7 +166,8 @@
     margin: 0;
     letter-spacing: 1.5px;
     color: #2b2b2b;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 
 }
 
