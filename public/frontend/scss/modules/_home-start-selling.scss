@@ -1,0 +1,102 @@
+section.section-selling {
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eaeaea;
+    .selling-content-area, .selling-image-area {
+        max-width: 50%;
+        flex: 0 0 50%;
+        .container {
+            max-width: 100%;
+        }
+    }
+    .selling-content-area {
+        .section-title {
+            padding: 30px 0 15px;
+            font-size: 80px;
+            line-height: 80px;
+        }
+        .selling-content {
+            font-size: 18px;
+            line-height: 28px;
+            padding-bottom: 20px;
+            margin-bottom: 15px;
+
+            a {
+                color: #de8962;
+                text-decoration: none;
+            }
+        }
+
+        .selling-action {
+            button {
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+                color: #FFF;
+                background: #cc815e;
+                border-radius: 0;
+                border: 1px solid #cc815e;
+
+                &:hover {
+                    background: #b37152;
+                    border-color: #b37152;
+                    color: #FFF;
+                }
+            }
+        }
+
+        .selling-discover {
+            margin-top: 60px;
+            font-size: 14px;
+            line-height: 20px;
+            a {
+                font-size: 14px;
+                line-height: 20px;
+                text-decoration: none;
+                color: #de8962;
+            }
+        }
+    }
+    .selling-image-area {
+        text-align: right;
+        img {
+            max-height: 427px;
+            object-fit: cover;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    section.section-selling {
+        .selling-content-area, .selling-image-area {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+        .selling-image-area {
+            order: 1;
+            padding: 30px 20px 15px 20px;
+            img {
+                max-height: unset;
+                width: 100%;
+                object-position: center;
+                object-fit: cover;
+            }
+        }
+        .selling-content-area {
+            order: 2;
+            padding-bottom: 15px;
+            .section-title {
+                padding: 0;
+                margin-bottom: 10px;
+                font-size: 40px;
+                line-height: 45px;
+                font-weight: 300;
+            }
+            .selling-discover {
+                margin-top: 20px;
+            }
+        }
+
+    }
+}

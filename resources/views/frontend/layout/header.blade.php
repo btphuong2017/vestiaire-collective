@@ -1,3 +1,10 @@
+<div class="page-loader-body loader_show">
+    <div class="cssload-loader cssload_loader_show">
+        <div class="cssload-inner cssload-one"></div>
+        <div class="cssload-inner cssload-two"></div>
+        <div class="cssload-inner cssload-three"></div>
+    </div>
+</div>
 <header id="header">
     {{-- Background Overflow --}}
     <div class="overflow-background"></div>
@@ -116,6 +123,9 @@
                     </button>
                 </div>
                 {{-- User access Selling (Only Display Mobile) --}}
+
+                {{-- Button Notification (When Guest No Login) --}}
+                
                 @if (!Auth::check())
                 <div class="user-access-item access-notification">
                     <button type="button" class="btn btn-icon d-block d-lg-none" data-toggle="modal"
@@ -143,6 +153,10 @@
                         <span class="access-item-inner">0</span>
                     </button>
                 </div>
+
+                {{-- Button Notification (When Guest No Login) --}}
+                
+                {{-- Button Me (When Guest No Login) (Not Show On Desktop) --}}
                 <div class="user-access-item access-user d-block d-lg-none">
                     <button type="button" class="btn btn-avatar" data-toggle="modal" data-target="#authModal">
                         <img src="{{ frontend('images/missing_avatar.jpg') }}" alt="Missing Avatar" />
@@ -158,7 +172,11 @@
                         <span class="access-item-text">Me</span>
                     </button>
                 </div>
+                {{-- Button Me (When Guest No Login) (Not Show On Desktop) --}}
+
                 @endif
+
+                {{-- Button Notification (When User Login) --}}
                 @if (Auth::check())
                 <div class="user-access-item access-notification">
                     <button type="button" class="btn btn-icon btn-access-dropdown" data-open="false">
@@ -263,6 +281,9 @@
                     </div>
                 </div>
                 @endIf
+                {{-- Button Notification (When User Login) --}}
+
+                {{-- Button Favourite (When User Login) --}}
                 @if (Auth::check())
                 <div class="user-access-item access-favourite d-none d-lg-block">
                     <button type="button" class="btn btn-icon btn-access-dropdown" data-open="false">
@@ -295,7 +316,11 @@
                     </div>
                 </div>
                 @endif
+                {{-- Button Favourite (When User Login) --}}
+
+                
                 @if (Auth::check())
+                {{-- Cart (When User Login) --}}
                 <div class="user-access-item access-cart">
                     <button type="button" class="btn btn-icon btn-access-dropdown" data-open="false">
                         <svg class="svg_bag_new" viewBox="0 0 25 27">
@@ -354,7 +379,11 @@
                         </div>
                     </div>
                 </div>
+                {{-- Cart (When User Login) --}}
+
                 @else
+
+                {{-- Cart (When Guest No Login) (Open Modal Signin) --}}
                 <div class="user-access-item access-cart">
                     <button type="button" class="btn btn-icon" data-toggle="modal" data-target="#authModal">
                         <svg class="svg_bag_new" viewBox="0 0 25 27">
@@ -381,7 +410,11 @@
                         <span class="access-item-inner">0</span>
                     </button>
                 </div>
+                {{-- Cart (When Guest No Login) (Open Modal Signin) --}}
+
                 @endif
+
+                {{-- User Profile (When User Login) (Only Show When User Login) --}}
                 @if (Auth::check())
                 <div class="user-access-item access-user">
                     <button type="button" class="btn btn-avatar btn-access-dropdown" data-open="false">
@@ -431,6 +464,9 @@
                     </div>
                 </div>
                 @endif
+                {{-- User Profile (When User Login) (Only Show When User Login) --}}
+
+                {{-- Signin - Signup (When Guest No Login) --}}
                 @if (!Auth::check())
                 <div class="user-access-item access-signin d-none d-lg-block">
                     <button type="button" class="btn btn-icon" data-toggle="modal" id="btn-signin"
@@ -444,8 +480,8 @@
                         Sign up
                     </button>
                 </div>
-
                 @endif
+                {{-- Signin - Signup (When Guest No Login) --}}
             </div>
             {{-- Header Accesses --}}
         </div>
@@ -457,6 +493,7 @@
             </button>
             <div class="header-searchbar">
                 <div class="searchbar-desktop" id="searchbar-desktop-container">
+                    {{-- Search Form --}}
                     <div class="searchbar-form-area">
                         <form action="">
                             <div class="searchbar-input">
@@ -488,6 +525,8 @@
                             <span class="close-icon"></span>
                         </button>
                     </div>
+                    {{-- Search Form  --}}
+                    {{-- Search Suggestion and Search Recent Searches --}}
                     <div class="searchbar-suggestion">
                         <div class="suggestion-recent">
                             <div class="text-uppercase suggestion-title">
@@ -557,6 +596,7 @@
                             </ul>
                         </div>
                     </div>
+                    {{-- Search Suggestion and Search Recent Searches --}}
                 </div>
                 <div class="searchbar-mobile">
                     <button type="button" class="btn searchbar-mobile-button" id="btn-searchbar-mobile">
@@ -584,6 +624,7 @@
                     </button>
                 </div>
             </div>
+            {{-- Main Nav --}}
             <nav class="header-nav">
                 <ul class="main-nav" id="main-nav">
                     <li class="nav-item just-in">
@@ -1252,8 +1293,10 @@
                     <span class="nav-item-underline"></span>
                 </ul>
             </nav>
+            {{-- Main Nav --}}
         </div>
     </div>
+    {{-- Search Bar Mobile --}}
     <div class="searchbar-mobile-container" id="searchbar-mobile-container">
         <div class="searchbar-form">
             <button type="button" class="searchbar-button-close">
@@ -1307,4 +1350,5 @@
             </div>
         </div>
     </div>
+    {{-- Search Bar Mobile --}}
 </header>

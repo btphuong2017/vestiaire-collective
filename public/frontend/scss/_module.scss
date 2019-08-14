@@ -16,6 +16,7 @@
 @import './modules/modal';
 @import './modules/input-label';
 @import './modules/section';
+@import './modules/loader';
 
 // ===========
 // @Home
@@ -32,9 +33,7 @@
 // @Category
 // ==========
 
-@import './modules/category-page';
 @import './modules/category-filter';
-@import './modules/category-action-bar';
 @import './modules/category-product';
 
 // ========
@@ -49,3 +48,4 @@
 @import './modules/product-may-also-like';
 @import './modules/product-same-tags';
 @import './modules/product-offer';
+@import './modules/recently-viewed';

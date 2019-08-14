@@ -1,8 +1,113 @@
-.inner_popular_brands{
-	display: block;
-    max-width: 100%;
-    margin: 0 auto;
-    padding-left: 20px;
-    padding-right: 20px;
-    background-color: #fafafa;
+// ==============
+// @Styleguide
+// ==============
+
+.section-styleguide {
+    padding: 60px 0px;
+    background: rgb(217, 170, 57);
+    color: rgb(0, 0, 0);
+
+    .section-title-sm,
+    .section-title {
+        text-align: left;
+    }
+
+    .section-title-sm {
+        padding-left: 43px;
+        font-size: 32px;
+        line-height: 39px;
+        padding-bottom: 11px;
+    }
+
+    a.section-title {
+        text-decoration: none;
+        display: block;
+    }
+
+    a.section-title h2 {
+        padding-bottom: 30px;
+        font-size: 120px;
+        line-height: 120px;
+        letter-spacing: -1.5px;
+        color: #2b2b2b;
+        text-decoration: none;
+    }
+
+    a.section-title h3 {
+        padding-left: 30%;
+        font-size: 80px;
+        line-height: 80px;
+        letter-spacing: -1.5px;
+    }
+
+    .styleguide-images {
+        margin-top: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    }
 }
+@media (max-width: 767px) {
+    .section-styleguide {
+        .section-title-sm {
+            padding-left: 0;
+            font-size: 26px;
+            line-height: 32px;
+            padding-bottom: 27px;
+            font-weight: 100;
+            padding-bottom: 0;
+            margin-bottom: 15px;
+        }
+        a.section-title {
+            margin-bottom: 30px;
+        }
+        a.section-title h2{
+            font-size: 38px;
+            line-height: 38px;
+            font-weight: 300;
+            letter-spacing: -.58px;
+            margin-bottom: 15px;
+            padding-bottom: 0;
+        }
+        a.section-title h3 {
+            font-size: 26px;
+            line-height: 32px;
+            font-weight: 300;
+            letter-spacing: -.58px;
+            padding-left: 0;
+        }
+        .styleguide-images {
+            max-width: 100%;
+            margin: 0;
+            margin-bottom: 15px;
+            position: relative;
+            padding-bottom: 90px;
+            img.left {
+                width: 80%;
+                object-fit: cover;
+                object-position: center;
+            }
+            img.right {
+                position: absolute;
+                right: 0;
+                bottom: 40px;
+                width: 40%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+// ==============
+// @Popular Brand
+// ============== 
+
+// .inner_popular_brands{
+// 	display: block;
+//     max-width: 100%;
+//     margin: 0 auto;
+//     padding-left: 20px;
+//     padding-right: 20px;
+//     background-color: #fafafa;
+// }

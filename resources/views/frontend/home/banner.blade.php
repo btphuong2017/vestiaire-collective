@@ -1,8 +1,4 @@
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="frontend/owl/assets/owl.carousel.min.css" rel="stylesheet" media="screen" />
-<link href="frontend/owl/assets/owl.theme.default.min.css" rel="stylesheet" media="screen" />
-
-<div class="owl-carousel">
+<div class="owl-carousel carousel-banner">
   <div class="banner_home">
   		<img src="frontend/images/banner1_home.jpg" class="img-responsive">
   		<div class="title_banner">

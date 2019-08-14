@@ -1,17 +1,27 @@
 @font-face {
     font-family: 'quarto';
-    src: url('../../fonts/Quarto.woff2');
-}
-@font-face {
-    font-family: 'bold-quarto';
-    src: url('../../fonts/Bold-Quarto.woff2');
-}
-@font-face {
-    font-family: 'italic-quarto';
-    src: url('../../fonts/Italic-Quarto.woff2');
+    src: url('../../frontend/fonts/Quarto.woff2');
 }
 
-body {
-    font-family: "HK Grotesk",sans-serif ;
-    font-weight: 400;
+@font-face {
+    font-family: "HK Grotesk";
+    src: url('../../frontend/fonts/HKGrotesk-Regular.otf');
+}
+
+@font-face {
+    font-family: 'quarto';
+    src: url('../../frontend/fonts/Quarto.woff2');
+}
+
+@font-face {
+    font-family: 'italic-quarto';
+    src: url('../../frontend/fonts/Italic-Quarto.woff2');
+}
+
+body,
+* {
+    font-family: "HK Grotesk", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: auto;
+    text-rendering: geometricPrecision;
 }

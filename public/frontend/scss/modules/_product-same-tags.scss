@@ -12,7 +12,7 @@
             color: #de8962;
             border: 1px solid #de8962;
             padding: 12px 20px 11px;
-            line-height: 14px;
+            line-height: 13px;
             font-size: 13px;
             font-weight: 500;
             vertical-align: middle;
@@ -31,12 +31,23 @@
         }
     }
 }
-
+@media (max-width: 1024px) {
+    .same-tags {
+        margin-top: 15px;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        .tag {
+            margin: 0px 5px 10px 0px;
+        }
+    }
+}
 @media (max-width: 767px) {
     .same-tags {
         margin-top: 15px;
-        flex-flow: row nowrap;
-        overflow-x: auto;
+        flex-flow: row wrap;
         justify-content: flex-start;
+        .tag {
+            margin: 0px 5px 10px 0px;
+        }
     }
 }

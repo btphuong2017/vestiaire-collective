@@ -1,0 +1,177 @@
+.page-loader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    float: left;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 9999999;
+    background: #fff;
+    transition: .3s all ease
+}
+
+.loader_show {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+.cssload_loader_show {
+    top: 50%;
+    transform: translate(0px, -50%);
+}
+
+@media(max-width: 1024px) {
+    .cssload_loader_show {
+        top: 20%;
+    }
+}
+
+.page-loader.loaded {
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1
+}
+
+.page-loader.ending {
+    display: none
+}
+
+.page-loader .page-loader-body {
+    text-align: center
+}
+
+[data-x-mode=design-mode] .page-loader {
+    display: none
+}
+
+.cssload-loader {
+    position: relative;
+    left: calc(50% - 31px);
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    -webkit-perspective: 780px;
+    perspective: 780px
+}
+
+.cssload-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: 50%
+}
+
+.cssload-inner.cssload-one {
+    left: 0%;
+    top: 0%;
+    -webkit-animation: cssload-rotate-one 1.15s linear infinite;
+    animation: cssload-rotate-one 1.15s linear infinite;
+    border-bottom: 3px solid #000
+}
+
+.cssload-inner.cssload-two {
+    right: 0%;
+    top: 0%;
+    -webkit-animation: cssload-rotate-two 1.15s linear infinite;
+    animation: cssload-rotate-two 1.15s linear infinite;
+    border-right: 3px solid #000
+}
+
+.cssload-inner.cssload-three {
+    right: 0%;
+    bottom: 0%;
+    -webkit-animation: cssload-rotate-three 1.15s linear infinite;
+    animation: cssload-rotate-three 1.15s linear infinite;
+    border-top: 3px solid #000
+}
+
+@-webkit-keyframes cssload-rotate-one {
+    0% {
+        -webkit-transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+        transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg)
+    }
+
+    100% {
+        -webkit-transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+        transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg)
+    }
+}
+
+@keyframes cssload-rotate-one {
+    0% {
+        -webkit-transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+        transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg)
+    }
+
+    100% {
+        -webkit-transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+        transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg)
+    }
+}
+
+@-webkit-keyframes cssload-rotate-two {
+    0% {
+        -webkit-transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+        transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg)
+    }
+
+    100% {
+        -webkit-transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+        transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg)
+    }
+}
+
+@keyframes cssload-rotate-two {
+    0% {
+        -webkit-transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+        transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg)
+    }
+
+    100% {
+        -webkit-transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+        transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg)
+    }
+}
+
+@-webkit-keyframes cssload-rotate-three {
+    0% {
+        -webkit-transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+        transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg)
+    }
+
+    100% {
+        -webkit-transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+        transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg)
+    }
+}
+
+@keyframes cssload-rotate-three {
+    0% {
+        -webkit-transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+        transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg)
+    }
+
+    100% {
+        -webkit-transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+        transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg)
+    }
+}

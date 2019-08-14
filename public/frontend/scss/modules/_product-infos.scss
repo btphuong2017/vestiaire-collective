@@ -305,7 +305,18 @@
         }
     }
 }
-
+@media (max-width: 1024px) {
+    .product-detail-infos {
+        .product-detail-actions {
+            flex-flow: row wrap;
+            button {
+                flex: 0 0 100%;
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+    }
+}
 @media (max-width: 767px) {
     .product-detail-infos {
         position: relative;

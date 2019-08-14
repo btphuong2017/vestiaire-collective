@@ -6,8 +6,8 @@
         padding: 20px 0;
         color: #2b2b2b;
         text-align: center;
-        
         .product-detail-brand {
+            font-family: 'quarto';
             text-transform: capitalize;
             font-size: 100px;
             text-align: center;
@@ -15,7 +15,6 @@
             font-weight: 300;
             letter-spacing: -.02em;
             text-decoration: none;
-            font-family: 'bold-quarto';
         }
         .product-detail-name {
             display: block;

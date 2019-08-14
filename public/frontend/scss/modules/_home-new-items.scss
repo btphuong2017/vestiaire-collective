@@ -8,7 +8,34 @@
 }
 
 .product_welove{
-	background-color: white;
+    background-color: white;
+    p, span {
+        font-size: 16px;
+        margin-bottom: 0;
+        line-height: 1.5;
+    }
+    p b {
+        font-family: sans-serif;
+        font-weight: 700;
+    }
+    .welove_img {
+        text-align: center;
+        img {
+            margin: 0 auto;
+        }
+    }
+    .product_location {
+        margin-top: 10px;
+        display: flex;
+        align-items: flex-end;
+        line-height: 1;
+        
+        svg {
+            width: 12px;
+            height: 19px;
+            margin-right: 9px;
+        }
+    }
 }
 @media (min-width: 768px){
 .product_welove{
@@ -41,7 +68,7 @@
 }
 .welove_img{
     position: relative;
-    margin: 20px 0 6px;
+    margin: 25px 0 15px;
     text-align: center;
 }
 .welove_img img{
@@ -85,12 +112,13 @@
 }
 }
 .name_button{
-    padding: 3px 2px;
+    padding: 3px 8px;
     border: 1px solid #2b2b2b;
     text-transform: uppercase;
     font-weight: 500;
-    font-size: 9px;
-    line-height: 11px;
+    font-size: 10px;
+    line-height: 12px;
+    background: #FFF;
 }
 .space10{
 	padding-top:5px;
@@ -102,8 +130,15 @@
 }
 }
 .button_viewall{
+    font-size: 13px;
+    line-height: 13px;
+    letter-spacing: .1em;
+    
 	text-align: center;
-    padding: 70px 0 50px;
+    padding: 30px 0 50px;
+    .btn {
+        padding: 12px 20px;
+    }
 }
 .style_button{
 	background-color: rgb(204, 129, 94);

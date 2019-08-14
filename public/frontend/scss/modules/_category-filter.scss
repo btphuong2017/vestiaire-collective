@@ -224,8 +224,9 @@ display: block;
 }
 }
 
-.a_filter.collapsed .icon_filter i.fa{
-	transform: rotate(-180deg);
+.a_filter.collapsed .icon_filter i{
+    transform: rotate(-180deg);
+    vertical-align: middle;
 }
 .a_filte.collapsed:after{
 	transform: rotate(-45deg);
@@ -234,7 +235,9 @@ display: block;
 .a_filter:visited{
     transform: rotate(135deg);
 }
-.parent a:hover, a:focus, a:hover{
+.parent a:hover,
+.parent a:focus, 
+.parent a:hover {
     color: #000 !important;
     text-decoration: none !important;
 }
@@ -1101,11 +1104,9 @@ label:hover:before {
 	}
 	.mat-radio-ripple {
     position: absolute;
-    left: calc(50% - 25px);
-    top: calc(50% - 25px);
     height: 50px;
     width: 50px;
-    top:8px;
+    top:10px;
     z-index: 1;
     pointer-events: none;
     left: -15px;
