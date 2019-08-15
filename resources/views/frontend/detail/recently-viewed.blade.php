@@ -4,6 +4,7 @@
         <div class="item">
             <div class="single_product">
                 <div class="product_welove">
+                    <div class="header_single_product">
                     <div class="heart_product">
                         <span class="number_love">89</span>
                         <svg class="svg_heart" viewBox="0 0 20 18.2">
@@ -12,6 +13,7 @@
                                 stroke="currentColor">
                             </path>
                         </svg>
+                    </div>
                     </div>
                     <div>
                         <a class="product_welove_a">
@@ -47,6 +49,7 @@
         <div class="item">
             <div class="single_product">
                 <div class="product_welove">
+                    <div class="header_single_product">
                     <div class="heart_product">
                         <span class="number_love">89</span>
                         <svg class="svg_heart" viewBox="0 0 20 18.2">
@@ -56,6 +59,7 @@
                             </path>
                         </svg>
                     </div>
+                    </div>
                     <div>
                         <a class="product_welove_a">
                             <div class="welove_img">
@@ -90,6 +94,7 @@
         <div class="item">
             <div class="single_product">
                 <div class="product_welove">
+                    <div class="header_single_product">
                     <div class="heart_product">
                         <span class="number_love">89</span>
                         <svg class="svg_heart" viewBox="0 0 20 18.2">
@@ -99,6 +104,7 @@
                             </path>
                         </svg>
                     </div>
+                    </div>
                     <div>
                         <a class="product_welove_a">
                             <div class="welove_img">
@@ -133,6 +139,7 @@
         <div class="item">
             <div class="single_product">
                 <div class="product_welove">
+                    <div class="header_single_product">
                     <div class="heart_product">
                         <span class="number_love">89</span>
                         <svg class="svg_heart" viewBox="0 0 20 18.2">
@@ -142,6 +149,7 @@
                             </path>
                         </svg>
                     </div>
+                    </div>
                     <div>
                         <a class="product_welove_a">
                             <div class="welove_img">
@@ -176,6 +184,7 @@
         <div class="item">
             <div class="single_product">
                 <div class="product_welove">
+                    <div class="header_single_product">
                     <div class="heart_product">
                         <span class="number_love">89</span>
                         <svg class="svg_heart" viewBox="0 0 20 18.2">
@@ -185,6 +194,7 @@
                             </path>
                         </svg>
                     </div>
+                    </div>
                     <div>
                         <a class="product_welove_a">
                             <div class="welove_img">
@@ -219,6 +229,7 @@
         <div class="item">
             <div class="single_product">
                 <div class="product_welove">
+                    <div class="header_single_product">
                     <div class="heart_product">
                         <span class="number_love">89</span>
                         <svg class="svg_heart" viewBox="0 0 20 18.2">
@@ -228,6 +239,7 @@
 
                             </path>
                         </svg>
+                    </div>
                     </div>
                     <div>
                         <a class="product_welove_a">

@@ -10,6 +10,14 @@
     <div class="overflow-background"></div>
     {{-- Fixed Topbar --}}
     <div class="fixed-topbar" id="topbar">
+        <div class="inner_fix_topbar">
+            <div class="single_text_show">
+                <span class="show_text">Don't have the App? Download it now!</span>
+            </div>
+            <div class="single_text_show">
+                <!-- <span class="show_text"> Authenticated pre-owed luxury fashion</span> -->
+            </div>
+        </div>
     </div>
     {{-- Fixed Topbar --}}
     {{-- Header FirstLine --}}

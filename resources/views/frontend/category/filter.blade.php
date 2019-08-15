@@ -1,10 +1,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="/frontend/font-awesome/css/font-awesome.min.css">
 <section class="contain_filter">
-	<div class="visible-xs sort_fillter_mobile">
+	<div class="d-sm-none sort_fillter_mobile">
 			<div class="sort_mobile">Sort</div>
 			<div class="fillter_mobile">Filter by</div>
 		</div>
@@ -13,7 +10,7 @@
 		<div class="filter">
 			<div class="category">
 				<div class="catalog__titleFilterBy  d-md-block"> Filter by</div>
-				<div class="visible-xs button_close_mobile"><span></span><span></span></div>
+				<div class="d-block d-sm-none button_close_mobile"><span></span><span></span></div>
 			</div>
 			<div>
 			<ul class="list-group" style="list-style: none">
@@ -269,11 +266,27 @@
 	</div>
 		</div>
 		<div class="products_filter">
+			<div class="catelog_alert">
+				<div class="item_women">
+					<button class="button_women style_button_women">
+						Women
+					</button>
+				</div>
+				<div class="item_jewellery">
+					<button class="button_women style_button_women">
+						 Jewellery 
+					</button>
+				</div>
+				<div class="button_bell">
+					<i class="fa fa-bell-o fa_bell" aria-hidden="true" ></i>
+					<span class="alert_mess">Create an alert </span>
+				</div>
+			</div>
 			<div class="header_sortby">
 				<div class="catalogSort">
 					<div class="catalogSort_Sortby desktop_sort">
 						<span class="catalogSort__listHeader sort_by">Sort by</span>
-						<div class="visible-xs button_close_mobile"><span></span><span></span></div>
+						<div class="d-block d-sm-none button_close_mobile"><span></span><span></span></div>
 						<div data-toggle="collapse" href="#sub-item-6" class="button_filter collapsed" aria-expanded="false" style="display: inline-block;">
 							<button class="button_sort">
 								<span>Relavance</span>
@@ -305,17 +318,27 @@
 					<div id="pagination-long">
 						<ul class="pagination center-align">
 							<li class="waves-effect" data-page="prev">
-								<i class="waves-effect material-icons"><</i>
+								<i class="fa fa-angle-left" aria-hidden="true" style="font-size: 20px"></i>
 							</li>
-							<li class="waves-effect" data-page="1">1</li>
+							<li class="waves-effect" data-page="1">
+								<a class="page_focus">1</a>
+							</li>
 							<li class="">...</li>
-							<li class="waves-effect" data-page="6">2</li>
-							<li class="waves-effect" data-page="6">3</li>
-							<li class="waves-effect" data-page="6">4</li>
+							<li class="waves-effect" data-page="6">
+								<a class="page_focus">2</a>
+							</li>
+							<li class="waves-effect" data-page="6">
+								<a class="page_focus">3</a>
+							</li>
+							<li class="waves-effect" data-page="6">
+								<a class="page_focus">4</a>
+							</li>
 							<li class="">...</li>
-							<li class="waves-effect" data-page="10">17</li>
-							<li class="waves-effect" data-page="next">
-								<i class="waves-effect material-icons">></i>
+							<li class="waves-effect" data-page="10">
+								<a class="page_focus">17</a>
+							</li>
+							<li class="waves-effect next_page" data-page="next">
+								<i class="fa fa-angle-right" aria-hidden="true" style="font-size: 20px"></i>
 							</li>
 						</ul>
 					</div>

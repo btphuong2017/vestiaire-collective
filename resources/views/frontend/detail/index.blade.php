@@ -9,13 +9,13 @@
     @include('frontend.detail.more-detail')
 </section>
 <section class="section section-also-like">
-    @include('frontend.detail.you-may-also-like');
+    @include('frontend.detail.you-may-also-like')
 </section>
 <section class="section section-recently">
-    @include('frontend.detail.recently-viewed');
+    @include('frontend.detail.recently-viewed')
 </section>
 <section class="section section-same-tags">
-    @include('frontend.detail.same-tags');
+    @include('frontend.detail.same-tags')
 </section>
 
 @endSection

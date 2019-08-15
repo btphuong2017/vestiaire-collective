@@ -45,7 +45,44 @@ body.safariNoScroll header .overflow-background {
     left: 0;
     height: 40px;
     line-height: 40px;
-    background: #FFF;
+    background: #000;
+    color:#fff;
+        .single_text_show{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            /* min-height: 40px; */
+            /* margin: auto; */
+            /* text-align: center; */
+            -webkit-animation-duration: .5s;
+            animation-duration: .5s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+        .show_text{
+            display: inline-block;
+            padding: 13px 20px;
+            font-size: 14px;
+            line-height: 18px;
+            font-weight: 500;
+            vertical-align: middle;
+        }
+        @media (min-width: 768px){
+            .show_text{
+                padding: 11px 20px 9px;
+                font-size: 14px;
+                line-height: 20px;
+                margin:0 auto;
+            }
+        }
+    
 }
 
 .header-firstline {
@@ -690,8 +727,10 @@ body.safariNoScroll header .overflow-background {
 
                 a {
                     font-size: 15px;
-                    color: #000;
+                    color: #2b2b2b;
                     text-decoration: none;
+                    text-rendering: geometricPrecision;
+                    vertical-align: baseline;
                 }
 
                 .sub-nav {
