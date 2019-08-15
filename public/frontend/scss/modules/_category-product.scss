@@ -6,6 +6,7 @@
   padding-left: 0;
   list-style: none;
   border-radius: 0.25rem;
+  margin-left: 40px;
 }
  
 .page-link {
@@ -75,6 +76,11 @@
   display: inline-block;
   
 }
+@media(max-width:767px){
+  .pagination-long_bottom{
+  display: none
+  }
+}
 .list-group{
   list-style: none;
   margin-bottom:0px !important;
@@ -94,3 +100,130 @@
     margin-right: 2px;
   }
   }  
+  .previous_page{
+    margin-right: 40px;
+  }
+  .next_page_bottom{
+    margin-left: 40px;
+  }
+  .underline_sale{
+    text-decoration: line-through;
+  }
+
+@media (min-width: 768px){
+span.seller {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: capitalize;
+    vertical-align: middle;
+  }
+}
+@media (max-width: 767px){
+span.seller {
+    font-size: 10px;
+    text-transform: capitalize;
+    display: inline-block;
+    line-height: 15px;
+    vertical-align: middle;
+
+  }
+}
+.style_svg_award {
+    width: 16px;
+    height: 15.6px;
+
+}
+
+
+@media (min-width: 768px){
+ .style_svg_award{
+    width: 18px;
+    height: 18px;
+}
+}
+.ready_ship{
+    display: flex;
+    align-items: center;
+    margin-top: 11px;
+
+}
+.inner_ship{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 9px;
+    line-height: 0;
+    color: #2b2b2b;
+}
+@media (min-width: 768px){
+span.text_ready {
+    font-size: 14px;
+    font-weight: 700;
+}
+}
+@media (max-width: 768px){
+.text_ready {
+    font-size: 10px;
+    font-weight: 400;
+}
+}
+.page_mobile{
+    margin-bottom: 40px;
+    margin-top: 30px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+@media(min-width: 768px){
+.page_mobile{
+  display: none;
+}
+}
+.style_ready{
+    display: inline-block;
+    /* width: 20px; */
+    height: 20px;
+    margin-right: 9px;
+    line-height: 0;
+    color: #2b2b2b;
+}
+.btn_mobile{
+  width: 100%;
+  padding: 12px 20px;
+
+}
+@media (min-width: 768px){
+.header_single_product{
+    min-height: 22px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+}
+@media (max-width: 768px){
+  .header_single_product{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: flex-start;
+    min-height: 15px;
+}
+}
+.award{
+    color: #de8962;
+    margin-right: auto;
+}
+.heart_product{
+    color: #de8962;
+    position: relative;
+}
+@media(max-width: 767px){
+.heart_product{
+  flex-direction: column;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    color: #de8962;
+    flex-flow: column-reverse;
+}
+}

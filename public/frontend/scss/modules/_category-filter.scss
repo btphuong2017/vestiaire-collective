@@ -73,6 +73,7 @@
     padding-left: 10px;
     margin-bottom: 10px;
     font-weight: 100;
+    color: #2b2b2b;
 }
 }
 #sub-item-2 {
@@ -193,6 +194,11 @@ display: block;
 .header_sortby{
 	max-height: 45px
 }
+.page_focus:active{
+    padding-top: 4px;
+    border-bottom: 1px solid black;
+
+}
 .dropdown.open .caret {
     display: inline-block;
     width: 0;
@@ -275,6 +281,8 @@ display: block;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    padding-top: 20px;
+    align-items: flex-start;
 }
 .form_prices{
 	display: -webkit-box;
@@ -444,7 +452,7 @@ display: block;
 }
 }
 .filter_color {
-    margin-bottom: 24px;
+   /* margin-bottom: 24px;*/
     padding: 0 0px 20px;
 }
 @media (min-width: 768px){
@@ -881,6 +889,119 @@ label:hover:before {
         z-index: 800
     }
 }
+ @media (min-width: 768px){
+.catelog_alert{
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+}
+.item_women{
+    display: inline-block;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+@media(max-width: 767px){
+    .item_women{
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-left: 0px;
+}
+}
+.item_women .style_button_women {
+    display: inline-block;
+    padding: 10px;
+    background: 0 0;
+    border: 1px solid #de8962;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "HK Grotesk",sans-serif;
+    font-size: 11px;
+    line-height: 13px;
+    letter-spacing: 1.27px;
+    color: #de8962;
+    transition: .3s;
+    cursor: pointer;
+}
+@media (min-width: 768px){
+ .item_women .style_button_women{
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: 1.5px;
+    padding: 11px 15px;
+}
+}
+.item_jewellery{
+    display: inline-block;
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+.item_jewellery .style_button_women {
+    display: inline-block;
+    padding: 10px;
+    background: 0 0;
+    border: 1px solid #de8962;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "HK Grotesk",sans-serif;
+    font-size: 11px;
+    line-height: 13px;
+    letter-spacing: 1.27px;
+    color: #de8962;
+    transition: .3s;
+    cursor: pointer;
+}
+@media (min-width: 768px){
+ .item_jewellery .style_button_women{
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: 1.5px;
+    padding: 11px 15px;
+}
+}
+.button_bell{
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.fa_bell{
+    
+    color: #cc815e;
+    font-size: 18px;
+}
+@media(max-width: 767px){
+   .button_bell{
+    display: inline-flex;
+    }
+    .fa_bell{
+    
+    color: #cc815e;
+    font-size: 16px;
+    margin-right: 10px;
+    }
+}
+.alert_button{
+    font-size: 0;
+    color: #de8962;
+}
+.alert_bell{
+    display: inline-block;
+    width: 16px;
+    margin-right: 10px;
+    vertical-align: middle;
+    color: inherit;
+}
+.alert_mess{
+    font-size: 16px;
+    color: #cc815e;
+}
+@media(max-width: 767px)
+{
+    .alert_mess{
+    font-size: 14px;
+    color: #cc815e;
+    }
+}
+
 @media (max-width: 767px){
 	.filter{
 		width: 100%;
@@ -964,6 +1085,7 @@ label:hover:before {
 	.inner_filter{
 		-ms-flex-wrap: wrap;
 		    flex-wrap: wrap;
+            padding-top:20px;
 	}
 	.sort_fillter_mobile{
 		width: 100%;
@@ -982,6 +1104,7 @@ label:hover:before {
 	}
 	.sort_fillter_mobile{
 		border-bottom: 1px solid #eaeaea;
+        display: flex;
 	}
 	.sort_fillter_mobile > div{
 		width: 50%;
@@ -1203,7 +1326,7 @@ label:hover:before {
   		margin: 6px 0px;
 
 }
-#sub-item-1{
+/*#sub-item-1{
 	display: none;
 }
 #sub-item-2{
@@ -1214,6 +1337,6 @@ label:hover:before {
 }
 #sub-item-5{
 	display: none;
-}
+}*/
 }
 

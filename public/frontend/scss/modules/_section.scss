@@ -17,6 +17,16 @@
         font-weight: lighter;
         color: #2b2b2b;
     }
+    @media(max-width: 767px)
+    {
+        .section-title-sm {
+            font-weight: lighter;
+            font-size: 26px;
+            line-height: 32px;
+            margin-bottom: 23px;
+            text-align: justify !important;
+        }
+    }
 }
 .section-detail-product {
     position: relative;
@@ -40,6 +50,12 @@
 .section-also-like {
     background: #fafafa;
     padding: 60px 0 90px;
+}
+@media(max-width: 767px){
+    .section-also-like {
+        background: #fafafa;
+        padding: 0px 0 0px;
+}
 }
 .section-same-tags {
     padding: 60px 0 60px;
