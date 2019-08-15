@@ -1,5 +1,4 @@
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="/frontend/font-awesome/css/font-awesome.min.css">
+
 <section class="contain_filter">
 	<div class="d-sm-none sort_fillter_mobile">
 			<div class="sort_mobile">Sort</div>
